@@ -9,6 +9,7 @@ Instructions for setup:
   
     Initialisation:
       - Create template folder
+      - git log // See all modification
       - git init
       - git remote set-url template https://github.com/RO-WebPros/template
       - git pull template master
