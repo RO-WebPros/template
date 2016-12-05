@@ -29,7 +29,6 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
   return gulp.src(['./js/*.js'])
-    .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(concat('script.js'))
     .pipe(uglify())
