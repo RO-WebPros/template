@@ -10,7 +10,7 @@ Instructions for setup:
     Initialisation:
       - Create template folder
       - git init
-      - git remote add template https://github.com/DragosVlad/template.git
+      - git remote set-url template https://github.com/RO-WebPros/template
       - git pull template master
     
     Work:
