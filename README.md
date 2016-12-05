@@ -29,9 +29,9 @@ Instructions for setup:
       - npm install es6-promise --save-dev                  (polyfill needed for some tasks)
       - npm install gulp-sass gulp-autoprefixer --save-dev  (sass and autoprefixer)
       - npm install gulp-plumber gulp-util --save-dev       (better error handling)
-      - npm install gulp-concat --save-dev                  (concatenate js files)
+      --- npm install gulp-concat --save-dev                  (concatenate js files)
       - npm install gulp-jshint --save-dev                  (validate js files)
-      - npm install gulp-uglify --save-dev                  (uglify js files)
+      --- npm install gulp-uglify --save-dev                  (uglify js files)
       - npm install browser-sync --save-dev                 (browsersync for automatic refresh)
       - create gulpfile.js
     
