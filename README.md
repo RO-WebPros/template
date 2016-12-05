@@ -4,7 +4,7 @@ Default HTML Template
 Instructions for setup:
 
   GIT
-    
+    //install git and edit files
     Initialisation:
       - Create template folder
       - git init
