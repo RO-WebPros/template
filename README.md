@@ -31,7 +31,6 @@ Instructions for setup:
       - git commit -m "your message here"
       - git push template
       - test
-      
 
   
   GULP
