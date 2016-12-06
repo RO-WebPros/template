@@ -31,8 +31,13 @@ gulp.task('js', function() {
   return gulp.src(['./js/*.js'])
   .pipe(jshint())
     .pipe(jshint.reporter('default'))
+<<<<<<< HEAD
 //     .pipe(concat('script.js'))
 //     .pipe(uglify())
+=======
+    // .pipe(concat('script.js'))
+    // .pipe(uglify())
+>>>>>>> b3bf3f735b71d336735417bffe8f16d9bd5a7b3b
     .pipe(gulp.dest('./js'))
 });
 
@@ -40,8 +45,12 @@ gulp.task('js', function() {
 gulp.task('watch', function() {
   browserSync.init({
     files: ['./**/*.php', './**/*.html'],
+<<<<<<< HEAD
     proxy: 'http://localhost:81',
     port:80,
+=======
+    proxy: 'http://localhost/template/',
+>>>>>>> b3bf3f735b71d336735417bffe8f16d9bd5a7b3b
   });
   gulp.watch('./sass/**/*.scss', ['sass', reload]);
   gulp.watch('./js/*.js', ['js', reload]);
