@@ -40,7 +40,7 @@ gulp.task('js', function() {
 gulp.task('watch', function() {
   browserSync.init({
     files: ['./**/*.php', './**/*.html'],
-    proxy: 'http://localhost:81',
+    proxy: 'http://localhost/template',
     
 
 
