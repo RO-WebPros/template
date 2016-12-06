@@ -12,6 +12,7 @@ Instructions for setup:
       - git log // See all modification
       - git diff // See the diferences
       - git init
+      - git pull template master --allow-unrelated-histories
       - git remote set-url template https://github.com/RO-WebPros/template
       - git pull template master
     
