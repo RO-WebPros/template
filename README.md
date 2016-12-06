@@ -13,7 +13,10 @@ Instructions for setup:
       - git diff // See the diferences
       - git init
       - git pull template master --allow-unrelated-histories
+      //Change repository url
       - git remote set-url template https://github.com/RO-WebPros/template
+      // add repository 
+      - git remote add template https://github.com/RO-WebPros/template  
       - git pull template master
     
     Work:
