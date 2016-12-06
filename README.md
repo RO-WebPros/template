@@ -14,10 +14,16 @@ Instructions for setup:
       - git init
       - git pull template master --allow-unrelated-histories
       //Change repository url
+
       - git remote set-url template https://github.com/RO-WebPros/template
       // add repository 
+      
       - git remote add template https://github.com/RO-WebPros/template  
+      // pull last version on github
       - git pull template master
+      
+      //push on github last version
+      -  git push template master
     
     Work:
       - Make changes
