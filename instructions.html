@@ -36,8 +36,6 @@
 		Nu scriem niciodata un text fara sa fie inconjurat de un tag html. (fisierul asta e exceptie)
 
 
-
-
 		Punem tag-ul de inchidere in dreptul tag-ului de deschidere, pe aceeasi coloana.
 
 		Tot timpul indentam tag-urile care sunt in interiorul altora cu un TAB, pentru a fi mai usor de citit codul si mai bine organizat.
@@ -94,7 +92,7 @@
 
 
 		Folosim BEM cand dam nume claselor, iar numele trebuie sa fie in engleza. Mai mule despre BEM mai jos.
-		
+
 		
 		Nu punem niciodata un tag care are proprietatea "display" setata in mod default la "block" in interiorul unui tag care are proprietatea ca "inline". Nu e corect si da eroare la validare.
 			Exemplu: Nu punem <p></p> in interiorul unui tag <small></small>.
@@ -103,52 +101,137 @@
 	</div> <!-- .container -->
 
 
-		Exemplu de cod scris corect in HTML cu Bootstrap si folosind BEM care foloseste (in mare parte) regulile de mai sus:
+	Exemplu de cod scris corect in HTML cu Bootstrap si folosind BEM care foloseste (in mare parte) regulile de mai sus:
 
-		<header class="main-header">
+	<header class="main-header">
 
-			<div class="container">
+		<div class="container">
 
-				<div class="row">
+			<div class="row">
+				
+				<div class="col-md-2">
 					
-					<div class="col-md-2">
+					<!-- Website logo -->
+					<div class="logo-wrapper">
 						
-						<!-- Website logo -->
-						<div class="logo-wrapper">
-							
-							<div class="logo">		
-								<img src="logo.png" alt="Website logo">
-							</div>
-
+						<div class="logo">		
+							<img src="logo.png" alt="Website logo">
 						</div>
 
-					</div> <!-- .col-md-2 -->
+					</div>
+
+				</div> <!-- .col-md-2 -->
 
 
 
-					<div class="col-md-10">
-						
-						<!-- Main navigation -->
-						<nav class="nav nav--main">
-						   
-							<ul class="nav__links">
-								<li class="nav__item nav__item--active"><a href="#">Home</a></li>
-								(Aici nav__item--active poate fi un modifier in BEM care face sa apara diferit in meniu pagina pe care te afli in acel moment)
-								<li class="nav__item"><a href="#">About us</a></li>
-								<li class="nav__item"><a href="#">Contact</a></li>
-							</ul>
+				<div class="col-md-10">
+					
+					<!-- Main navigation -->
+					<nav class="nav nav--main">
+					   
+						<ul class="nav__links">
+							<li class="nav__item nav__item--active"><a href="#">Home</a></li>
+							(Aici nav__item--active poate fi un modifier in BEM care face sa apara diferit in meniu pagina pe care te afli in acel moment)
+							<li class="nav__item"><a href="#">About us</a></li>
+							<li class="nav__item"><a href="#">Contact</a></li>
+						</ul>
 
-							(O mica exceptie de la regula, pentru ca elementele li sunt strans legate de ul, nu am mai pus un spatiu intre ele. Aici poti sa faci cum consideri mai bine, in cazul elementelor care mereu stau impreuna, cum ar fi "label" si "input". Dar in rest, regula ramane valabila)
+						(O mica exceptie de la regula, pentru ca elementele li sunt strans legate de ul, nu am mai pus un spatiu intre ele. Aici poti sa faci cum consideri mai bine, in cazul elementelor care mereu stau impreuna, cum ar fi "label" si "input". Dar in rest, regula ramane valabila)
 
-						</nav>
+					</nav>
 
-					</div> <!-- .col-md-10 -->
+				</div> <!-- .col-md-10 -->
 
-				</div> <!-- .row -->
+			</div> <!-- .row -->
 
-			</div> <!-- .container -->
+		</div> <!-- .container -->
 
-		</header>
+	</header>
+
+
+
+
+
+	<h2>Instructiuni pentru CSS</h2>
+
+	Incercam sa aplicam cat mai mult ce e aici: http://cssguidelin.es/
+
+	Dar pentru indentare folosim tot TAB, nu doua spatii cum scrie acolo.
+
+	Folosim doar class in fisierele de CSS, niciodata id
+
+	Folosim class cat mai mult, in loc sa selectam direct un tag, cum ar fi "ul" sau "h1". 
+
+	In Sass, nu scriem prefixe -wekbit-, -moz-, pentru ca autoprefixer face asta automat.
+
+	Un selector in CSS trebuie sa arate in felul urmator:
+
+	<style>
+
+		.main-header {
+			position: relative;
+			top: 30px;
+			left: 0;
+			z-index: 10;
+			margin: 0 auto;
+			padding: 20px 30px;
+			background-color: #ccee22;
+			font-size: 24px;
+		}
+
+			.container {
+				max-width: 80%;
+				text-align: center;
+			}
+
+	</style>
+
+	Pentru selectori, respectam urmatoarele reguli:
+		- acolada de deschidere pe acelasi rand, cu UN SPATIU inainte
+		- acolada de inchidere in dreptul selectorului
+		- fiecare proprietate pe cate un rand separat
+		- dupa numele proprietatii trebuie puse : si UN SPATIU dupa : 
+		- valorile de 0 (zero) nu trebuie sa aiba unitatea specificata (scriem "0" in loc de "0px")
+		- fiecare proprietate are la final ;
+	
+	Cand sunt multe proprietati pentru acelasi selector, incercam sa le punem intr-o ordine logica. Ideea e sa incepi din "afara" spre interior, adica mai intai sunt proprietatile care stabilesc pozitia, marimea (in general position ar trebui sa fie prima proprietate, daca e nevoie de ea), apoi mergem spre interior, cu ce tine de box-model (margin, padding, border), dupa care culorile si textul.
+
+	Pentru indentare, chiar daca Sass permite selectori de genul asta:
+
+		<style>
+			.main-header {
+
+				...
+
+				.container {
+					...
+				}
+
+			}
+		</style>
+
+		Asta duce la cresterea specificitatii, deci creste timpul de incarcare al paginii.
+
+		Atunci, al doilea selector, desi in HTML este in interiorul primului, in CSS il scriem in afara. Totusi, il indentam cu un TAB pentru a vedea mai usor legatatura dintre ei, faptul ca e in interiorul celuilalt in HTML:
+
+
+		<style>
+			.main-header {
+				...
+			}
+
+				.container {
+					...
+				}
+		</style>
+
+
+
+
+
+
+	
+
 
 
 
