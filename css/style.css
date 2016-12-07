@@ -5,3 +5,11 @@ body {
   background-color: yellow;
   max-width: 50%;
   margin: 0 auto; }
+
+header_left {
+  float: left; }
+  header_left p img {
+    float: left; }
+
+header_right {
+  float: right; }
