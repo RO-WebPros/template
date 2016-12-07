@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Instructions</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+	<!-- Nu baga in seama codu asta de CSS de aici din head -->
+	<style>
+
+		.title {
+			text-align: center;
+			font-size: 4em;
+			margin-bottom: 70px;
+		}
+
+		small {
+			display: block;
+			font-size: 0.4em !important;
+		}
+
+	</style>
+
+
+
+</head>
+<body>
+	
+	<div class="container">
+	
+		<h1 class="title">Instructiuni <small>pentru HTML si CSS</small></h1>
+
+		<h2>Instructiuni pentru HTML</h2>
+
+
+		Nu scriem niciodata un text fara sa fie inconjurat de un tag html. (fisierul asta e exceptie)
+
+
+
+
+		Punem tag-ul de inchidere in dreptul tag-ului de deschidere, pe aceeasi coloana.
+
+		Tot timpul indentam tag-urile care sunt in interiorul altora cu un TAB, pentru a fi mai usor de citit codul si mai bine organizat.
+
+		Intre tag-uri lasam un spatiu liber ca sa fie mai usor de citit. Intre sectiuni mai mari punem 3 spatii.
+
+		In cazul in care un div este foarte lung (mai mult de 10-15 randuri), dupa tagul de inchidere punem un comentariu in care scriem ce div se inchide acolo, in felul asta:
+			Daca deschidem un <div class="main-section">, dupa tagul de inchidere </div> punem <!-- .main-section -->. Exemplu mai jos in cod.
+			Daca tagul este unul de HTML5, cum ar fi <footer>, nu mai punem comentariu, pentru ca e usor sa ne dam seama dupa nume </footer> despre ce e vorba.
+
+		Folosim comentarii in care descriem sectiunile importante.
+
+
+			Exemplu:
+
+			<div class="section section--1">
+
+				<h1 class="title">Titlul sectiunii</h1>
+
+				<p class="description">Scurta descriere despre aceasta sectiune</p>
+
+				...
+
+			</div> <!-- .section 1 -->
+
+
+
+			<!-- This is the second important section of this page -->
+			<div class="section section--2">
+				
+				<h1 class="title">O alta sectiune</h1>
+
+				...
+
+			</div> <!-- .section 2 -->
+
+
+
+
+		Folosim tag-uri de HTML5 ori de cate ori e posibil
+			Folosim <header> in loc de <div class="header"></div>. Acelasi lucru si pentru tag-urile footer, aside, article, nav, section, etc
+
+
+		Folosim valoarea corecta pentru type in tag-urile input
+			Ex: folosim <input type="email"> si nu <input type="text"> pentru un input de email
+
+
+		Folosim "class" si nu "id" pentru tag-uri. ID folosim doar pentru <input> sau lucruri legate de javascript, dar niciodata pentru CSS (fisierele de CSS nu trebuie sa contina niciodata id-uri pentru a modifica stilurile unui element)
+
+
+		Punem in HTML clase ori de cate ori e posibil, pentru a evita cat mai mult sa folosim tag-uri in CSS cand selectam un element.
+			Exemplu: Folosim <h1 class="title"></h1> si in CSS il selectam cu ".title{ }" , in loc sa il selectam direct "h1 { }".
+			Asta e important pentru "low specificity" - timp mai bun de incarcare a paginii.
+
+
+		Folosim BEM cand dam nume claselor, iar numele trebuie sa fie in engleza. Mai mule despre BEM mai jos.
+		
+		
+		Nu punem niciodata un tag care are proprietatea "display" setata in mod default la "block" in interiorul unui tag care are proprietatea ca "inline". Nu e corect si da eroare la validare.
+			Exemplu: Nu punem <p></p> in interiorul unui tag <small></small>.
+
+
+	</div> <!-- .container -->
+
+
+		Exemplu de cod scris corect in HTML cu Bootstrap si folosind BEM care foloseste (in mare parte) regulile de mai sus:
+
+		<header class="main-header">
+
+			<div class="container">
+
+				<div class="row">
+					
+					<div class="col-md-2">
+						
+						<!-- Website logo -->
+						<div class="logo-wrapper">
+							
+							<div class="logo">		
+								<img src="logo.png" alt="Website logo">
+							</div>
+
+						</div>
+
+					</div> <!-- .col-md-2 -->
+
+
+
+					<div class="col-md-10">
+						
+						<!-- Main navigation -->
+						<nav class="nav nav--main">
+						   
+							<ul class="nav__links">
+								<li class="nav__item nav__item--active"><a href="#">Home</a></li>
+								(Aici nav__item--active poate fi un modifier in BEM care face sa apara diferit in meniu pagina pe care te afli in acel moment)
+								<li class="nav__item"><a href="#">About us</a></li>
+								<li class="nav__item"><a href="#">Contact</a></li>
+							</ul>
+
+							(O mica exceptie de la regula, pentru ca elementele li sunt strans legate de ul, nu am mai pus un spatiu intre ele. Aici poti sa faci cum consideri mai bine, in cazul elementelor care mereu stau impreuna, cum ar fi "label" si "input". Dar in rest, regula ramane valabila)
+
+						</nav>
+
+					</div> <!-- .col-md-10 -->
+
+				</div> <!-- .row -->
+
+			</div> <!-- .container -->
+
+		</header>
+
+
+
+</body>
+</html>
