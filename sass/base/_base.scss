@@ -5,14 +5,19 @@ html {
 }
 
 body {
+	position: relative;
 	height: 100%;
 	overflow: hidden;
+	background-color: #DEE6FF;
+	text-align: center;
 }
 
 .wrapper {
-	
+	width: 90%;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
-
-
-
+.logo__image {
+	max-width: 200px;
+}

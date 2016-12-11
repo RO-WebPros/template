@@ -11,6 +11,42 @@
 </head>
 
 <body>
+
+	<!-- Main Navigation -->
+
+	<nav class="main-nav">
+
+		<ul class="main-nav__links">
+
+			<li class="main-nav__item">
+				<a type="button" class="nav_test" data-toggle="modal" data-target="#about">
+					<i class="glyphicon glyphicon-user"></i>
+					<span class="hidden-xs hidden-md hidden-lg">About us</span>
+				</a>
+				
+			</li>
+
+			<li class="main-nav__item">
+				<a type="button" class="nav_test" data-toggle="modal" data-target="#services">
+					<i class="glyphicon glyphicon-wrench"></i>
+					<span class="hidden-xs hidden-md hidden-lg">Services</span>
+				</a>
+			</li>
+
+			<li class="main-nav__item">
+				<a type="button" class="nav_test" data-toggle="modal" data-target="#contact">
+					<i class="glyphicon glyphicon-envelope"></i>
+					<span class="hidden-xs hidden-md hidden-lg">Contact Us</span>
+				</a>
+			</li>
+
+		</ul>
+
+	</nav>
+
+
+
+	<!-- Main Wrapper -->
   	<div class="wrapper">
 
 		<div class="loader">
@@ -19,105 +55,104 @@
 
 
 
-		<!-- Main Navigation -->
-
-		<nav class="main-nav">
-
-			<ul class="main-nav__links">
-
-				<li class="main-nav__item">
-					<a href="#">
-						<i class="glyphicon glyphicon-user"></i>
-						About us
-					</a>
-				</li>
-
-				<li class="main-nav__item">
-					<a href="#">
-						<i class="glyphicon glyphicon-wrench"></i>
-						Services
-					</a>
-				</li>
-
-				<li class="main-nav__item">
-					<a href="#">
-						<i class="glyphicon glyphicon-envelope"></i>
-						Contact us
-					</a>
-				</li>
-
-			</ul>
-
-		</nav>
-		
-
-
 		<!-- Main Content Section -->
 
 		<div class="main-content">
-			<div class="col-main">
-				<div class="inner">
-					
-				</div> <!-- inner -->
 
-			</div> <!-- col-main -->
+			<div class="logo">
+				<img src="images/logo.png" alt="" class="logo__image">
+			</div>
+
+			<h1 class="title">We are coming soon</h1>
+
+			<div class="countdown"></div>
+
+			<div class="subscribe-box"></div>
 
 		</div> <!-- main-content -->
 
 
+
 		<!-- This div hold menu structure and information -->
 
-		<div class="col-modal">
-			<div class="middle tab-content">
-				<section id="newsletter">
-			
-					<h2></h2>	
-					<p></p>
-					<form></form>
-				
-				</section> <!-- newsletter -->
-			
-				<section id="about">
-				
-					<a href=""></a>
-					<h2>Acesta este heading de la about</h2>	
-					<p></p>
-					<div></div>
-				
-				</section>  <!-- about -->
-				
-				<section id="services">
-				
-					<a href=""></a>
-					<h2>Acesta este heading de la services</h2>	
-					<div></div>
-				
-				</section> <!-- services -->
-				
-				<section id="contact">
-				
-					<a href=""></a>
-					<h2>Acesta este heading de la contact</h2>	
-					<ul></ul>
-					<ul></ul>
-					<div></div>
-					<p></p>
-					<form></form>
-				
-				</section> <!-- contact -->
-			
-			</div> <!-- middle tab-content -->
-			
-		</div> <!-- col-modal -->
+		<div class="information">
 
-		<ul class="navigation">
+			<div class="information__content">
+			
+				<!-- About Information Section -->
+				<section class="information__section modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 
-				<li><a href="#about">About</a></li>
-				<li><a href="#services">Services</a></li>
-				<li><a href="#contact">Contact</a></li>
-					
-		</ul>	<!-- navigation anchors -->
-	
+					<div class="modal-dialog modal-lg" role="document">
+
+						<div class="modal-content">
+
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h2 class="modal-title" id="myModalLabel">About us</h2>
+							</div>
+
+							<div class="modal-body">
+								<p>This is information about us</p>
+							</div>
+
+						</div>
+
+				  	</div>
+
+				</section> <!-- .information__section About -->
+				
+
+
+				<!-- Services Information Section -->
+				<section class="information__section modal fade" id="services" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+					<div class="modal-dialog modal-lg" role="document">
+
+						<div class="modal-content">
+
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h2 class="modal-title" id="myModalLabel">Services</h2>
+							</div>
+
+							<div class="modal-body">
+								<p>This is information about our services</p>
+							</div>
+
+						</div>
+
+				  	</div>
+
+				</section> <!-- .information__section Services -->
+				
+
+
+				<!-- Contact Information Section -->
+				<section class="information__section modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+					<div class="modal-dialog modal-lg" role="document">
+
+						<div class="modal-content">
+
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h2 class="modal-title" id="myModalLabel">Contact us</h2>
+							</div>
+
+							<div class="modal-body">
+								<p>You can contact us here</p>
+							</div>
+
+						</div>
+
+				  	</div>
+
+				</section> <!-- .information__section Contact -->
+			
+			</div> <!-- information__content -->
+			
+		</div> <!-- information -->
+
 	</div> <!-- wrapper -->
 
 
