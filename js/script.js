@@ -1,6 +1,9 @@
-function testing() {
-	console.log("Heeey");
-}
+jQuery(document).ready(function($) {
+	
+	$(".modal-body").mCustomScrollbar({
+	   theme: "rounded-dots-dark"
+	});
 
 
-testing();
+	
+});
