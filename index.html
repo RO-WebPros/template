@@ -67,35 +67,32 @@
 
 			<!-- <h1 class="title">We are coming soon</h1> -->
 
-			<div id="countdown">
-			  <div>
-			    <span class="days"></span>
-			    <div class="smalltext">Days</div>
-			  </div>
-			  <div>
-			    <span class="hours"></span>
-			    <div class="smalltext">Hours</div>
-			  </div>
-			  <div>
-			    <span class="minutes"></span>
-			    <div class="smalltext">Minutes</div>
-			  </div>
-			  <div>
-			    <span class="seconds"></span>
-			    <div class="smalltext">Seconds</div>
-			  </div>
-			</div> <!-- .countdown div -->
+			<div class="counter">
+                            <ul>
+                                <li><span id="cday"></span>/days</li>
+                                <li><span id="chours"></span>/hours</li>
+                                <li><span id="cminutes"></span>/minutes</li>
+                                <li><span id="cseconds"></span>/seconds</li>
+                            </ul>
+            </div> <!-- .countdown div -->
 
-			<div class="section section-newsletter" id="newsletter">
-				
-				<h2>Subscribe Now</h2>
-				<p>Submit your email and we will notify you when we are ready!</p>
-				<form id="newsletter-form" class="newsletter-form form-inline">
-					<div class="form-group"></div>
-					<button type="Submit" class="btn btn-main">Send</button>
-					<div class="alert-message"></div>
-				
-				</form>
+			<div class="section-newsletter">
+			
+					<h2>Subscribe Now</h2>
+					<p>Submit your email and we will notify you when we are ready!</p>
+					
+					<form id="newsletter-form" class="newsletter-form form-inline">
+						<div class="form-group"></div>
+						<div class="form-group">
+						    <form class="form-inline"> 
+							    <form class="form-group">
+							    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Subscribe">
+							  	<button type="submit" class="btn btn-default">Send</button>
+							  	</form> 
+						  	</form>
+						<div class="alert-message"></div>
+					
+					</form>
 
 			</div>
 			
@@ -201,6 +198,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="js/script.js"></script>
-	<script src="js/countdown.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	
 </body>
 </html>

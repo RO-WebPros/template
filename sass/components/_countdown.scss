@@ -1,47 +1,32 @@
-#countdown {
-    font-family: sans-serif;
-    color: #717171;
-    font-weight: 100;
-    text-align: center;
-    font-size: 30px;
-    justify-content: space-between;
-   
+.counter ul
+{
+    margin-top: 40px;
+
+    color: #333;
 }
 
-    #countdown > div {
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 30px;
-    background: #717171;
+.counter ul li
+{
     display: inline-block;
-    }   
 
-        #countdown div > span{
-        padding: 15px;
-        border-radius: 30px;
-        background: #B2B8CC;
-        display: inline-block;
-        }
-
-#countdown:hover{
-    color:black;
-}  
-        #countdown > div:hover {
-            cursor: pointer;
-        }
-
-
-.smalltext{
-    padding-top: 5px;
-    font-size: 16px;
-    color: #B2B8CC;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 400px) {
-    #countdown{ 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+.counter ul li span
+{
+    font-size: 40px;
 
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.counter ul li span:after
+{
+    padding-left: 15px;
+
+    content: '\00b7';
+
+    color: #fff;
 }
