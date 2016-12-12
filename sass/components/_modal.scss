@@ -4,7 +4,7 @@
 
 // Overwrite Bootstrap style to hide default scroll bar
 .modal-open .modal {
-	// overflow-y: hidden;
+	overflow-y: hidden;
 }
 
 .modal {
@@ -22,14 +22,23 @@
 			overflow: hidden;
 		}
 
+			.modal-header {
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			}
+
 			.modal-body {
 				// border: 2px solid red;
 				height: 80vh;
+				padding-top: 0;
 				overflow: hidden;
 				background-color: transparent;
 
 				p {
 					font-size: 2rem;
+
+					&:first-child {
+						padding-top: 20px;
+					}
 				}
 			}
 
