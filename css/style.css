@@ -18,6 +18,9 @@ body {
 .logo__image {
   max-width: 200px; }
 
+.main-content {
+  background-color: mistyrose; }
+
 .main-nav {
   position: absolute;
   left: 30px;
@@ -87,7 +90,8 @@ body {
       width: 100%; } }
 
 .modal-open .modal {
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  font-family: 'Finger Paint', cursive; }
 
 .modal-content {
   position: relative;
@@ -123,7 +127,8 @@ body {
 
 .subscribe {
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: 'Finger Paint', cursive; }
 
 .counter {
   margin-top: 30px;
@@ -134,7 +139,17 @@ body {
 
 .counter__part {
   display: inline-block;
-  margin-right: 20px; }
+  margin-right: 20px;
+  font-family: 'Finger Paint', cursive; }
   .counter__part span {
     font-size: 40px;
     display: block; }
+
+.main-text {
+  width: 100%;
+  height: auto;
+  margin: 10px 0 10px 0;
+  font-family: 'Finger Paint', cursive; }
+
+.main-text__elem {
+  font-size: 2em; }
