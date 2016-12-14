@@ -92,26 +92,42 @@
 
 
 
-			<div class="subscribe">
+			<!-- <div class="subscribe"> -->
 			
-				<h2>Subscribe Now</h2>
-
+				<!-- <h2>Subscribe Now</h2>
+				
 				<p>Submit your email and we will notify you when we are ready!</p>
-
-				<form class="form-inline"> 
-
+				
+				<form class="form-inline" id="newsletter-form"> 
+				
 					<div class="form-group">
 						<label for="email" class="sr-only">Email address</label>
-						<input type="email" class="form-control" id="email" placeholder="Enter your email">	
+						<input type="email" class="form-control newsletter_email" id="newsletter_email" name="newsletter_email" placeholder="Enter your email">	
 					</div>
-
+				
 					<button type="submit" class="btn btn-default">Subscribe</button>
-
+				
 				</form>
+				
+				<div class="alert-message"></div> -->
 
-				<div class="alert-message"></div>
+					<section class="section section-newsletter tab-pane fade in active" id="newsletter"> 
 
-			</div>
+	                    <form id="newsletter-form" class="newsletter-form form-inline">
+
+	                        <div class="form-group">
+
+	                            <label class="sr-only" for="newsletter_email">Your Email:</label>
+	                            <input type="email" id="newsletter_email" name="newsletter_email" class="form-control newsletter_email" placeholder="Subscribe" required> 
+	                        
+	                        </div>
+
+	                        <button type="submit" class="btn btn-main">Send</button>
+	                        <div class="alert-message"></div>
+	                	</form>  
+
+
+			<!-- </div> -->
 			
 		</header> <!-- main-content -->
 
@@ -214,6 +230,7 @@
 	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="js/jquery.countdown.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/jquery.validate.js"></script>
 	
 </body>
 </html>
