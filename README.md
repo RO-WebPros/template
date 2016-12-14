@@ -24,7 +24,10 @@ Instructions for setup:
       
       //push on github last version
       -  git push template master
-    
+      
+      //revert to a past commit
+      - git push template +10fdf91:softly
+      
     Work:
       - Make changes
       - git add .
