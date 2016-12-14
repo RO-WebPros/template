@@ -1,36 +1,152 @@
+/*==================================
+=            Typography            =
+==================================*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*=====  End of Typography  ======*/
+/*=======================================================
+=            Base styles (used in all pages)            =
+=======================================================*/
 html {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 body {
   height: 100%;
   overflow: hidden;
-  text-align: center; }
+  text-align: center;
+}
 
 .wrapper {
   position: relative;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+<<<<<<< HEAD
   background-color: #C5E9FF; }
+=======
+  padding-top: 50px;
+  background-color: #C5E9FF;
+}
 
-.logo__image {
-  max-width: 200px; }
+/*=====  End of Base styles  ======*/
+/*===============================
+=            Buttons            =
+===============================*/
+/*=====  End of Buttons  ======*/
+/*=================================
+=            Countdown            =
+=================================*/
+.counter {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+>>>>>>> 10fdf917945e82afe5ae676eaa988365ea11d9d1
 
+.counter__elements {
+  color: #333;
+}
+
+<<<<<<< HEAD
 .main-content {
   background-color: #42BB35; }
+=======
+.counter__part {
+  display: inline-block;
+  margin-right: 20px;
+  font-family: 'Finger Paint', cursive;
+}
 
+.counter__part span {
+  font-size: 40px;
+  display: block;
+}
+
+/*=====  End of Countdown  ======*/
+/*=============================
+=            Forms            =
+=============================*/
+.subscribe {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Finger Paint', cursive;
+}
+
+/*=====  End of Forms  ======*/
+/*====================================================
+=            Modals (Navigation Sections)            =
+====================================================*/
+.modal-open .modal {
+  overflow-y: hidden;
+  font-family: 'Finger Paint', cursive;
+}
+
+.modal-content {
+  position: relative;
+  /* height: 90vh; */
+  overflow: hidden;
+}
+
+.modal-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body {
+  height: 80vh;
+  padding-top: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+>>>>>>> 10fdf917945e82afe5ae676eaa988365ea11d9d1
+
+.modal-body p {
+  font-size: 2rem;
+}
+
+.modal-body p:first-child {
+  padding-top: 20px;
+}
+
+.modal-effect {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  opacity: 0;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.modal-effect.in {
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+/*=====  End of Modals (Navigation Sections)  ======*/
+/*==================================
+=            Navigation            =
+==================================*/
 .main-nav {
   position: absolute;
   left: 30px;
+<<<<<<< HEAD
   bottom: 30px; }
+=======
+  bottom: 30px;
+}
+>>>>>>> 10fdf917945e82afe5ae676eaa988365ea11d9d1
 
 .main-nav__links {
   padding: 0;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+}
 
 .main-nav__item {
   width: 70px;
@@ -46,42 +162,52 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50%; }
-  .main-nav__item a {
-    cursor: pointer;
-    width: 70px;
-    height: 70px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-decoration: none;
-    color: #717171;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .main-nav__item a:hover, .main-nav__item a:active {
-      text-decoration: none;
-      color: #333333; }
-    .main-nav__item a i {
-      font-size: 2rem; }
+  border-radius: 50%;
+}
+
+.main-nav__item a {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #717171;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-nav__item a:hover, .main-nav__item a:active {
+  text-decoration: none;
+  color: #333333;
+}
+
+.main-nav__item a i {
+  font-size: 2rem;
+}
 
 @media only screen and (max-width: 800px) {
   .main-nav {
     width: 100%;
     left: 0px;
-    bottom: 0px; }
+    bottom: 0px;
+  }
   .main-nav__links {
     padding: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+  }
   .main-nav__item {
     width: 33.333333%;
     border-radius: 0;
     margin-right: 0;
+<<<<<<< HEAD
     border-right: 2px solid rgba(0, 0, 0, 0.3); }
     .main-nav__item:last-child {
       border: none; }
@@ -254,12 +380,67 @@ label {
   .counter__part span {
     font-size: 40px;
     display: block; }
+=======
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+  }
+  .main-nav__item:last-child {
+    border: none;
+  }
+  .main-nav__item a {
+    width: 100%;
+  }
+}
 
-.main-text {
+/*=====  End of Navigation  ======*/
+/*==============================
+=            Header            =
+==============================*/
+.main-content {
+  background-color: mistyrose;
+}
+
+.logo__image {
+  width: 200px;
+}
+>>>>>>> 10fdf917945e82afe5ae676eaa988365ea11d9d1
+
+.header-info {
   width: 100%;
+<<<<<<< HEAD
   height: auto;
   margin: 10px 0 10px 0;
   font-family: 'Finger Paint', cursive; }
 
 .main-text__elem {
   font-size: 2em; }
+=======
+  margin: 10px 0;
+  font-family: 'Finger Paint', cursive;
+}
+
+.header-info__text {
+  font-size: 2em;
+}
+
+/*=====  End of Header Styles  ======*/
+/*==============================
+=            Footer            =
+==============================*/
+/*=====  End of Footer  ======*/
+/*=================================================
+=            Home Page specific styles            =
+=================================================*/
+/*=====  End of Home Page specific styles  ======*/
+/*==================================================
+=            About Page specific styles            =
+==================================================*/
+/*=====  End of About Page specific styles  ======*/
+/*=====================================================
+=            Services Page specific styles            =
+=====================================================*/
+/*=====  End of Services Page specific styles  ======*/
+/*====================================================
+=            Contact Page specific styles            =
+====================================================*/
+/*=====  End of Contact Page specific styles  ======*/
+>>>>>>> 10fdf917945e82afe5ae676eaa988365ea11d9d1

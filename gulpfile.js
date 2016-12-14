@@ -21,7 +21,7 @@ var onError = function (err) {
 gulp.task('sass', function() {
   return gulp.src('./sass/**/*.scss')
   .pipe(plumber({ errorHandler: onError }))
-  .pipe(sass())
+  .pipe(sass({outputStyle: 'expanded'}))
   .pipe(autoprefixer())
   .pipe(gulp.dest('./css'));
 });
