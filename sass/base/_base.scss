@@ -1,3 +1,8 @@
+/*=======================================================
+=            Base styles (used in all pages)            =
+=======================================================*/
+
+
 html {
 	width: 100%;
 	height: 100%;
@@ -17,14 +22,8 @@ body {
 	margin: 0 auto;
 	padding-top: 50px;
 	background-color: #C5E9FF;
-	border: 1px solid red;
 }
 
-.logo__image {
-	max-width: 200px;
-}
+/*=====  End of Base styles  ======*/
 
-.main-content {
-	background-color: mistyrose;
-	border: 1px solid red;
-}
+

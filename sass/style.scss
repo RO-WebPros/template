@@ -4,23 +4,24 @@
 	'base/base';
 
 @import
-	'components/buttons',
-	'components/navigation',
-	'components/dropdown',
-	'components/modal',
-	'components/forms',
-	'components/countdown';
-
-@import
 	'helpers/functions',
 	'helpers/helpers',
 	'helpers/mixins';
 
 @import
+	'components/buttons',
+	'components/countdown',
+	'components/forms',
+	'components/modal',
+	'components/navigation';
+
+@import
 	'layout/header',
-	'layout/sidebar',
 	'layout/footer';
 
 @import
 	'pages/home',
+	'pages/about',
+	'pages/services',
 	'pages/contact';
+

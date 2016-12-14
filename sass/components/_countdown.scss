@@ -1,26 +1,28 @@
+/*=================================
+=            Countdown            =
+=================================*/
 
 .counter {
     margin-top: 30px;
     margin-bottom: 30px;
-    border: 1px solid red;
 }
 
     .counter__elements {
-
         color: #333;
-        border: 1px solid red;
     }
 
         .counter__part {
             display: inline-block;
             margin-right: 20px;
             font-family: 'Finger Paint', cursive;
-            border: 1px solid red;
 
             span {
                 font-size: 40px;
                 display: block;
-                border: 1px solid red;
             }
 
         }
+
+/*=====  End of Countdown  ======*/
+
+
