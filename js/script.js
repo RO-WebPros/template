@@ -15,11 +15,12 @@ jQuery(document).ready(function($) {
     });
 
 	/*  Subscribe Box  */ 
-    var newsletterform = $('.newsletter-form');
-    var newsletteralert = $('.newsletter-form .alert-message');    
-    newsletterform.validate({
+    var subscribeform = $('#subscribe-form');
+    var subscribealert = $('#subscribe-form .alert-message');    
+    
+    subscribeform.validate({
         rules: {
-            newsletter_email: {
+            subscribe__email: {
                 required: true,
                 email: true
             }
@@ -34,31 +35,47 @@ jQuery(document).ready(function($) {
 
         },
         submitHandler: function(form) {
-            newsletteralert.html('<i class="fa fa-refresh fa-spin"></i> Success!!!');
-            $.post("subscription.php", newsletterform.serialize(),
+            subscribealert.html('<i class="fa fa-refresh fa-spin"></i> Success!!!');
+            $.post("subscription.php", subscribeform.serialize(),
                 function(data) {
                     var obj = jQuery.parseJSON(data);
-                    newsletteralert.html("<span class='" + obj.error + "'>" + obj.flash + "</span>");                    
+                    subscribealert.html("<span class='" + obj.error + "'>" + obj.flash + "</span>");                    
                     if(obj.error != "error"){                       
-                        newsletterform.trigger("reset");
+                        subscribeform.trigger("reset");
                     }
                     
                     setTimeout(function(){
-                        newsletteralert.fadeOut("slow", function(){
-                            newsletteralert.html('').show();                         
+                        subscribealert.fadeOut("slow", function(){
+                            subscribealert.html('').show();                         
                         });                       
                     }, 2000);
                 });
             return false;
         }
+        
     });
 
+$(".btn-main").hover(function(){
+        if(subscribeform == true){
+            $(".btn-main").css("border-color", "#00FF42");
+        }
+        else{
+             $(".btn-main").css("border-color", "red");
+        }
+        
+        });
 
-
-    
-});
-
-
+        $(".btn-main").focus(function(){
+                if(subscribeform == true){
+                    $(".btn-main").css("border-bottom-color", "#00FF42");
+                }
+                else{
+                     $(".btn-main").css("border-bottom-color", "red");
+                }
+        });
 
 
    
+
+    
+});
