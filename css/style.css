@@ -25,7 +25,9 @@ body {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: #333333;
+  padding: 30px;
+  background-color: #03A9F4;
+  color: #fff;
 }
 
 /*=====  End of Base styles  ======*/
@@ -73,7 +75,6 @@ body {
 }
 
 .form-control {
-  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   height: 43px;
   -webkit-transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1) 0s;
@@ -198,7 +199,6 @@ label {
 .subscribe {
   width: 90%;
   margin: 0 auto;
-  font-family: 'Finger Paint', cursive;
 }
 
 /*=====  End of Forms  ======*/
@@ -207,7 +207,6 @@ label {
 ====================================================*/
 .modal-open .modal {
   overflow-y: hidden;
-  font-family: 'Finger Paint', cursive;
 }
 
 .modal-content {
@@ -257,8 +256,8 @@ label {
 ==================================*/
 .main-nav {
   position: absolute;
-  left: 30px;
-  bottom: 30px;
+  left: 10px;
+  bottom: 0px;
 }
 
 .main-nav__links {
@@ -270,6 +269,7 @@ label {
 }
 
 .main-nav__item {
+  position: relative;
   width: 70px;
   height: 70px;
   margin-right: 10px;
@@ -282,8 +282,31 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.main-nav__item:first-child {
+  border-bottom-left-radius: 15px 30px;
+}
+
+.main-nav__item:last-child {
+  border-top-right-radius: 30px 15px;
+}
+
+.main-nav__item:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0%;
+  height: 0%;
+  background-color: green;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-nav__item:hover:before {
+  width: 100%;
+  height: 100%;
 }
 
 .main-nav__item a {
@@ -300,14 +323,14 @@ label {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
-  color: #717171;
+  color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .main-nav__item a:hover, .main-nav__item a:active {
   text-decoration: none;
-  color: #333333;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .main-nav__item a i {
@@ -439,8 +462,25 @@ label {
 =            Header            =
 ==============================*/
 .main-content {
-  background-color: mistyrose;
-  background-color: rgba(18, 244, 148, 0.3);
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  padding-bottom: 50px;
+  background-color: rgba(51, 51, 51, 0.8);
+  border-bottom-left-radius: 15px 30px;
+  border-top-right-radius: 60px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .logo__image {
@@ -450,6 +490,9 @@ label {
 .header-info {
   width: 100%;
   margin: 10px 0;
+}
+
+.title, .secondary-title {
   font-family: 'Finger Paint', cursive;
 }
 

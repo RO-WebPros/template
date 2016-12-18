@@ -4,10 +4,19 @@
 
 
 .main-content {
-	background-color: mistyrose;
+	position: relative;
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 30px;
+	padding-bottom: 50px;
+	background-color: rgba(#333333, 0.8);
+	border-bottom-left-radius: 15px 30px;
+	border-top-right-radius: 60px 30px;
 
-		background-color: rgba(#12f494 , 0.3);
-
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 }
 
@@ -22,12 +31,19 @@
 	.header-info {
 		width: 100%;
 		margin: 10px 0;
-		font-family: 'Finger Paint', cursive;
 	}
+
+		.title, .secondary-title {
+			font-family: 'Finger Paint', cursive;
+		}
 
 		.header-info__text {
 			font-size: 2em;
 		}
+
+	.subscribe {
+		
+	}
 
 
 
