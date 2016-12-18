@@ -27,32 +27,15 @@ jQuery(document).ready(function($) {
         },
         highlight: function(element, errorClass, validClass) {
             $(element).addClass('form-error');
+            $(".btn-main").addClass('form-error');
         },
         unhighlight: function(element, errorClass, validClass) {
             $(element).removeClass('form-error');
+            $(".btn-main").removeClass('form-error');
         },
         errorPlacement: function(error, element) {
 
-        },
-        submitHandler: function(form) {
-            subscribealert.html('<i class="fa fa-refresh fa-spin"></i> Success!!!');
-            $.post("subscription.php", subscribeform.serialize(),
-                function(data) {
-                    var obj = jQuery.parseJSON(data);
-                    subscribealert.html("<span class='" + obj.error + "'>" + obj.flash + "</span>");                    
-                    if(obj.error != "error"){                       
-                        subscribeform.trigger("reset");
-                    }
-                    
-                    setTimeout(function(){
-                        subscribealert.fadeOut("slow", function(){
-                            subscribealert.html('').show();                         
-                        });                       
-                    }, 2000);
-                });
-            return false;
         }
-        
     });
     
 });
