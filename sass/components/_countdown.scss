@@ -26,6 +26,13 @@
 
         }
 
+@media (max-width: 767px) and (min-width: 480px){
+   
+    .counter__elements .col-sm-3 {
+        width: 50%;
+        float: left;
+    }
+}
 /*=====  End of Countdown  ======*/
 
 

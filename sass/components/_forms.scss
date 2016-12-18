@@ -120,6 +120,19 @@ label {
 
 }
 
+@media (max-width: 690px) and (min-width: 600px){
+   
+    .form-group {
+			width: 50%;
+			padding-left: 0;
+			display: inline-block;
+	}
+	.subscribe__email {
+		width: 70%;
+		min-width: 260px;
+	}
+}
+
 /*=============================
 =            Forms            =
 =============================*/

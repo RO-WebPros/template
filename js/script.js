@@ -54,28 +54,5 @@ jQuery(document).ready(function($) {
         }
         
     });
-
-$(".btn-main").hover(function(){
-        if(subscribeform == true){
-            $(".btn-main").css("border-color", "#00FF42");
-        }
-        else{
-             $(".btn-main").css("border-color", "red");
-        }
-        
-        });
-
-        $(".btn-main").focus(function(){
-                if(subscribeform == true){
-                    $(".btn-main").css("border-bottom-color", "#00FF42");
-                }
-                else{
-                     $(".btn-main").css("border-bottom-color", "red");
-                }
-        });
-
-
-   
-
     
 });
