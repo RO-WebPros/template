@@ -13,40 +13,30 @@
 	background-color: rgba(#333333, 0.8);
 	border-bottom-left-radius: 15px 30px;
 	border-top-right-radius: 60px 30px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: space-between;
 
 }
 
+/* 
+.logo {}
 
-	.logo {}
+	.logo__image {
+		width: 200px;
 
-		.logo__image {
-			width: 200px;
-
-		}
-
+	}
+ */
 	.header-info {
 		width: 100%;
 		margin: 10px 0;
 	}
 
-		.title, .secondary-title {
-			font-family: 'Finger Paint', cursive;
-		}
-
-		.header-info__text {
-			font-size: 2em;
-		}
 
 	.subscribe {
 		
 	}
 
 
-
-/*=====  End of Header Styles  ======*/
 
 

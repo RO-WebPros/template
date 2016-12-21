@@ -5,7 +5,14 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/*=====  End of Typography  ======*/
+.title, .secondary-title {
+  font-family: 'Finger Paint', cursive;
+}
+
+.header-info__text {
+  font-size: 2em;
+}
+
 /*=======================================================
 =            Base styles (used in all pages)            =
 =======================================================*/
@@ -30,11 +37,9 @@ body {
   color: #fff;
 }
 
-/*=====  End of Base styles  ======*/
 /*===============================
 =            Buttons            =
 ===============================*/
-/*=====  End of Buttons  ======*/
 /*=================================
 =            Countdown            =
 =================================*/
@@ -65,7 +70,6 @@ body {
   }
 }
 
-/*=====  End of Countdown  ======*/
 .btn,
 .form-control,
 .form-control:hover,
@@ -201,7 +205,6 @@ label {
   margin: 0 auto;
 }
 
-/*=====  End of Forms  ======*/
 /*====================================================
 =            Modals (Navigation Sections)            =
 ====================================================*/
@@ -250,7 +253,6 @@ label {
           transform: rotate(0deg);
 }
 
-/*=====  End of Modals (Navigation Sections)  ======*/
 /*==================================
 =            Navigation            =
 ==================================*/
@@ -361,7 +363,6 @@ label {
   }
 }
 
-/*=====  End of Navigation  ======*/
 .icon {
   display: inline-block;
   vertical-align: top;
@@ -471,53 +472,33 @@ label {
   background-color: rgba(51, 51, 51, 0.8);
   border-bottom-left-radius: 15px 30px;
   border-top-right-radius: 60px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.logo__image {
-  width: 200px;
-}
+/* 
+.logo {}
 
+	.logo__image {
+		width: 200px;
+
+	}
+ */
 .header-info {
   width: 100%;
   margin: 10px 0;
 }
 
-.title, .secondary-title {
-  font-family: 'Finger Paint', cursive;
-}
-
-.header-info__text {
-  font-size: 2em;
-}
-
-/*=====  End of Header Styles  ======*/
 /*==============================
 =            Footer            =
 ==============================*/
-/*=====  End of Footer  ======*/
 /*=================================================
 =            Home Page specific styles            =
 =================================================*/
-/*=====  End of Home Page specific styles  ======*/
 /*==================================================
 =            About Page specific styles            =
 ==================================================*/
-/*=====  End of About Page specific styles  ======*/
 /*=====================================================
 =            Services Page specific styles            =
 =====================================================*/
-/*=====  End of Services Page specific styles  ======*/
 /*====================================================
 =            Contact Page specific styles            =
 ====================================================*/
-/*=====  End of Contact Page specific styles  ======*/
