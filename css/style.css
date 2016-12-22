@@ -412,6 +412,7 @@ label {
   position: absolute;
   left: 10px;
   bottom: 0px;
+  z-index: 1000;
 }
 
 .main-nav__links {
