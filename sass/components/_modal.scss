@@ -3,10 +3,38 @@
 ====================================================*/
 
 
+.information__content {
+	position: relative;
+}
+
 // Overwrite Bootstrap style to hide default scroll bar
 .modal-open .modal {
 	overflow-y: hidden;
 }
+
+.modal-loader {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	z-index: 1999;
+}
+
+	.modal-loader__animation {
+		position: absolute;
+		width: 900px;
+		height: 2px;
+		margin-left: 10px;
+		border-radius: 6px;
+		background-color: #fff;
+		// transform: scale(0);
+		transform-origin: 50% 0%;
+		animation: modal-load 2s forwards;
+		
+	}
 
 .modal {
 
@@ -29,6 +57,7 @@
 
 				.close {
 					position: relative;
+					z-index: 9999;
 					font-size: 3em;
 					transition: all 0.2s ease-in-out;
 
@@ -56,19 +85,80 @@
 
 
 .modal-effect {
-  transform-origin: 50% 50%;
-  transform: scale(2);
-  opacity: 0;
-  -webkit-transition: all .4s linear;
-  -o-transition: all .4s linear;
-  transition: all .4s linear;
+	// border: 2px solid red;
+	transform-origin: 50% 50%;
+	// transform: scale(2);
+	// opacity: 0;
+	// height: 0;
+	// transition: all 0.3s ease-in-out;
+	
+
+
 }
 
 .modal-effect.in {
-  opacity: 1;
-  transform: scale(1);
+	opacity: 0;
+	animation-name: modal-animation;
+	animation-duration: 1s;
+	animation-delay: 1.9s;
+	animation-fill-mode: forwards;
 
+	.modal-title, .modal-body {
+		opacity: 0;
+		// transform: translateY(50px);
+		animation-name: modal-content;
+		animation-duration: 1s;
+		animation-delay: 2.5s;
+		animation-fill-mode: forwards;
+	}
 
+	.modal-body {
+		animation-delay: 3s;
+	}
 }
 
 
+@keyframes modal-animation {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes modal-load {
+	0% {
+		transform: scale(0) translateY(0);
+	}
+
+	60% {
+		transform: scale(1) translateY(0);
+		height: 10px;
+
+	}
+
+	99% {
+		transform: scale(1);
+		height: 90vh;
+		transform: translateY(-300px);
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes modal-content {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

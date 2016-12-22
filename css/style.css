@@ -208,8 +208,40 @@ label {
 /*====================================================
 =            Modals (Navigation Sections)            =
 ====================================================*/
+.information__content {
+  position: relative;
+}
+
 .modal-open .modal {
   overflow-y: hidden;
+}
+
+.modal-loader {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1999;
+}
+
+.modal-loader__animation {
+  position: absolute;
+  width: 900px;
+  height: 2px;
+  margin-left: 10px;
+  border-radius: 6px;
+  background-color: #fff;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-animation: modal-load 2s forwards;
+          animation: modal-load 2s forwards;
 }
 
 .modal-content {
@@ -224,6 +256,7 @@ label {
 
 .close {
   position: relative;
+  z-index: 9999;
   font-size: 3em;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -251,17 +284,125 @@ label {
 .modal-effect {
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  opacity: 0;
-  -webkit-transition: all .4s linear;
-  transition: all .4s linear;
 }
 
 .modal-effect.in {
-  opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  opacity: 0;
+  -webkit-animation-name: modal-animation;
+          animation-name: modal-animation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.modal-effect.in .modal-title, .modal-effect.in .modal-body {
+  opacity: 0;
+  -webkit-animation-name: modal-content;
+          animation-name: modal-content;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.modal-effect.in .modal-body {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes modal-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes modal-load {
+  0% {
+    -webkit-transform: scale(0) translateY(0);
+            transform: scale(0) translateY(0);
+  }
+  60% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    height: 10px;
+  }
+  99% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    height: 90vh;
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-load {
+  0% {
+    -webkit-transform: scale(0) translateY(0);
+            transform: scale(0) translateY(0);
+  }
+  60% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    height: 10px;
+  }
+  99% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    height: 90vh;
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes modal-content {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes modal-content {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 /*==================================

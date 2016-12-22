@@ -37,5 +37,19 @@ jQuery(document).ready(function($) {
 
         }
     });
+
+
+
+    /* Modal effect */
+
+    $(document).on('click', function() {
+
+        if( $('.modal-effect').hasClass('in') ) {
+            $('.modal-loader__inner').addClass('modal-loader__animation');
+        } else {
+            $('.modal-loader__inner').removeClass('modal-loader__animation')
+        };
+
+    });
     
 });
