@@ -42,14 +42,18 @@ jQuery(document).ready(function($) {
 
     /* Modal effect */
 
-    $(document).on('click', function() {
+    /*$(document).on('click', function() {
 
         if( $('.modal-effect').hasClass('in') ) {
-            $('.modal-loader__inner').addClass('modal-loader__animation');
+
+            $('.modal-effect').removeClass('out');
+
         } else {
-            $('.modal-loader__inner').removeClass('modal-loader__animation')
+
+            $('.modal-effect').addClass('out');
+            
         };
 
-    });
+    });*/
     
 });
