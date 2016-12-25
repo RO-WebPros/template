@@ -66,13 +66,16 @@
 					}
 				}
 
+				.modal-title {
+					text-align: center;
+				}
+
 			.modal-body {
 				// border: 2px solid red;
 				height: 80vh;
 				padding-top: 0;
 				overflow: hidden;
 				background-color: transparent;
-
 				animation-name: anim-elem-open;
 				animation-duration: 0.6s;
 				animation-fill-mode: forwards;
