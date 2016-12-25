@@ -533,10 +533,6 @@ label {
 /*==================================================
 =            About Page specific styles            =
 ==================================================*/
-.caption {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .caption h3 {
   background-color: rgba(0, 0, 0, 0.3);
 }
