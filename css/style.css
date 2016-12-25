@@ -24,7 +24,6 @@ html {
 body {
   height: 100%;
   overflow: hidden;
-  text-align: center;
 }
 
 .wrapper {
@@ -266,6 +265,10 @@ label {
   outline: none;
 }
 
+.modal-title {
+  text-align: center;
+}
+
 .modal-body {
   height: 80vh;
   padding-top: 0;
@@ -485,6 +488,7 @@ label {
   margin: 0 auto;
   padding: 30px;
   padding-bottom: 50px;
+  text-align: center;
   background-color: rgba(51, 51, 51, 0.8);
   border-bottom-left-radius: 15px 30px;
   border-top-right-radius: 60px 30px;
