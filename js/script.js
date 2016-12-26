@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 	});
 
     /*  Countdown timmer  */
-  $('.counter').countdown('2016/12/25', function(event) {
+  $('.counter').countdown('2017/01/3', function(event) {
         var offset = event.offset;
         $('#cday').text(offset.totalDays);
         $('#chours').text(''.concat(offset.hours < 10 ? '0' : '', offset.hours));
