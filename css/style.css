@@ -91,7 +91,6 @@ body {
   border-width: 0 0 3px 0;
   border-style: solid;
   border-color: #00FF42;
-  border-bottom-left-radius: 15px 30px;
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -120,7 +119,6 @@ label {
   padding: 13px 30px;
   text-transform: uppercase;
   border-radius: 0;
-  border-top-right-radius: 15px 30px;
 }
 
 .btn-main {
@@ -494,8 +492,6 @@ label {
   padding-bottom: 50px;
   text-align: center;
   background-color: rgba(51, 51, 51, 0.8);
-  border-bottom-left-radius: 15px 30px;
-  border-top-right-radius: 60px 30px;
   color: #fff;
 }
 
