@@ -12,32 +12,8 @@
 	overflow-y: hidden;
 }
 
-.modal-loader {
-	position: fixed;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	z-index: 1999;
-}
-
-	.modal-loader__animation {
-		position: absolute;
-		width: 900px;
-		height: 2px;
-		margin-left: 10px;
-		border-radius: 6px;
-		background-color: #fff;
-		// transform: scale(0);
-		transform-origin: 50% 0%;
-		animation: modal-load 2s forwards cubic-bezier(0.7,0,0.3,1);
-		
-	}
-
 .modal {
-
+	color: $text-black;
 }
 
 	.modal-dialog {
@@ -72,6 +48,7 @@
 
 			.modal-body {
 				// border: 2px solid red;
+
 				height: 80vh;
 				padding-top: 0;
 				overflow: hidden;
@@ -102,6 +79,18 @@
 		animation-fill-mode: forwards;
 		animation-timing-function: cubic-bezier(0.7,0,0.3,1);
 	}
+
+	&:nth-child(1) {
+		transform-origin: 0 100%;
+	}
+
+	&:nth-child(2) {
+		transform-origin: 50% 50%;
+	}
+
+	&:nth-child(3) {
+		transform-origin: 100% 100%;
+	}
 }
 
 
@@ -110,10 +99,12 @@
 	0% { 
 		opacity: 0;
 		// transform: translate3d(-400px, 0, 0) scale3d(1.4, 0, 1);
+		/* transform: scale(0); */
 	}
 	
 	100% {
 		opacity: 1; 
 		// transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+		// transform: scale(1);
 	}
 }
