@@ -11,22 +11,17 @@
 	padding: 30px;
 	padding-bottom: 50px;
 	text-align: center;
-	background-color: rgba(#333333, 0.8);
-	color: #fff;
+	background-color: rgba($background-color, 0.8);
+	color: $text-white;
 }
 
-/* 
-.logo {}
-
-	.logo__image {
-		width: 200px;
-
-	}
- */
 	.header-info {
-		width: 100%;
-		margin: 10px 0;
+		// border: 1px solid red;
 	}
+
+		.main-title {}
+
+		.header-info__text {}
 
 
 	.subscribe {
