@@ -101,6 +101,7 @@ body {
 
 .form-control:focus {
   background: rgba(0, 0, 0, 0.3);
+  border-color: #00FF42;
 }
 
 .form-control::-moz-placeholder {
@@ -488,6 +489,39 @@ label {
 /*=====================================================
 =            Services Page specific styles            =
 =====================================================*/
+.services__list-item {
+  padding: 10px 100px;
+}
+
+.services__list-item i {
+  font-size: 3em;
+  vertical-align: middle;
+  height: 100%;
+  padding-top: 30%;
+}
+
+.services_icon {
+  float: left;
+  text-align: center;
+  height: 150px;
+}
+
+.services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 75vh;
+}
+
 /*====================================================
 =            Contact Page specific styles            =
 ====================================================*/
