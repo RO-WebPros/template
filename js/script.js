@@ -27,11 +27,11 @@ jQuery(document).ready(function($) {
         },
         highlight: function(element, errorClass, validClass) {
             $(element).addClass('form-error');
-            $(".btn-main").addClass('form-error');
+            $(".subscribe__button").addClass('form-error');
         },
         unhighlight: function(element, errorClass, validClass) {
             $(element).removeClass('form-error');
-            $(".btn-main").removeClass('form-error');
+            $(".subscribe__button").removeClass('form-error');
         },
         errorPlacement: function(error, element) {
 

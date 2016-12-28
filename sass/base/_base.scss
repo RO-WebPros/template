@@ -2,6 +2,12 @@
 =            Base styles (used in all pages)            =
 =======================================================*/
 
+::selection {
+  background: rgba($main-color, 0.4);
+}
+::-moz-selection {
+  background: rgba($main-color, 0.4);
+}
 
 html {
 	width: 100%;

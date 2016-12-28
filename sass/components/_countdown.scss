@@ -8,14 +8,14 @@
 }
 
     .counter__elements {
-        color: #fff;
+        color: $text-white;
 
     }
 
         .counter__part {
             display: inline-block;
             margin-right: 20px;
-            font-family: 'Finger Paint', cursive;
+            font-family: $finger-paint;
 
 
             span {
