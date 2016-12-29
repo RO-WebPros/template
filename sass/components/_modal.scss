@@ -48,13 +48,14 @@
 
 			.modal-body {
 				// border: 2px solid red;
-
+				opacity: 0;
 				height: 80vh;
 				padding-top: 0;
 				overflow: hidden;
 				background-color: transparent;
-				animation-name: anim-elem-open;
-				animation-duration: 0.6s;
+				animation-name: content-animation;
+				animation-duration: 0.4s;
+				animation-delay: 0.6s;
 				animation-fill-mode: forwards;
 				animation-timing-function: cubic-bezier(0.7,0,0.3,1);
 
@@ -74,7 +75,7 @@
 
 	&.in {
 		animation-name: modal-animation;
-		animation-duration: 0.2s;
+		animation-duration: 0.6s;
 		animation-delay: 0s;
 		animation-fill-mode: forwards;
 		animation-timing-function: cubic-bezier(0.7,0,0.3,1);
@@ -100,11 +101,25 @@
 		opacity: 0;
 		// transform: translate3d(-400px, 0, 0) scale3d(1.4, 0, 1);
 		/* transform: scale(0); */
+		transform: scale(2) rotate(45deg);
 	}
 	
 	100% {
 		opacity: 1; 
 		// transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
 		// transform: scale(1);
+		transform: scale(1) rotate(0deg);
+	}
+}
+
+@keyframes content-animation {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }

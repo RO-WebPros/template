@@ -4,8 +4,8 @@
 
 .main-nav {
 	position: absolute;
-	left: 10px;
-	bottom: 0px;
+	left: 30px;
+	bottom: 10px;
 	z-index: 1000;
 }
 
@@ -17,33 +17,30 @@
 
 		.main-nav__item {
 			position: relative;
-			width: 60px;
-			height: 60px;
-			margin-right: 10px;
+			width: 45px;
+			height: 45px;
+			margin-right: 35px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background-color: darken($background-color, 10%);
+			// background-color: darken($background-color, 10%);
+			// border: 2px solid darken($background-color, 10%);
 
 			.main-nav__link {
 				cursor: pointer;
-				width: 60px;
-				height: 60px;
+				width: 45px;
+				height: 45px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				text-decoration: none;
-				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-				color: #fff;
-				transition: all 0.3s ease-in-out;
-
-				&:hover, &:active {
-					text-decoration: none;
-					color: rgba(#fff, 0.8);
-				}
+				text-shadow: 2px 2px 4px rgba($main-color, 0.3);
+				color: $main-color;
+				transition: all 0.5s ease-in-out;
 
 				i {
-					font-size: 1.7rem;
+					font-size: 1.4rem;
+					transition: all 0.3s ease-in-out;
 				}
 
 				&:before {
@@ -54,46 +51,48 @@
 					top: 0;
 					width: 100%;
 					height: 100%;
-					transform: scale(0);
-					transform-origin: 0 100%;
+					z-index: -10;
+					transform: scale(1) rotate(0deg);
+					transform-origin: 50% 50%;
 					background-color: $main-color;
+					transition: all 0.3s ease-in-out;
+				}
+
+				&:after {
+					position: absolute;
+					content: '';
+					display: block;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					z-index: -5;
+					transform: scale(1.1) rotate(45deg);
+					transform-origin: 50% 50%;
+					background-color: $text-white;
 					transition: all 0.3s ease-in-out;
 				}
 
 				&:hover {
 
+					i {
+						color: $text-white;
+					}
+
 					&:before {
-						transform: scale(1);
+						transform: scale(1.2) rotate(45deg);
+						background-color: $text-white;
+					}
+
+					&:after {
+						transform: scale(1) rotate(-45deg);
+						background-color: $main-color;
 					}
 
 				}
 
 			}
 
-		
-		&:nth-child(1) {
-			.main-nav__link {
-				&:before {
-					transform-origin: 0 100%;
-				}
-			}
-		}
-
-		&:nth-child(2) {
-			.main-nav__link {
-				&:before {
-					transform-origin: 50% 50%;
-				}
-			}
-		}
-
-		&:nth-child(3) {
-			.main-nav__link {
-				&:before {
-					transform-origin: 100% 100%;
-				}
-			}
-		}
 
 }
 
