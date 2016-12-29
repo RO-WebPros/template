@@ -521,7 +521,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 500px) {
   .about__history {
     padding: 5px 15px;
   }
