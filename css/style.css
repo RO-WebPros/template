@@ -464,6 +464,72 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.about__description {
+  padding: 10px 50px;
+  font-size: 2em;
+}
+
+.about__history {
+  padding: 10px 50px;
+}
+
+.about__icons {
+  height: 55px;
+  position: relative;
+}
+
+.about__history h2 {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.about__process {
+  padding: 10px 30px;
+}
+
+.about__process h2 {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.about__title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.services__content h3 {
+  margin: 25px 0;
+}
+
+.about__title-block {
+  height: 55px;
+}
+
+.about__process div i {
+  font-size: 2em;
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+  .services_icon {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .about__history {
+    padding: 5px 15px;
+  }
+  .about__process {
+    padding: 5px 15px;
+  }
+}
+
 /*=====================================================
 =            Services Page specific styles            =
 =====================================================*/
@@ -498,6 +564,22 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 75vh;
+}
+
+.services__content h3 {
+  margin: 25px 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .services_icon {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .services__list-item {
+    padding: 5px 15px;
+  }
 }
 
 /*====================================================
