@@ -56,6 +56,21 @@ body {
   background-size: cover;
 }
 
+:before, :after {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 /*===============================
 =            Buttons            =
 ===============================*/
@@ -388,7 +403,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.main-nav__item .main-nav__link:before {
+.main-nav__item .main-nav__link:before, .main-nav__item .main-nav__link:after {
   position: absolute;
   content: '';
   display: block;
@@ -396,32 +411,25 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: -10;
-  -webkit-transform: scale(1) rotate(0deg);
-          transform: scale(1) rotate(0deg);
+  cursor: pointer;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  background-color: #03A9F4;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
+.main-nav__item .main-nav__link:before {
+  z-index: -10;
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  background-color: #03A9F4;
+}
+
 .main-nav__item .main-nav__link:after {
-  position: absolute;
-  content: '';
-  display: block;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   z-index: -5;
   -webkit-transform: scale(1.1) rotate(45deg);
           transform: scale(1.1) rotate(45deg);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
   background-color: #F7FAFF;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .main-nav__item .main-nav__link:hover i {
