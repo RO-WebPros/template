@@ -26,3 +26,28 @@
 	justify-content: center;
 	min-height: 75vh; 
 }
+
+.services__content h3 {
+ 
+ 	margin: 25px 0;
+
+}
+
+@media only screen and (max-width: 992px) {
+
+	
+	.services_icon {
+		height: auto;
+	}
+
+}
+
+@media only screen and (max-width: 500px) {
+	
+.services__list-item {
+
+    padding: 5px 15px;
+
+}
+
+}
