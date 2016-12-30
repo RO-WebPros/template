@@ -239,6 +239,18 @@ body {
 .alert-message .error {
   color: #FF3434;
   border: 0px solid blue;
+  position: absolute;
+  left: 450px;
+  top: 640px;
+  margin-top: 30px;
+}
+
+.error-message {
+  position: absolute;
+  display: block;
+  margin: 15px auto 0;
+  border: 5px solid blue;
+  color: white;
 }
 
 /*=============================
@@ -256,6 +268,18 @@ body {
 @media only screen and (max-width: 520px) {
   .subscribe__email {
     min-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .subscribe__button {
+    margin-bottom: 50px;
+  }
+  .error-message {
+    margin: 70px auto 0;
+    width: 100%;
+    text-align: center;
+    margin-left: -45px;
   }
 }
 

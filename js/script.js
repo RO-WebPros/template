@@ -15,8 +15,9 @@
     });
 
 
+    var subscribe = $("#subscribe-form")
 
-$("#subscribe-form").validate({
+        subscribe.validate({
                     rules: {
                         subscribe__email: {
                             required: true,
@@ -25,53 +26,77 @@ $("#subscribe-form").validate({
                     },
                     messages: {
                         subscribe__email:{
-                            required: "Please enter a valid email",
+                            required: "Please enter an email address",
                             email: 'Please enter a <em> valid </em> email address'
                         }
                     },
 
                     highlight: function(element, errorClass, validClass) {
                     $(element).addClass('form-error');
-                    $(".subscribe__button").addClass('form-error');
+                        $(".subscribe__button").addClass('form-error');
                     },
                     unhighlight: function(element, errorClass, validClass) {
                     $(element).removeClass('form-error');
-                    $(".subscribe__button").removeClass('form-error');
+                        $(".subscribe__button").removeClass('form-error');
                     },
                     errorPlacement: function(error, element) {
 
                         offset = element.offset();
                         error.insertAfter(element)
-                        error.addClass('alert-message');  // add a class to the wrapper
-                        error.css('position', 'static');
-                        error.css('left', offset.left + element.outerWidth());
-                        error.css('top', offset.top);
-
+                        error.addClass('error-message');  // add a class to the wrapper
                     },
                     
 
                 });
 
+
+
+    var contact = $("#contact-form")
+        contact.validate({    
+                 rules: {
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        name: {
+                            required: true,
+                            nowhitespace: true,
+                            lettersonly: true,
+                        }
+                    },
+
+                    messages: {
+                        email: {
+                            required: "Please enter an email address",
+                            email: 'Please enter a <em> valid </em> email address'
+                        }
+                        name: {
+                            required: "Please enter a name",
+                            nowhitespace: "Please enter a valid name without whitespace"
+                            lettersonly: "Please enter a valid name without numbers"
+                        }
+                    },
+
+                     highlight: function(element, errorClass, validClass) {
+                    $(element).addClass('form-error');
+                        $(".subscribe__button").addClass('form-error');
+                    },
+                    unhighlight: function(element, errorClass, validClass) {
+                    $(element).removeClass('form-error');
+                        $(".subscribe__button").removeClass('form-error');
+                    },
+                    errorPlacement: function(error, element) {
+
+                        offset = element.offset();
+                        error.insertAfter(element)
+                        error.addClass('error-message');  // add a class to the wrapper
+                        error.css("position", "static");
+                    },
+   
+    });   
+
 $.validator.methods.email = function( value, element ) {
                      return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
                     }
 
-
-    /* Modal effect */
-
-    /*$(document).on('click', function() {
-
-        if( $('.modal-effect').hasClass('in') ) {
-
-            $('.modal-effect').removeClass('out');
-
-        } else {
-
-            $('.modal-effect').addClass('out');
-            
-        };
-
-    });*/
-    
-    
 });
