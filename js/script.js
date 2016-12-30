@@ -1,4 +1,4 @@
-        jQuery(document).ready(function($) {
+jQuery(document).ready(function($) {
 	
 	/*  Modal settings  */
 	$(".modal-body").mCustomScrollbar({
@@ -61,7 +61,7 @@
                         name: {
                             required: true,
                             nowhitespace: true,
-                            lettersonly: true,
+                            lettersonly: true
                         }
                     },
 
@@ -69,10 +69,10 @@
                         email: {
                             required: "Please enter an email address",
                             email: 'Please enter a <em> valid </em> email address'
-                        }
+                        },
                         name: {
                             required: "Please enter a name",
-                            nowhitespace: "Please enter a valid name without whitespace"
+                            nowhitespace: "Please enter a valid name without whitespace",
                             lettersonly: "Please enter a valid name without numbers"
                         }
                     },
