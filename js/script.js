@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+        jQuery(document).ready(function($) {
 	
 	/*  Modal settings  */
 	$(".modal-body").mCustomScrollbar({
@@ -23,6 +23,9 @@ jQuery(document).ready(function($) {
             subscribe__email: {
                 required: true,
                 email: true
+                messages: {
+                    required: "Required email",
+                }
             }
         },
         highlight: function(element, errorClass, validClass) {
@@ -35,7 +38,26 @@ jQuery(document).ready(function($) {
         },
         errorPlacement: function(error, element) {
 
-        }
+        },
+        // submitHandler: function(form) {
+        //     subscribealert.html('<i class="fa fa-refresh fa-spin"></i> Please wait');
+        //     $.post("subscription.php", subscribeform.serialize(),
+        //         function(data) {
+        //             var obj = jQuery.parseJSON(data);
+        //             subscribealert.html("<span class='" + obj.error + "'>" + obj.flash + "</span>");                    
+        //             if(obj.error != "error"){                       
+        //                 subscribeform.trigger("reset");
+        //             }
+                    
+        //             setTimeout(function(){
+        //                 subscribealert.fadeOut("slow", function(){
+        //                     subscribealert.html('').show();                         
+        //                 });                       
+        //             }, 2000);
+        //         });
+        //     return false;
+        // }
+
     });
 
 
