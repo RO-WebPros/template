@@ -14,52 +14,47 @@
         $('#cseconds').text(''.concat(offset.seconds < 10 ? '0' : '', offset.seconds));
     });
 
-	/*  Subscribe Box  */ 
-    var subscribeform = $('#subscribe-form');
-    var subscribealert = $('#subscribe-form .alert-message');    
-    
-    subscribeform.validate({
-        rules: {
-            subscribe__email: {
-                required: true,
-                email: true
-                messages: {
-                    required: "Required email",
-                }
-            }
-        },
-        highlight: function(element, errorClass, validClass) {
-            $(element).addClass('form-error');
-            $(".subscribe__button").addClass('form-error');
-        },
-        unhighlight: function(element, errorClass, validClass) {
-            $(element).removeClass('form-error');
-            $(".subscribe__button").removeClass('form-error');
-        },
-        errorPlacement: function(error, element) {
 
-        },
-        // submitHandler: function(form) {
-        //     subscribealert.html('<i class="fa fa-refresh fa-spin"></i> Please wait');
-        //     $.post("subscription.php", subscribeform.serialize(),
-        //         function(data) {
-        //             var obj = jQuery.parseJSON(data);
-        //             subscribealert.html("<span class='" + obj.error + "'>" + obj.flash + "</span>");                    
-        //             if(obj.error != "error"){                       
-        //                 subscribeform.trigger("reset");
-        //             }
+
+$("#subscribe-form").validate({
+                    rules: {
+                        subscribe__email: {
+                            required: true,
+                            email: true
+                        }
+                    },
+                    messages: {
+                        subscribe__email:{
+                            required: "Please enter a valid email",
+                            email: 'Please enter a <em> valid </em> email address'
+                        }
+                    },
+
+                    highlight: function(element, errorClass, validClass) {
+                    $(element).addClass('form-error');
+                    $(".subscribe__button").addClass('form-error');
+                    },
+                    unhighlight: function(element, errorClass, validClass) {
+                    $(element).removeClass('form-error');
+                    $(".subscribe__button").removeClass('form-error');
+                    },
+                    errorPlacement: function(error, element) {
+
+                        offset = element.offset();
+                        error.insertAfter(element)
+                        error.addClass('alert-message');  // add a class to the wrapper
+                        error.css('position', 'static');
+                        error.css('left', offset.left + element.outerWidth());
+                        error.css('top', offset.top);
+
+                    },
                     
-        //             setTimeout(function(){
-        //                 subscribealert.fadeOut("slow", function(){
-        //                     subscribealert.html('').show();                         
-        //                 });                       
-        //             }, 2000);
-        //         });
-        //     return false;
-        // }
 
-    });
+                });
 
+$.validator.methods.email = function( value, element ) {
+                     return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+                    }
 
 
     /* Modal effect */
@@ -77,5 +72,6 @@
         };
 
     });*/
+    
     
 });

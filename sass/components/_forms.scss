@@ -54,15 +54,23 @@
 
 .form-error {
     border-color: #FF3434 !important;
+
 }
 
 .alert-message {
     margin-top: 20px;
+    border: 0px solid red;
 }
 
 	.alert-message .error {
 	    color: #FF3434;
+	    border: 0px solid blue;
+	    // position: absolute;
+	    // left: 450px;
+	    // top: 640px;
+	    // margin-top: 30px;
 	}
+
 
 /*=============================
 =            Forms            =

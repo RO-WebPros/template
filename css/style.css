@@ -233,10 +233,12 @@ body {
 
 .alert-message {
   margin-top: 20px;
+  border: 0px solid red;
 }
 
 .alert-message .error {
   color: #FF3434;
+  border: 0px solid blue;
 }
 
 /*=============================
