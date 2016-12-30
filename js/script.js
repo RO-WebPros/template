@@ -14,6 +14,7 @@
         $('#cseconds').text(''.concat(offset.seconds < 10 ? '0' : '', offset.seconds));
     });
 
+    /*Subscribe-form*/
 
     var subscribe = $("#subscribe-form")
 
@@ -50,7 +51,7 @@
                 });
 
 
-
+    /*Contact-form*/
     var contact = $("#contact-form")
         contact.validate({    
                  rules: {
@@ -58,42 +59,55 @@
                             required: true,
                             email: true
                         },
-                        name: {
-                            required: true,
-                            nowhitespace: true,
-                            lettersonly: true,
-                        }
+                        
+                        // name: {
+                        //     required: true,
+                        //     nowhitespace: true,
+                        //     lettersonly: true
+                        // }
                     },
 
                     messages: {
                         email: {
-                            required: "Please enter an email address",
+                            required: 'Please enter an email address',
                             email: 'Please enter a <em> valid </em> email address'
-                        }
-                        name: {
-                            required: "Please enter a name",
-                            nowhitespace: "Please enter a valid name without whitespace"
-                            lettersonly: "Please enter a valid name without numbers"
-                        }
+                        },
                     },
 
-                     highlight: function(element, errorClass, validClass) {
+                    highlight: function(element, errorClass, validClass) {
                     $(element).addClass('form-error');
-                        $(".subscribe__button").addClass('form-error');
+                        $(".contact__button").addClass('form-error');
                     },
                     unhighlight: function(element, errorClass, validClass) {
                     $(element).removeClass('form-error');
-                        $(".subscribe__button").removeClass('form-error');
+                        $(".contact__button").removeClass('form-error');
                     },
                     errorPlacement: function(error, element) {
 
                         offset = element.offset();
                         error.insertAfter(element)
-                        error.addClass('error-message');  // add a class to the wrapper
-                        error.css("position", "static");
+                        error.addClass('error-message--contact');  // add a class to the wrapper
+                        
                     },
-   
+                    
     });   
+
+        var error_name = false;
+
+        function check_username(){
+            var username_lenght = $("#name").val().lenght;
+
+            if (username_lenght < 5 || username_lenght > 20) {
+                $(".alert-message").html("Should be between 5-20 characters");
+                $(".alert-message").show();
+                error_name = true;
+            } else {
+                $(".alert-message").hide();
+            }
+
+
+
+        }
 
 $.validator.methods.email = function( value, element ) {
                      return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
