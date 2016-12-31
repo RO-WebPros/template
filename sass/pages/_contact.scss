@@ -2,45 +2,140 @@
 =            Contact Page specific styles            =
 ====================================================*/
 
-
-.contact__social-icons {
-    list-style-type: none;
-    margin: 0 auto;
+.contact__info {
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
-.social-item {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    margin-right: 30px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    
+        .contact__title {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
 
-    .facebook {
-        @include button-effect(30px, 30px, $facebook, $text-white);
+        .contact__title--right {
+            margin-right: 10px;
+        }
+
+        .contact__title--form {
+            font-size: 2.5rem;
+        }
+
+        .contact__information {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin-bottom: 15px;
+                font-size: 2rem;
+
+                i {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+    .contact__social {
+        text-align: right;
     }
 
-    .twitter {
-        @include button-effect(30px, 30px, $twitter, $text-white);
-    }
+        .contact__social-icons {
+            list-style-type: none;
+            margin: 0 auto;
+        }
 
-    .googleplus {
-        @include button-effect(30px, 30px, $googleplus, $text-white);
-    }
+            .social-item {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                margin-right: 30px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
 
-    .linkedin {
-        @include button-effect(30px, 30px, $linkedin, $text-white);
-    }
-}
+                &:last-child {
+                    margin-right: 10px;
+                }
+
+                .facebook {
+                    @include button-effect(50px, 50px, $facebook, $text-white);
+                }
+
+                .twitter {
+                    @include button-effect(50px, 50px, $twitter, $text-white);
+                }
+
+                .googleplus {
+                    @include button-effect(50px, 50px, $googleplus, $text-white);
+                }
+
+                .linkedin {
+                    @include button-effect(50px, 50px, $linkedin, $text-white);
+                }
+            }
 
 
 .contact__form {
-    text-align: center;
+    margin-bottom: 30px;
+}
 
-    .input-group {
-        // display: block;
-        margin: 0 auto;
+    .contact-form {
         width: 70%;
+
+        .form-group {
+            position: relative;
+        }
+
+            .form-name, .form-email, .form-message {
+                background-color: transparent;
+                margin-top: 30px;
+
+                &:focus, &:valid {
+                    + .contact__label {
+                        transform: translate(-6px, -30px);
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            .form-message {
+                resize: vertical;
+            }
+
+        .contact__label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            line-height: 43px;
+            padding-left: 12px;
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(#000, 0.7);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+
+
+
+
+
+.content-separator {
+    width: 100%; 
+    position: relative; 
+
+    .mask { 
+        overflow: hidden;
+        height: 20px; 
+
+        &:after { 
+            content: ''; 
+            display: block;
+            margin: -25px auto 0;
+            width: 100%; 
+            height: 25px;  
+            border-radius: 125px / 12px;  
+            box-shadow: 0 0 10px rgba(darken($main-color, 30%), 0.4);
+        }
     }
 }

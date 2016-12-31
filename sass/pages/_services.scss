@@ -3,7 +3,9 @@
 =====================================================*/
 
 .services__list-item {
- 	padding: 10px 100px;
+ 	padding: 0px 50px;
+ 	margin-bottom: 30px;
+ 	margin-top: 30px;
 }
 
 .services__list-item i {
@@ -17,6 +19,7 @@
     float: left;
     text-align: center;
     height: 150px;
+    height: auto;
 }
 
 .services__list {
@@ -28,9 +31,8 @@
 }
 
 .services__content h3 {
- 
- 	margin: 25px 0;
-
+ 	// margin: 25px 0;
+ 	margin-top: 0;
 }
 
 @media only screen and (max-width: 992px) {

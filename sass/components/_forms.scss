@@ -88,50 +88,50 @@
 
 .form-control {
 	min-width: 300px;
-		font-size: 13px;
-		height: 43px;
-		letter-spacing: 2px;
-		border-width: 0 0 3px 0;
-		border-style: solid;
-		border-color: $main-color;
-		background: rgba(0,0,0,.2);
-		transition: all 0.3s ease-in-out;
-	
-		&:focus { 
-			background: rgba(0,0,0,.3);
-		}
-	
-		&::-moz-placeholder {
-			opacity: 1;
-			color: rgba(255,255,255,.85);
-		}
+	font-size: 13px;
+	height: 43px;
+	letter-spacing: 2px;
+	border-width: 0 0 3px 0;
+	border-style: solid;
+	border-color: $main-color;
+	background: rgba(0,0,0,.2);
+	transition: all 0.3s ease-in-out;
 
-		&:-ms-input-placeholder {
-			color: rgba(255,255,255,.85);
-		}
+	&:focus { 
+		background: rgba(0,0,0,.3);
+	}
 
-		&::-webkit-input-placeholder {
-			color: rgba(255,255,255,.85);
-		}
+	&::-moz-placeholder {
+		opacity: 1;
+		color: rgba(255,255,255,.85);
+	}
+
+	&:-ms-input-placeholder {
+		color: rgba(255,255,255,.85);
+	}
+
+	&::-webkit-input-placeholder {
+		color: rgba(255,255,255,.85);
+	}
 
 }
 
 .contact__button {
 	padding: 13px 30px;
-	    border-width: 0 0 3px 0;
-	    border-style: solid;
-	    border-color: $main-color;
-	    font-size: 11px;
-	    font-weight: 700;
-	    letter-spacing: 2px;
-		text-transform: uppercase;
-	    background: rgba(0,0,0,.2);
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    border-color: $main-color;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+	text-transform: uppercase;
+    background: rgba(0,0,0,.2);
 
-	    &:hover,
-	    &:focus {
-	        color: #fff;
-	        background: rgba(0,0,0,.3);
-	    }
+    &:hover,
+    &:focus {
+        color: #fff;
+        background: rgba(0,0,0,.3);
+    }
 }
 
 .alert-message {
@@ -168,11 +168,11 @@
 		margin-bottom: 50px;
 	}
 	.error-message {
-	margin: 70px auto 0;
-	width: 100%;
-	text-align: center;
-	margin-left: -45px;
+		margin: 70px auto 0;
+		width: 100%;
+		text-align: center;
+		margin-left: -45px;
 
-}
+	}
 
 }
