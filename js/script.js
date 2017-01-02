@@ -59,12 +59,6 @@ jQuery(document).ready(function($) {
                             required: true,
                             email: true
                         }
-                        
-                        // name: {
-                        //     required: true,
-                        //     nowhitespace: true,
-                        //     lettersonly: true
-                        // }
                     },
 
                     messages: {

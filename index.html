@@ -186,6 +186,10 @@
 								<p class="about__description">
 									Over the last 2 years , we are experienced in frontend and backend development technologies including advanced HTML, CSS, Bootstrap, Wordpress, PHP, MySQL, jQuery. Demonstrated understanding web technologies and design principles, we have great future plans and projects to be done.
 								</p>
+
+								<div class="content-separator">
+									<div class="mask"></div>
+								</div>
 								
 								<div class="about__history">
 									<h2 class="secondary-title">History About Us</h2>
@@ -205,6 +209,10 @@
 										</div>
 
 									</div>
+								</div>
+
+								<div class="content-separator">
+									<div class="mask"></div>
 								</div>
 
 
@@ -295,6 +303,11 @@
 											</div>
 										</div>
 									</div>
+
+									<div class="content-separator">
+										<div class="mask"></div>
+									</div>
+
 									<div class="col-md-12 services__list-item">
 										<div class="row">
 											<div class="col-md-2 services_icon">
@@ -309,6 +322,10 @@
 										</div>
 									</div>
 
+									<div class="content-separator">
+										<div class="mask"></div>
+									</div>
+
 									<div class="col-md-12 services__list-item">
 										<div class="row">
 												<div class="col-md-2 services_icon">
@@ -321,7 +338,12 @@
 												</div>
 											</div>
 										</div>
-									</div>		
+									</div>
+
+									<div class="content-separator">
+										<div class="mask"></div>
+									</div>
+
 									<div class="col-md-12 services__list-item">
 										<div class="row">
 												<div class="col-md-2 services_icon">
@@ -363,91 +385,99 @@
 
 							<div class="modal-body">
 
-								<div class="row">
+								<div class="contact__info">
+								
+									<div class="row">
 
-									<div class="col-md-6">
+										<div class="col-md-6">
 
-										<p class="contact__description">Keep in touch with us</p>
+											<h3 class="contact__title">Keep in touch with us</h3>
 
-										<ul class="contact__information">
-											<li>
-												<i class="fa fa-home" aria-hidden="true"></i>
-												849 Hill St, Oklahoma City, UT
-											</li>
-
-											<li>
-												<i class="fa fa-phone" aria-hidden="true"></i>
-												(389) 252-7012
-											</li>
-
-											<li>
-												<i class="fa fa-envelope" aria-hidden="true"></i>
-												<a href="mailto:email@example.com">email@example.com</a>
-											</li>
-										</ul>
-
-									</div>
-
-
-
-									<div class="col-md-6">
-
-										<div class="contact__social">
-
-											<p>Places to find us</p>
-
-											<ul class="contact__social-icons">
-												<li class="social-item">
-													<a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+											<ul class="contact__information">
+												<li>
+													<i class="fa fa-home" aria-hidden="true"></i>
+													849 Hill St, Oklahoma City, UT
 												</li>
 
-												<li class="social-item">
-													<a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+												<li>
+													<i class="fa fa-phone" aria-hidden="true"></i>
+													(389) 252-7012
 												</li>
 
-												<li class="social-item">
-													<a href="#" class="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-												</li>
-
-												<li class="social-item">
-													<a href="#" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+												<li>
+													<i class="fa fa-envelope" aria-hidden="true"></i>
+													<a href="mailto:email@example.com">email@example.com</a>
 												</li>
 											</ul>
 
-										</div> <!-- contact__social -->
+										</div>
 
-									</div>
-								</div> <!-- row -->
+										<div class="col-md-6">
 
+											<div class="contact__social">
 
+												<h3 class="contact__title contact__title--right">Places to find us</h3>
+
+												<ul class="contact__social-icons">
+													<li class="social-item">
+														<a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+													</li>
+
+													<li class="social-item">
+														<a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+													</li>
+
+													<li class="social-item">
+														<a href="#" class="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+													</li>
+
+													<li class="social-item">
+														<a href="#" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+													</li>
+												</ul>
+
+											</div> <!-- contact__social -->
+
+										</div>
+
+									</div> <!-- row -->
+
+								</div> <!-- contact__info -->
+
+								<div class="content-separator">
+									<div class="mask"></div>
+								</div>
 
 								<div class="contact__form">
 
-									<div class="contact__form-info">Send us a message, and we'll get back to you soon.</div>
+									<h3 class="contact__title contact__title--form">Send us a message below, and we'll get back to you soon.</h3>
 									
 									<form class="contact-form" action="#" id="contact-form">
 
-										<div class="input-group">
-											<label for="name">Name:</label>
-											<input type="name" class="form-control form-name" id="name">
+										<div class="form-group">
+											<input type="name" class="form-control form-name" id="name" required>
+											<label class="contact__label" for="name">Name:</label>
 										</div>
 										
-										<div class="input-group">
-											<label for="email">Email address:</label>
-											<input type="email" class="form-control form-email" id="email">
+										<div class="form-group">
+											<input type="email" class="form-control form-email" id="email" required>
+											<label class="contact__label" for="email">Email address:</label>
 										</div>
 
-										<div class="input-group">
-											<label for="message">Message:</label>
-											<textarea class="form-control form-message" rows="5" id="message"></textarea>
+										<div class="form-group">
+											<textarea class="form-control form-message" rows="5" id="message" required></textarea>
+											<label class="contact__label" for="message">Message:</label>
 										</div>
 
 										<button type="submit" class="btn btn-info contact__button" >Submit</button>
+
 										<div class="alert-message"></div>
 
 									</form>
 
-								</div>
+								</div> <!-- contact__form -->
+
+								<p>Hi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam, tempore doloremque, corrupti, fugiat harum excepturi perferendis illum necessitatibus recusandae placeat aliquam expedita similique id eius adipisci. Perferendis dolore rerum nam fuga. Aliquid consequatur ad nemo mollitia dolor, odio!</p>
 
 
 							</div> <!-- modal-body -->
