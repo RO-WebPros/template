@@ -56,6 +56,21 @@ body {
   background-size: cover;
 }
 
+/*==================================
+=            Function           =
+==================================*/
+.video-background {
+  position: relative;
+  z-index: -1;
+  background: transparent;
+}
+
+.ytplayer-container {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+}
+
 /*===============================
 =            Buttons            =
 ===============================*/
@@ -636,19 +651,6 @@ body {
   }
 }
 
-/*** video background ***/
-.video-background {
-  position: relative;
-  z-index: -1;
-  background: transparent;
-}
-
-.ytplayer-container {
-  position: fixed;
-  z-index: 0;
-  top: 0;
-}
-
 /*==============================
 =            Header            =
 ==============================*/
@@ -828,6 +830,86 @@ body {
   .services__list-item {
     padding: 5px 15px;
   }
+}
+
+.services__list i {
+  color: #03A9F4;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(3, 169, 244, 0.3);
+  color: #03A9F4;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.services__list i i {
+  z-index: 1;
+  font-size: 16.66667px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.services__list i:before, .services__list i:after {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.services__list i:before {
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  background-color: #03A9F4;
+}
+
+.services__list i:after {
+  -webkit-transform: scale(1.1) rotate(45deg);
+          transform: scale(1.1) rotate(45deg);
+  background-color: #F7FAFF;
+}
+
+.services__list i:hover i {
+  color: #F7FAFF;
+}
+
+.services__list i:hover:before {
+  -webkit-transform: scale(1.2) rotate(45deg);
+          transform: scale(1.2) rotate(45deg);
+  background-color: #F7FAFF;
+}
+
+.services__list i:hover:after {
+  -webkit-transform: scale(1) rotate(-45deg);
+          transform: scale(1) rotate(-45deg);
+  background-color: #03A9F4;
 }
 
 /*====================================================
