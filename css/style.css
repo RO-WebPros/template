@@ -78,30 +78,22 @@ body {
 =            Countdown            =
 =================================*/
 .counter {
+  width: 100%;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.counter__part {
+.counter__element {
   position: relative;
-  display: inline-block;
-  margin-right: 90px;
   font-family: "Finger Paint", cursive;
+  cursor: default;
 }
 
-.counter__part span {
+.counter__element .counter__element-number {
   position: relative;
-  font-size: 4rem;
-  display: block;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.counter__part .counter__part-number {
-  position: relative;
-  width: 70px;
-  height: 70px;
-  margin-bottom: 30px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,7 +109,16 @@ body {
           align-items: center;
 }
 
-.counter__part .counter__part-number:before {
+.counter__element .counter__element-number span {
+  position: relative;
+  font-size: 4.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #03A9F4;
+  z-index: 3;
+}
+
+.counter__element .counter__element-number:before {
   position: absolute;
   content: '';
   display: block;
@@ -136,7 +137,7 @@ body {
   box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.counter__part .counter__part-number:after {
+.counter__element .counter__element-number:after {
   position: absolute;
   content: '';
   display: block;
@@ -155,33 +156,28 @@ body {
   box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.counter__part .counter__part-number span {
-  color: #03A9F4;
-  z-index: 3;
-}
-
-.counter__part .counter__part-number:hover:before {
+.counter__element .counter__element-number:hover:before {
   -webkit-transform: scale(1) rotate(-45deg);
           transform: scale(1) rotate(-45deg);
   background-color: #03A9F4;
 }
 
-.counter__part .counter__part-number:hover:after {
+.counter__element .counter__element-number:hover:after {
   -webkit-transform: scale(1.2) rotate(135deg);
           transform: scale(1.2) rotate(135deg);
   background-color: #F7FAFF;
 }
 
-.counter__part .counter__part-number:hover span {
+.counter__element .counter__element-number:hover span {
   color: #F7FAFF;
 }
 
-.counter__part .counter__part-text {
+.counter__element .counter__element-text {
   font-size: 2rem;
 }
 
 @media (max-width: 767px) and (min-width: 480px) {
-  .counter__elements .col-sm-3 {
+  .counter .col-sm-3 {
     width: 50%;
     float: left;
   }
@@ -377,6 +373,10 @@ body {
 
 .modal {
   color: #212121;
+}
+
+.modal-dialog {
+  width: 85%;
 }
 
 .modal-content {
@@ -654,6 +654,11 @@ body {
 /*==============================
 =            Header            =
 ==============================*/
+.logo__image {
+  position: relative;
+  width: 150px;
+}
+
 .main-content {
   position: relative;
   width: 90%;
@@ -679,11 +684,7 @@ body {
 }
 
 .header-info {
-  margin-bottom: 30px;
-}
-
-.subscribe {
-  margin-top: 30px;
+  font-size: 1.4rem;
 }
 
 /*==============================

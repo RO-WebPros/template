@@ -3,38 +3,33 @@
 =================================*/
 
 .counter {
+    width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-    .counter__elements {
-        // color: $text-white;
-
-    }
-
-        .counter__part {
+        .counter__element {
             position: relative;
-            display: inline-block;
-            margin-right: 90px;
             font-family: $finger-paint;
+            cursor: default;
 
-
-            span {
+            .counter__element-number {
                 position: relative;
-                font-size: 4rem;
-                display: block;
-                transition: all 0.3s ease-in-out;
-            }
-
-            .counter__part-number {
-                position: relative;
-                width: 70px;
-                height: 70px;
-                margin-bottom: 30px;
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 40px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
+                span {
+                    position: relative;
+                    font-size: 4.5rem;
+                    transition: all 0.3s ease-in-out;
+                    color: $main-color;
+                    z-index: 3;
+                }
 
                 &:before {
                     position: absolute;
@@ -68,11 +63,6 @@
                     box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.1);
                 }
 
-                span {
-                    color: $main-color;
-                    z-index: 3;
-                }
-
                 &:hover {
                     &:before {
                         transform: scale(1) rotate(-45deg);
@@ -90,7 +80,7 @@
                 }
             }
 
-            .counter__part-text {
+            .counter__element-text {
                 font-size: 2rem;
             }
 
@@ -98,10 +88,10 @@
 
 @media (max-width: 767px) and (min-width: 480px){
    
-    .counter__elements .col-sm-3 {
-        width: 50%;
-        float: left;
-    }
+    .counter .col-sm-3 {
+       width: 50%;
+       float: left;
+   }
 }
 
 
