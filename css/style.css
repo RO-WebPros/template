@@ -249,8 +249,7 @@ body {
   position: absolute;
   display: block;
   margin: 10px auto 0;
-  color: white;
-  box-shadow: 10px 10px 5px #03A9F4;
+  color: red;
 }
 
 .error-message--contact {
@@ -635,6 +634,19 @@ body {
   .main-nav__item a {
     width: 100%;
   }
+}
+
+/*** video background ***/
+.video-background {
+  position: relative;
+  z-index: -1;
+  background: transparent;
+}
+
+.ytplayer-container {
+  position: fixed;
+  z-index: 0;
+  top: 0;
 }
 
 /*==============================

@@ -1,11 +1,26 @@
+/* ===================================================  
+1. Cowntdown timmer 
+2. Subscribe Form
+3. Contact Form
+4. Youtube Background
+
+ =================================================== */
+
 jQuery(document).ready(function($) {
 	
-	/*  Modal settings  */
+/* =================================================== */
+/*                  0.Modal timmer 
+/* =================================================== */
+
 	$(".modal-body").mCustomScrollbar({
 	   theme: "rounded-dots-dark"
 	});
 
-    /*  Countdown timmer  */
+/* =================================================== */
+/*                  1.Cowntdown timmer 
+/* =================================================== */
+
+
   $('.counter').countdown('2017/01/5', function(event) {
         var offset = event.offset;
         $('#cday').text(offset.totalDays);
@@ -14,7 +29,10 @@ jQuery(document).ready(function($) {
         $('#cseconds').text(''.concat(offset.seconds < 10 ? '0' : '', offset.seconds));
     });
 
-    /*Subscribe-form*/
+/* =================================================== */
+/*                 2.Subscribe Form
+/* =================================================== */
+
 
     var subscribe = $("#subscribe-form")
 
@@ -50,8 +68,11 @@ jQuery(document).ready(function($) {
 
                 });
 
+/* =================================================== */
+/*                  3.Contact Form
+/* =================================================== */
 
-    /*Contact-form*/
+
     var contact = $("#contact-form")
         contact.validate({    
                  rules: {
@@ -90,4 +111,48 @@ $.validator.methods.email = function( value, element ) {
                      return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
                     }
 
+
+
+/* =================================================== */
+/*                  4.Youtube Background
+/* =================================================== */
+
+     
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+    
+  
+    if(isMobile.any()) {  
+       var bg2 = $('#background2');
+       if($.fn.backstretch && bg2.length){
+            bg2.backstretch("images/about_thumb1.jpg");
+       }  
+    } else {
+       var videobg = $('#video-background');
+       if(videobg.length){
+            videobg.YTPlayer({
+                 fitToBackground: true,
+                 videoId: 'zJ7hUvU-d2Q'
+             }); 
+       }   
+    }  
+          
 });

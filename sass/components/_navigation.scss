@@ -61,3 +61,16 @@
 }
 
 
+/*** video background ***/
+
+.video-background {
+    position: relative;
+    z-index: -1;
+    background: transparent;
+}
+
+.ytplayer-container {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+}
