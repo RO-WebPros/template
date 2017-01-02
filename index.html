@@ -43,20 +43,20 @@
 				<ul class="main-nav__links">
 
 					<li class="main-nav__item">
-						<a type="button" class="main-nav__link" data-toggle="modal" data-target="#about">
+						<a class="main-nav__link" data-toggle="modal" data-target="#about">
 							<i class="glyphicon glyphicon-user"></i>
 						</a>
 						
 					</li>
 
 					<li class="main-nav__item">
-						<a type="button" class="main-nav__link" data-toggle="modal" data-target="#services">
+						<a class="main-nav__link" data-toggle="modal" data-target="#services">
 							<i class="glyphicon glyphicon-wrench"></i>
 						</a>
 					</li>
 
 					<li class="main-nav__item">
-						<a type="button" class="main-nav__link" data-toggle="modal" data-target="#contact">
+						<a class="main-nav__link" data-toggle="modal" data-target="#contact">
 							<i class="glyphicon glyphicon-envelope"></i>
 						</a>
 					</li>
@@ -88,47 +88,48 @@
 			            	<ul class="counter__elements">
 
 			            		<div class="col-sm-3">
-
-			                		<li class="counter__part">
-			                			<div class="counter__part-number">
-			                				<span id="cday"></span>
-			                			</div>
-			                			<span class="counter__part-text">days</span>
-			                		</li>
-								
+									<ul>
+				                		<li class="counter__part">
+				                			<div class="counter__part-number">
+				                				<span id="cday"></span>
+				                			</div>
+				                			<span class="counter__part-text">days</span>
+				                		</li>
+									</ul>
 								</div>
 			                	
 			                	<div class="col-sm-3">
+									<ul>
+				                		<li class="counter__part">
+				                			<div class="counter__part-number">
+				                				<span id="chours"></span>
+				                			</div>
+				                			<span class="counter__part-text">hours</span>
+				                		</li>
+									</ul>
+								</div>
 
-			                		<li class="counter__part">
-			                			<div class="counter__part-number">
-			                				<span id="chours"></span>
-			                			</div>
-			                			<span class="counter__part-text">hours</span>
-			                		</li>
+			                	<div class="col-sm-3">
+									<ul>
+				                		<li class="counter__part">
+				                			<div class="counter__part-number">
+				                				<span id="cminutes"></span>
+				                			</div>
+				                			<span class="counter__part-text">minutes</span>
+				                		</li>
+			                		</ul>
 								
 								</div>
 
 			                	<div class="col-sm-3">
-
-			                		<li class="counter__part">
-			                			<div class="counter__part-number">
-			                				<span id="cminutes"></span>
-			                			</div>
-			                			<span class="counter__part-text">minutes</span>
-			                		</li>
-								
-								</div>
-
-			                	<div class="col-sm-3">
-
-			                		<li class="counter__part">
-			                			<div class="counter__part-number">
-			                				<span id="cseconds"></span>
-			                			</div>
-			                			<span class="counter__part-text">seconds</span>
-			                		</li>
-
+									<ul>
+				                		<li class="counter__part">
+				                			<div class="counter__part-number">
+				                				<span id="cseconds"></span>
+				                			</div>
+				                			<span class="counter__part-text">seconds</span>
+				                		</li>
+									</ul>
 			                	</div>
 			                	
 			            	</ul>
@@ -171,7 +172,7 @@
 			<div class="information__content">
 			
 				<!-- About Information Section -->
-				<section class="about information__section modal modal-effect" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style:"display: block;">
+				<section class="about information__section modal modal-effect" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 
 					<div class="modal-dialog modal-lg" role="document">
 
@@ -199,13 +200,13 @@
 										<div class="col-md-6">
 											<h3 class="about__title">Beginning History</h3>
 											
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, sed obcaecati porro dolores quo aliquam. Culpa non ratione cumque illum quibusdam vel, distinctio quam, fugiat provident possimus est, unde aperiam?</p>
+											<img src="images/about_thumb1.jpg" alt="Beginning History Photo" >
 										</div>
 
 										<div class="col-md-6">
 											<h3 class="about__title">Latest History</h3>
 											
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, sed obcaecati porro dolores quo aliquam. Culpa non ratione cumque illum quibusdam vel, distinctio quam, fugiat provident possimus est, unde aperiam?</p>
+											<img src="images/about_thumb2.jpg" alt="Latest History Photo" >
 										</div>
 
 									</div>
@@ -455,7 +456,7 @@
 									<form class="contact-form" action="#" id="contact-form">
 
 										<div class="form-group">
-											<input type="name" class="form-control form-name" id="name" required>
+											<input type="text" class="form-control form-name" id="name" >
 											<label class="contact__label" for="name">Name:</label>
 										</div>
 										
@@ -465,7 +466,7 @@
 										</div>
 
 										<div class="form-group">
-											<textarea class="form-control form-message" rows="5" id="message" required></textarea>
+											<textarea class="form-control form-message" rows="5" id="message"></textarea>
 											<label class="contact__label" for="message">Message:</label>
 										</div>
 
@@ -476,9 +477,6 @@
 									</form>
 
 								</div> <!-- contact__form -->
-
-								<p>Hi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam, tempore doloremque, corrupti, fugiat harum excepturi perferendis illum necessitatibus recusandae placeat aliquam expedita similique id eius adipisci. Perferendis dolore rerum nam fuga. Aliquid consequatur ad nemo mollitia dolor, odio!</p>
-
 
 							</div> <!-- modal-body -->
 

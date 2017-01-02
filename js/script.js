@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 	});
 
     /*  Countdown timmer  */
-  $('.counter').countdown('2017/01/3', function(event) {
+  $('.counter').countdown('2017/01/5', function(event) {
         var offset = event.offset;
         $('#cday').text(offset.totalDays);
         $('#chours').text(''.concat(offset.hours < 10 ? '0' : '', offset.hours));
@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
                     messages: {
                         subscribe__email:{
                             required: "Please enter an email address",
-                            email: 'Please enter a <em> valid </em> email address'
+                            email: 'Please enter a <span style="font-size: 2em"> valid </span> email address'
                         }
                     },
 

@@ -2,32 +2,28 @@
 =            About Page specific styles            =
 ==================================================*/
 
-
-.caption h3 {
-	background-color: rgba(0,0,0,0.3)
-}
-
 .about__description {
-	padding: 10px 50px;
+	padding: 10px 30px;
 	font-size: 2em;
 }
 
 .about__history {
-	padding: 10px 50px;
+	padding: 10px 30px;
 }
+
+	.about__history h2 {
+		
+		margin-bottom: 15px;
+		margin-top: 15px;
+		text-align: center;
+	}
 
 .about__icons {
 	height: 55px;
     position: relative;
 }
 
-.about__history h2 {
-	
-	margin-bottom: 25px;
-	margin-top: 25px;
-	text-align: center;
 
-}
 
 .about__process {
 
@@ -35,30 +31,31 @@
 
 }
 
-.about__process h2 {
+	.about__process h2 {
 
-	margin-bottom: 25px;
-	margin-top: 25px;
-	text-align: center;
+		margin-bottom: 25px;
+		margin-top: 25px;
+		text-align: center;
 
-}
+	}
+	.about__history img{
+
+		width: 400px;
+		height: auto;
+
+	}
 
 .about__title {
 
-	margin-top: 20px;
-    margin-bottom: 10px;
-
-}
-.services__content h3 {
- 
- 	margin: 25px 0;
+	margin-top: 15px;
+    margin-bottom: 15px;
 
 }
 
-.about__title-block {
+	.about__title-block {
 
-	height: 55px;
-}
+		height: 55px;
+	}
 
 .about__process div i {
 	font-size: 2em;
@@ -66,6 +63,12 @@
 	position: absolute;
     top: 15px;
     left: 30px;
+}
+
+.services__content h3 {
+ 
+ 	margin: 25px 0;
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -79,15 +82,33 @@
 
 @media only screen and (max-width: 500px) {
 	
-.about__history {
+	.about__history {
 
-	padding: 5px 15px;
+		padding: 5px 15px;
+	}
+
+	.about__process {
+
+		padding: 5px 15px;
+
+	}
+
+	.about__history img{
+
+		width: 300px;
+		height: auto;
+
+	}
+
 }
 
-.about__process {
+@media only screen and (max-width: 500px) {
+	
+	.about__history img{
 
-	padding: 5px 15px;
+		width: 200px;
+		height: auto;
 
-}
+	}
 
 }
