@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Softly-Page Template</title>
 	<meta name="description" content="A base template used as a start point for other templates">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -172,7 +172,7 @@
 			<div class="information__content">
 			
 				<!-- About Information Section -->
-				<section class="about information__section modal modal-effect" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<section class="about information__section modal modal-effect" id="about" tabindex="-1" role="dialog" aria-labelledby="modal-about">
 
 					<div class="modal-dialog modal-lg" role="document">
 
@@ -180,7 +180,7 @@
 
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h2 class="modal-title" id="myModalLabel">About us</h2>
+								<h2 class="modal-title" id="modal-about">About us</h2>
 							</div>
 
 							<div class="modal-body">
@@ -278,7 +278,7 @@
 
 
 				<!-- Services Information Section -->
-				<section class="information__section modal modal-effect" id="services" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<section class="information__section modal modal-effect" id="services" tabindex="-1" role="dialog" aria-labelledby="modal-services">
 
 					<div class="modal-dialog modal-lg" role="document">
 
@@ -286,7 +286,7 @@
 
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h2 class="modal-title" id="myModalLabel">Our Services</h2>
+								<h2 class="modal-title" id="modal-services">Our Services</h2>
 							</div>
 								
 							<div class="modal-body">
@@ -373,7 +373,7 @@
 
 
 				<!-- Contact Information Section -->
-				<section class="contact information__section modal modal-effect" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<section class="contact information__section modal modal-effect" id="contact" tabindex="-1" role="dialog" aria-labelledby="modal-contact">
 
 					<div class="modal-dialog modal-lg" role="document">
 
@@ -381,7 +381,7 @@
 
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h2 class="modal-title" id="myModalLabel">Contact us</h2>
+								<h2 class="modal-title" id="modal-contact">Contact us</h2>
 							</div>
 
 							<div class="modal-body">
@@ -456,17 +456,17 @@
 									<form class="contact-form" action="#" id="contact-form">
 
 										<div class="form-group">
-											<input type="text" class="form-control form-name" id="name" >
+											<input type="text" class="form-control form-name" id="name" name="username" required>
 											<label class="contact__label" for="name">Name:</label>
 										</div>
 										
 										<div class="form-group">
-											<input type="email" class="form-control form-email" id="email" required>
+											<input type="email" class="form-control form-email" id="email" name="email" required>
 											<label class="contact__label" for="email">Email address:</label>
 										</div>
 
 										<div class="form-group">
-											<textarea class="form-control form-message" rows="5" id="message"></textarea>
+											<textarea class="form-control form-message" rows="5" id="message" name="message" required></textarea>
 											<label class="contact__label" for="message">Message:</label>
 										</div>
 
