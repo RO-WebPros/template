@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
                         email: {
                             required: true,
                             email: true
-                        },
+                        }
                         
                         // name: {
                         //     required: true,
@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
                         email: {
                             required: 'Please enter an email address',
                             email: 'Please enter a <em> valid </em> email address'
-                        },
+                        }
                     },
 
                     highlight: function(element, errorClass, validClass) {
@@ -90,24 +90,7 @@ jQuery(document).ready(function($) {
                         
                     },
                     
-    });   
-
-        var error_name = false;
-
-        function check_username(){
-            var username_lenght = $("#name").val().lenght;
-
-            if (username_lenght < 5 || username_lenght > 20) {
-                $(".alert-message").html("Should be between 5-20 characters");
-                $(".alert-message").show();
-                error_name = true;
-            } else {
-                $(".alert-message").hide();
-            }
-
-
-
-        }
+    });
 
 $.validator.methods.email = function( value, element ) {
                      return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
