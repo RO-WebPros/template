@@ -6,7 +6,7 @@ body {
 }
 
 .main-title, .secondary-title {
-  font-family: "Finger Paint", cursive;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .main-title {
@@ -87,6 +87,7 @@ body {
   position: relative;
   font-family: "Finger Paint", cursive;
   cursor: default;
+  padding: 15px;
 }
 
 .counter__element .counter__element-number {
@@ -727,8 +728,12 @@ body {
 }
 
 .about__history img {
-  width: 400px;
+  width: 100%;
   height: auto;
+}
+
+.about__history-text {
+  margin-top: 15px;
 }
 
 .about__title {
@@ -752,30 +757,64 @@ body {
   margin: 25px 0;
 }
 
-@media only screen and (max-width: 992px) {
-  .services_icon {
-    height: auto;
-  }
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
   .about__history {
     padding: 5px 15px;
   }
   .about__process {
     padding: 5px 15px;
   }
-  .about__history img {
-    width: 300px;
-    height: auto;
-  }
 }
 
-@media only screen and (max-width: 500px) {
-  .about__history img {
-    width: 200px;
-    height: auto;
-  }
+.grid figure {
+  position: relative;
+  overflow: hidden;
+  margin: 10px 1%;
+  width: 100%;
+  background: #03A9F4;
+  text-align: center;
+  cursor: pointer;
+}
+
+figure.effect-bubba {
+  background: #03A9F4;
+}
+
+.about__description {
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 40px;
+  padding: 40px;
+  background-color: #03A9F4;
+}
+
+.about__description:after {
+  border-radius: 0 0 0 10px;
+  border-bottom: solid 20px #5b7093;
+  border-left: solid 20px #5b7093;
+  border-right: solid 20px transparent;
+  border-top: solid 20px transparent;
+}
+
+.about__description:last-child {
+  margin-bottom: 0;
+}
+
+.about__description:before, .about__description:after {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  content: "";
+}
+
+.about__description:before {
+  border-top: solid 20px #fff;
+  border-right: solid 20px #fff;
+  border-left: solid 20px transparent;
+  border-bottom: solid 20px transparent;
 }
 
 /*=====================================================
