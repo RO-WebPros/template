@@ -12,19 +12,25 @@ Instructions for setup:
       - git log // See all modification
       - git diff // See the diferences
       - git init
-      - git pull template master --allow-unrelated-histories
+      - git pull template master --allow-unrelated-histories 
+  
       //Change repository url
-
       - git remote set-url template https://github.com/RO-WebPros/template
-      // add repository 
-      
+     
+     // add repository
       - git remote add template https://github.com/RO-WebPros/template  
-      // pull last version on github
+     
+     // pull last version on github
       - git pull template master
       
       //push on github last version
       -  git push template master
-    
+      
+      //create a branch
+      - git checkout -b [name of branch]
+      
+      //change the branch
+      - git checkout [name of branch]
     Work:
       - Make changes
       - git add .
