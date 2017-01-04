@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
                     messages: {
                         subscribe__email:{
                             required: "Please enter an email address",
-                            email: 'Please enter a <span style="font-size: 2em"> valid </span> email address'
+                            email: 'Please enter a valid email address'
                         }
                     },
 
@@ -67,6 +67,10 @@ jQuery(document).ready(function($) {
                     
 
                 });
+
+    $('.sub__title').on('click', function(){
+        $('.sub__content').toggleClass('sub__content--expanded');
+    });
 
 /* =================================================== */
 /*                  3.Contact Form
