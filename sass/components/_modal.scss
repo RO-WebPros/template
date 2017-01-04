@@ -129,3 +129,15 @@
 
 
 
+/* Opacity #2 */
+.hover12 figure {
+	background: $main-color;
+}
+.hover12 figure img {
+	opacity: 1;
+	transition: .3s ease-in-out;
+}
+.hover12 figure:hover img {
+	opacity: .8;
+	cursor: pointer;
+}
