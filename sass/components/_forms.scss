@@ -84,6 +84,7 @@
 	margin: 15px auto 0;
 	border: 0px solid blue;
 	color: red;
+	padding-bottom: 15px;
 }
 
 .form-control {
@@ -132,6 +133,11 @@
         color: #fff;
         background: rgba(0,0,0,.3);
     }
+}
+
+.contact__label {
+	margin-top: 10px;
+
 }
 
 .alert-message {

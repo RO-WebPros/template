@@ -277,6 +277,7 @@ body {
   margin: 15px auto 0;
   border: 0px solid blue;
   color: red;
+  padding-bottom: 15px;
 }
 
 .form-control {
@@ -324,6 +325,10 @@ body {
 .contact__button:hover, .contact__button:focus {
   color: #fff;
   background: rgba(0, 0, 0, 0.3);
+}
+
+.contact__label {
+  margin-top: 10px;
 }
 
 .alert-message {
@@ -793,6 +798,7 @@ figure.effect-bubba {
   margin-bottom: 40px;
   padding: 40px;
   background-color: #03A9F4;
+  margin-top: 10px;
 }
 
 .about__description:after {
@@ -837,7 +843,7 @@ figure.effect-bubba {
   font-size: 3em;
   vertical-align: middle;
   height: 100%;
-  padding-top: 30%;
+  padding-top: 20px;
 }
 
 .services_icon {
@@ -880,11 +886,7 @@ figure.effect-bubba {
 }
 
 .services__list i {
-  color: #03A9F4;
-  position: relative;
-  width: 50px;
-  height: 50px;
-  margin-right: 30px;
+  height: auto;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -894,69 +896,10 @@ figure.effect-bubba {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  text-shadow: 2px 2px 4px rgba(3, 169, 244, 0.3);
+}
+
+.services__list-item i:hover {
   color: #03A9F4;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.services__list i i {
-  z-index: 1;
-  font-size: 16.66667px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.services__list i:before, .services__list i:after {
-  position: absolute;
-  content: '';
-  display: block;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.services__list i:before {
-  -webkit-transform: scale(1) rotate(0deg);
-          transform: scale(1) rotate(0deg);
-  background-color: #03A9F4;
-}
-
-.services__list i:after {
-  -webkit-transform: scale(1.1) rotate(45deg);
-          transform: scale(1.1) rotate(45deg);
-  background-color: #F7FAFF;
-}
-
-.services__list i:hover i {
-  color: #F7FAFF;
-}
-
-.services__list i:hover:before {
-  -webkit-transform: scale(1.2) rotate(45deg);
-          transform: scale(1.2) rotate(45deg);
-  background-color: #F7FAFF;
-}
-
-.services__list i:hover:after {
-  -webkit-transform: scale(1) rotate(-45deg);
-          transform: scale(1) rotate(-45deg);
-  background-color: #03A9F4;
 }
 
 /*====================================================
@@ -1315,32 +1258,8 @@ figure.effect-bubba {
   position: relative;
 }
 
-.contact-form .form-name, .contact-form .form-email, .contact-form .form-message {
-  background-color: transparent;
-  margin-top: 30px;
-}
-
-.contact-form .form-name:focus + .contact__label, .contact-form .form-name:valid + .contact__label, .contact-form .form-email:focus + .contact__label, .contact-form .form-email:valid + .contact__label, .contact-form .form-message:focus + .contact__label, .contact-form .form-message:valid + .contact__label {
-  -webkit-transform: translate(-6px, -30px);
-          transform: translate(-6px, -30px);
-  font-size: 11px;
-}
-
 .contact-form .form-message {
   resize: vertical;
-}
-
-.contact-form .contact__label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  line-height: 43px;
-  padding-left: 12px;
-  font-size: 13px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.7);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .content-separator {
