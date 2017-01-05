@@ -120,7 +120,7 @@
 
 
 
-.content-separator {
+.content-separator {s
     width: 100%; 
     position: relative; 
 
@@ -139,3 +139,24 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 992px) {
+
+    .contact__social {
+        text-align: left;
+    }
+    
+}
+
+@media only screen and (max-width: 430px) {
+    
+    .social-item {
+        
+        margin-bottom: 10px;
+    
+    }
+    
+
+}
+

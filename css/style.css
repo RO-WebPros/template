@@ -636,7 +636,7 @@ body {
   }
 }
 
-/* Opacity #2 */
+/* Image hover effect  */
 .hover12 figure {
   background: #03A9F4;
 }
@@ -857,6 +857,13 @@ body {
 /*=================================================
 =            Home Page specific styles            =
 =================================================*/
+@media only screen and (max-width: 615px) {
+  .sub__box {
+    width: 200px;
+    margin: 20px auto 0;
+  }
+}
+
 /*==================================================
 =            About Page specific styles            =
 ==================================================*/
@@ -1033,6 +1040,16 @@ body {
 
 .services__list-item i:hover {
   color: #03A9F4;
+}
+
+@media only screen and (max-width: 768px) {
+  .services__content h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  .services_icon {
+    float: none;
+  }
 }
 
 /*====================================================
@@ -1413,6 +1430,25 @@ body {
   height: 25px;
   border-radius: 125px / 12px;
   box-shadow: 0 0 10px rgba(1, 64, 93, 0.4);
+}
+
+@media only screen and (max-width: 992px) {
+  .contact__social {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .social-item {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .sub__box {
+    width: 200px;
+    margin: 20px auto 0;
+  }
 }
 
 @media only screen and (max-width: 800px) {
