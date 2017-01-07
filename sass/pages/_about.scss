@@ -2,6 +2,12 @@
 =            About Page specific styles            =
 ==================================================*/
 
+
+
+/*==================================================
+=          		 About Structure	               =
+==================================================*/
+
 .about__description {
 	padding: 10px 30px;
 	font-size: 2em;
@@ -51,19 +57,7 @@
 }
 
 
-@media only screen and (max-width: 750px) {
-	
-	.about__history {
 
-		padding: 5px 15px;
-	}
-
-	.about__process {
-
-		padding: 5px 15px;
-
-	}
-}
 
 /*==================================================
 =           About us container                     =
@@ -120,4 +114,18 @@
 
 .about__box-icon .icon-container:hover {
 	color: $main-color;
+}
+
+/* Image hover effect  */
+
+.hover12 figure {
+	background: $main-color;
+}
+.hover12 figure img {
+	opacity: 1;
+	transition: .3s ease-in-out;
+}
+.hover12 figure:hover img {
+	opacity: .8;
+	cursor: pointer;
 }

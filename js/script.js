@@ -1,23 +1,31 @@
 /* ===================================================  
-1. Cowntdown timmer 
-2. Subscribe Form
-3. Contact Form
-4. Youtube Background
+
+1. Modal function
+2. Cowntdown timmer 
+3. Subscribe Form
+4. Contact Form
+5. Youtube Background
 
  =================================================== */
+
+
 
 jQuery(document).ready(function($) {
 	
 /* =================================================== */
-/*                  0.Modal timmer 
+/*                  1.Modal function 
 /* =================================================== */
-
 	$(".modal-body").mCustomScrollbar({
 	   theme: "rounded-dots-dark"
 	});
 
 /* =================================================== */
-/*                  1.Cowntdown timmer 
+/*                  6.Loader
+/* =================================================== */
+
+
+/* =================================================== */
+/*                  2.Cowntdown timmer 
 /* =================================================== */
 
 
@@ -30,7 +38,7 @@ jQuery(document).ready(function($) {
     });
 
 /* =================================================== */
-/*                 2.Subscribe Form
+/*                 3.Subscribe Form
 /* =================================================== */
 
 
@@ -73,7 +81,7 @@ jQuery(document).ready(function($) {
     });
 
 /* =================================================== */
-/*                  3.Contact Form
+/*                  4.Contact Form
 /* =================================================== */
 
 
@@ -118,7 +126,7 @@ $.validator.methods.email = function( value, element ) {
 
 
 /* =================================================== */
-/*                  4.Youtube Background
+/*                  5.Youtube Background
 /* =================================================== */
 
      
@@ -160,3 +168,5 @@ $.validator.methods.email = function( value, element ) {
     }  
           
 });
+
+

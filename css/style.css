@@ -636,22 +636,6 @@ body {
   }
 }
 
-/* Image hover effect  */
-.hover12 figure {
-  background: #03A9F4;
-}
-
-.hover12 figure img {
-  opacity: 1;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-.hover12 figure:hover img {
-  opacity: .8;
-  cursor: pointer;
-}
-
 /*==================================
 =            Navigation            =
 ==================================*/
@@ -748,30 +732,6 @@ body {
   background-color: #03A9F4;
 }
 
-@media only screen and (max-width: 800px) {
-  .main-nav {
-    width: 100%;
-    left: 0px;
-    bottom: 0px;
-  }
-  .main-nav__links {
-    padding: 0;
-    margin-bottom: 0;
-  }
-  .main-nav__item {
-    width: 33.333333%;
-    border-radius: 0;
-    margin-right: 0;
-    border-right: 2px solid rgba(0, 0, 0, 0.3);
-  }
-  .main-nav__item:last-child {
-    border: none;
-  }
-  .main-nav__item a {
-    width: 100%;
-  }
-}
-
 /*==============================
 =            Header            =
 ==============================*/
@@ -857,15 +817,11 @@ body {
 /*=================================================
 =            Home Page specific styles            =
 =================================================*/
-@media only screen and (max-width: 615px) {
-  .sub__box {
-    width: 200px;
-    margin: 20px auto 0;
-  }
-}
-
 /*==================================================
 =            About Page specific styles            =
+==================================================*/
+/*==================================================
+=          		 About Structure	               =
 ==================================================*/
 .about__description {
   padding: 10px 30px;
@@ -902,15 +858,6 @@ body {
 
 .services__content h3 {
   margin: 25px 0;
-}
-
-@media only screen and (max-width: 750px) {
-  .about__history {
-    padding: 5px 15px;
-  }
-  .about__process {
-    padding: 5px 15px;
-  }
 }
 
 /*==================================================
@@ -970,29 +917,25 @@ body {
   color: #03A9F4;
 }
 
+/* Image hover effect  */
+.hover12 figure {
+  background: #03A9F4;
+}
+
+.hover12 figure img {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.hover12 figure:hover img {
+  opacity: .8;
+  cursor: pointer;
+}
+
 /*=====================================================
 =            Services Page specific styles            =
 =====================================================*/
-.services__list-item {
-  padding: 0px 50px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-.services__list-item i {
-  font-size: 3em;
-  vertical-align: middle;
-  height: 100%;
-  padding-top: 20px;
-}
-
-.services_icon {
-  float: left;
-  text-align: center;
-  height: 150px;
-  height: auto;
-}
-
 .services__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1009,22 +952,6 @@ body {
   min-height: 75vh;
 }
 
-.services__content h3 {
-  margin-top: 0;
-}
-
-@media only screen and (max-width: 992px) {
-  .services_icon {
-    height: auto;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .services__list-item {
-    padding: 5px 15px;
-  }
-}
-
 .services__list i {
   height: auto;
   display: -webkit-inline-box;
@@ -1038,18 +965,32 @@ body {
           align-items: center;
 }
 
+.services__list-item {
+  padding: 0px 50px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.services__list-item i {
+  font-size: 3em;
+  vertical-align: middle;
+  height: 100%;
+  padding-top: 20px;
+}
+
 .services__list-item i:hover {
   color: #03A9F4;
 }
 
-@media only screen and (max-width: 768px) {
-  .services__content h3 {
-    margin-top: 0;
-    text-align: center;
-  }
-  .services_icon {
-    float: none;
-  }
+.services_icon {
+  float: left;
+  text-align: center;
+  height: 150px;
+  height: auto;
+}
+
+.services__content h3 {
+  margin-top: 0;
 }
 
 /*====================================================
@@ -1432,18 +1373,10 @@ body {
   box-shadow: 0 0 10px rgba(1, 64, 93, 0.4);
 }
 
-@media only screen and (max-width: 992px) {
-  .contact__social {
-    text-align: left;
-  }
-}
-
-@media only screen and (max-width: 430px) {
-  .social-item {
-    margin-bottom: 10px;
-  }
-}
-
+/*====================================================
+=           	Media Query  			             =
+====================================================*/
+/* Main content */
 @media only screen and (max-width: 800px) {
   html {
     height: auto;
@@ -1457,5 +1390,92 @@ body {
   }
   .main-content {
     height: auto;
+  }
+}
+
+/* Home page */
+@media only screen and (max-width: 615px) {
+  .sub__box {
+    width: 200px;
+    margin: 20px auto 0;
+  }
+}
+
+/* About Page  */
+@media only screen and (max-width: 750px) {
+  .about__history {
+    padding: 5px 15px;
+  }
+  .about__process {
+    padding: 5px 15px;
+  }
+}
+
+/* Services Page  */
+@media only screen and (max-width: 992px) {
+  .services_icon {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .services__list-item {
+    padding: 5px 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .services__content h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  .services_icon {
+    float: none;
+  }
+}
+
+/* Contact Page  */
+@media only screen and (max-width: 992px) {
+  .contact__social {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .social-item {
+    margin-bottom: 10px;
+  }
+}
+
+/* Navigation */
+@media only screen and (max-width: 800px) {
+  .main-nav {
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+  }
+  .main-nav__links {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .main-nav__item {
+    width: 33.333333%;
+    border-radius: 0;
+    margin-right: 0;
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+  }
+  .main-nav__item:last-child {
+    border: none;
+  }
+  .main-nav__item a {
+    width: 100%;
+  }
+}
+
+/* Countdown */
+@media (max-width: 767px) and (min-width: 480px) {
+  .counter .col-sm-3 {
+    width: 50%;
+    float: left;
   }
 }
