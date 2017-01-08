@@ -117,12 +117,18 @@
 
 
 .content-separator {
-    width: 100%; 
+    display: block;
+    width: 100%;
+    // margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     position: relative; 
 
     .mask { 
         overflow: hidden;
-        height: 20px; 
+        height: 20px;
+        max-width: 900px;
+        margin: 0 auto;
 
         &:after { 
             content: ''; 
