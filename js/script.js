@@ -60,11 +60,11 @@ jQuery(document).ready(function($) {
 
                     highlight: function(element, errorClass, validClass) {
                     $(element).addClass('form-error');
-                        $(".subscribe__button").addClass('form-error');
+                        $(".form__button--subscribe").addClass('form-error');
                     },
                     unhighlight: function(element, errorClass, validClass) {
                     $(element).removeClass('form-error');
-                        $(".subscribe__button").removeClass('form-error');
+                        $(".form__button--subscribe").removeClass('form-error');
                     },
                     errorPlacement: function(error, element) {
 
@@ -103,11 +103,11 @@ jQuery(document).ready(function($) {
 
                     highlight: function(element, errorClass, validClass) {
                     $(element).addClass('form-error');
-                        $(".contact__button").addClass('form-error');
+                        $(".form__button--contact").addClass('form-error');
                     },
                     unhighlight: function(element, errorClass, validClass) {
                     $(element).removeClass('form-error');
-                        $(".contact__button").removeClass('form-error');
+                        $(".form__button--contact").removeClass('form-error');
                     },
                     errorPlacement: function(error, element) {
 
