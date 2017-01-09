@@ -120,8 +120,8 @@ jQuery(document).ready(function($) {
     });
 
 $.validator.methods.email = function( value, element ) {
-                     return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
-                    }
+    return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
+}
 
 
 
