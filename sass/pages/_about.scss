@@ -2,130 +2,88 @@
 =            About Page specific styles            =
 ==================================================*/
 
-
-
-/*==================================================
-=          		 About Structure	               =
-==================================================*/
-
 .about__description {
-	padding: 10px 30px;
-	font-size: 2em;
+	max-width: 900px;
+	margin: 30px auto;
 }
 
 .about__history {
-	padding: 10px 30px;
+	max-width: 900px;
+	margin: 30px auto;
+
+	.row {
+		margin-bottom: 30px;
+	}
 }
 
 	.about__history h2 {
-		
-		margin-bottom: 15px;
-		margin-top: 15px;
+		margin-top: 0;
+		margin-bottom: 30px;
 		text-align: center;
 	}
 
-	.about__history img{
-
+	.about__history img {
 		width: 100%;
-		height: auto;
-
-	}
-
-	.about__history-text {
-
-		margin-top: 15px;
-
 	}
 
 
-.about__title {
 
-	margin-top: 15px;
-    margin-bottom: 15px;
-
-}
-
-	.about__title-block {
-
-		height: 55px;
-	}
-
-.services__content h3 {
- 
- 	margin: 25px 0;
-
-}
-
-
-
-
-/*==================================================
-=           About us container                     =
-==================================================*/
-
-.about__paragraph {
-	margin-top: 10px;
-}
-
-.about__box {
-	position: relative;
-}
-
-.about__box.text-center .about__box-icon {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.about__box.text-right .about__box-icon {
-	margin-left: auto;
-}
-
-.text-center {
-	text-align: center !important;
-}
-
-.about__box-icon {
-	position: relative;
-	width: 100px;
-	height: 100px;
-	margin: 0;
-	margin-bottom: 20px;
+.about__team {
+	max-width: 900px;
+	margin: 30px auto;
 	text-align: center;
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
 }
 
-.about__box-icon .icon-container {
-    position: relative;
-	width: 100px;
-	height: 100px;
-    z-index: 1;
-	background-color: #fff;
-	box-shadow: 0 3px 27px rgba(0, 0, 0, 0.19);
-	font-size: 52px;
-	line-height: 100px;
-	top: 0;
-	transition: top .3s linear 0.2s;
-}
+	.team__member {
+		// border: 1px solid red;
+		width: 100%;
+		text-align: center;
+	}
 
-.about__box-icon.light .icon-container {
-	background-color: transparent;
-	box-shadow: inset 0 0 0 3px #fff;
-	color: #fff;
-}
+		.team__picture {
+			position: relative;
+			width: 250px;
+			height: 200px;
+			overflow: hidden;
+			margin: 0 auto;
+			background-color: $main-color;
+			background-size: cover;
+			-webkit-clip-path: polygon(50% 0%, 90% 50%, 50% 100%, 10% 50%);
+			clip-path: polygon(50% 0%, 90% 50%, 50% 100%, 10% 50%);
 
-.about__box-icon .icon-container:hover {
-	color: $main-color;
-}
+			transition: all 0.5s ease-in-out;
+	
+			&:hover {
+				// background-size: 120%;
+			}
 
-/* Image hover effect  */
+			&--1 {
+				background-image: url('../images/team1.jpg');
+			}
 
-.hover12 figure {
-	background: $main-color;
-}
-.hover12 figure img {
-	opacity: 1;
-	transition: .3s ease-in-out;
-}
-.hover12 figure:hover img {
-	opacity: .8;
-	cursor: pointer;
-}
+			&--2 {
+				background-image: url('../images/team2.jpg');
+			}
+
+			&--3 {
+				background-image: url('../images/team3.jpg');
+			}
+		}
+
+		.team__info {
+			margin-top: 20px;
+		}
+
+			.team__name {
+				font-size: 2rem;
+				font-weight: 700;
+			}
+
+			.team__role {
+				font-style: italic;
+			}
