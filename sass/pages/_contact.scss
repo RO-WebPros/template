@@ -92,37 +92,13 @@
 
         }
 
-            // .form-name, .form-email, .form-message {
-            //     background-color: transparent;
-            //     margin-top: 30px;
-
-            //     &:focus, &:valid {
-            //         + .contact__label {
-            //             transform: translate(-6px, -30px);
-            //             font-size: 11px;
-            //         }
-            //     }
-            // }
-
             .form-message {
                 resize: vertical;
             }
 
-        // .contact__label {
-        //     position: absolute;
-        //     left: 0;
-        //     top: 0;
-        //     line-height: 43px;
-        //     padding-left: 12px;
-        //     font-size: 13px;
-        //     font-weight: 300;
-        //     color: rgba(#000, 0.7);
-        //     transition: all 0.3s ease-in-out;
-        // }
     }
 
 .form-control {
-
         height: 45px;
         border-width: 0 0 3px 0;
         border-style: solid;
@@ -137,7 +113,6 @@
 .content-separator {
     display: block;
     width: 100%;
-    // margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
     position: relative; 

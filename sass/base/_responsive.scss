@@ -3,9 +3,11 @@
 ====================================================*/
 
 
-/* Main content */
+/* Page becomes scrollable and navigation gets on the bottom of the container */
 
 @media only screen and (max-width: 800px) {
+
+	/* Main content */
 	
 	html {
 		height: auto;
@@ -24,8 +26,51 @@
 		height: auto;
 	}
 
+
+	/* Navigation */
+
+	.main-nav {
+		width: 100%;
+		left: 0;
+		bottom: 0;
+	}
+
+	.main-nav__links {
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	.main-nav__item {
+		width: 33.333333%;
+		border-radius: 0;
+		margin-right: 0;
+		border-right: 2px solid rgba(black, 0.3);
+
+		&:last-child {
+			border: none;
+		}
+
+		a {
+			width: 100%;
+		}
+	}
+
 }
 
+
+@media only screen and (max-width: 768px) {
+
+	.subscribe {
+		margin-bottom: 50px;
+	}
+
+	.error-message {
+		margin: 10px auto 0 0;
+		width: 100%;
+		text-align: left;
+	}
+
+}
 
 
 /* Home page */
@@ -50,76 +95,14 @@
 
 	}
 
-/* About Page  */
 
-@media only screen and (max-width: 750px) {
-	
-	.about__history {
-
-		padding: 5px 15px;
-	}
-
-	.about__process {
-
-		padding: 5px 15px;
-
-	}
-}
-
-
-/* Services Page  */
-
-@media only screen and (max-width: 992px) {
-
-	
-	.services_icon {
-
-		height: auto;
-	
-	}
-
-	.contact-form {
-    	width: 100%;
-	}
-
-}
-
-@media only screen and (max-width: 500px) {
-	
-	.services__list-item {
-
-	    padding: 5px 15px;
-
-	}
-
-}
-
-
-@media only screen and (max-width: 768px) {
-    
-    .services__content h3 {
-
-	    margin-top: 0;
-	    text-align: center;
-	
-	}
-
-    .services_icon {
-    
-    	float: none;
-	
-	}    
-
-}
 
 /* Contact Page  */
 
 @media only screen and (max-width: 992px) {
 
     .contact__social {
-
         text-align: left;
-    
     }
     
 }
@@ -127,43 +110,10 @@
 @media only screen and (max-width: 430px) {
     
     .social-item {
-        
         margin-bottom: 10px;
-    
     }
     
 
-}
-
-/* Navigation */
-
-@media only screen and (max-width: 800px) {
-
-	.main-nav {
-		width: 100%;
-		left: 0px;
-		bottom: 0px;
-	}
-
-	.main-nav__links {
-		padding: 0;
-		margin-bottom: 0;
-	}
-
-	.main-nav__item {
-		width: 33.333333%;
-		border-radius: 0;
-		margin-right: 0;
-		border-right: 2px solid rgba(black, 0.3);
-
-		&:last-child {
-			border: none;
-		}
-
-		a {
-			width: 100%;
-		}
-	}
 }
 
 /* Countdown */

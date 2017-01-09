@@ -251,23 +251,3 @@
 	}
 }
 
-
-@media only screen and (max-width: 520px) {
-	.subscribe__email {
-		min-width: 100%;
-	}
-}
-
-@media only screen and (max-width: 768px) {
-	.subscribe__button {
-		margin-bottom: 50px;
-	}
-	.error-message {
-		margin: 70px auto 0;
-		width: 100%;
-		text-align: center;
-		margin-left: -45px;
-
-	}
-
-}

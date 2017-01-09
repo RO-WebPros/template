@@ -173,13 +173,6 @@ body {
   font-size: 2rem;
 }
 
-@media (max-width: 767px) and (min-width: 480px) {
-  .counter .col-sm-3 {
-    width: 50%;
-    float: left;
-  }
-}
-
 .btn,
 .form-control,
 .form-control:hover,
@@ -447,24 +440,6 @@ body {
   border-radius: 0;
 }
 
-@media only screen and (max-width: 520px) {
-  .subscribe__email {
-    min-width: 100%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .subscribe__button {
-    margin-bottom: 50px;
-  }
-  .error-message {
-    margin: 70px auto 0;
-    width: 100%;
-    text-align: center;
-    margin-left: -45px;
-  }
-}
-
 /*====================================================
 =            Modals (Navigation Sections)            =
 ====================================================*/
@@ -553,6 +528,8 @@ body {
 }
 
 .modal-effect.in {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   -webkit-animation-name: modal-animation;
           animation-name: modal-animation;
   -webkit-animation-duration: 0.6s;
@@ -563,21 +540,6 @@ body {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
           animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-}
-
-.modal-effect:nth-child(1) {
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-}
-
-.modal-effect:nth-child(2) {
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-}
-
-.modal-effect:nth-child(3) {
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
 }
 
 @-webkit-keyframes modal-animation {
@@ -1359,8 +1321,9 @@ body {
 /*====================================================
 =           	Media Query  			             =
 ====================================================*/
-/* Main content */
+/* Page becomes scrollable and navigation gets on the bottom of the container */
 @media only screen and (max-width: 800px) {
+  /* Main content */
   html {
     height: auto;
   }
@@ -1373,6 +1336,39 @@ body {
   }
   .main-content {
     height: auto;
+  }
+  /* Navigation */
+  .main-nav {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+  .main-nav__links {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .main-nav__item {
+    width: 33.333333%;
+    border-radius: 0;
+    margin-right: 0;
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+  }
+  .main-nav__item:last-child {
+    border: none;
+  }
+  .main-nav__item a {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .subscribe {
+    margin-bottom: 50px;
+  }
+  .error-message {
+    margin: 10px auto 0 0;
+    width: 100%;
+    text-align: left;
   }
 }
 
@@ -1391,42 +1387,6 @@ body {
   }
 }
 
-/* About Page  */
-@media only screen and (max-width: 750px) {
-  .about__history {
-    padding: 5px 15px;
-  }
-  .about__process {
-    padding: 5px 15px;
-  }
-}
-
-/* Services Page  */
-@media only screen and (max-width: 992px) {
-  .services_icon {
-    height: auto;
-  }
-  .contact-form {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .services__list-item {
-    padding: 5px 15px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .services__content h3 {
-    margin-top: 0;
-    text-align: center;
-  }
-  .services_icon {
-    float: none;
-  }
-}
-
 /* Contact Page  */
 @media only screen and (max-width: 992px) {
   .contact__social {
@@ -1437,31 +1397,6 @@ body {
 @media only screen and (max-width: 430px) {
   .social-item {
     margin-bottom: 10px;
-  }
-}
-
-/* Navigation */
-@media only screen and (max-width: 800px) {
-  .main-nav {
-    width: 100%;
-    left: 0px;
-    bottom: 0px;
-  }
-  .main-nav__links {
-    padding: 0;
-    margin-bottom: 0;
-  }
-  .main-nav__item {
-    width: 33.333333%;
-    border-radius: 0;
-    margin-right: 0;
-    border-right: 2px solid rgba(0, 0, 0, 0.3);
-  }
-  .main-nav__item:last-child {
-    border: none;
-  }
-  .main-nav__item a {
-    width: 100%;
   }
 }
 
