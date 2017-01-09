@@ -14,7 +14,7 @@
         }
 
         .contact__title--right {
-            margin-right: 10px;
+            margin-right: 0;
         }
 
         .contact__title--form {
@@ -23,7 +23,7 @@
 
         .contact__information {
             list-style: none;
-            padding-left: 0;
+            padding-left: 10px;
 
             li {
                 margin-bottom: 15px;
@@ -36,12 +36,13 @@
         }
 
     .contact__social {
-        text-align: right;
+        text-align: left;
     }
 
         .contact__social-icons {
             list-style-type: none;
             margin: 0 auto;
+            padding: 10px;
         }
 
             .social-item {
@@ -124,7 +125,7 @@
         border-color: $main-color;
         font-size: 13px;
         letter-spacing: 3px;
-        background: rgba(0,0,0, 0.2);
+        background: rgba(0,0,0, 0.0);
         transition: all 0.5s ease-in-out;
 }
 
