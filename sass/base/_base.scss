@@ -16,7 +16,6 @@ html {
 
 body {
 	height: 100%;
-	overflow: hidden;
 }
 
 .wrapper {
@@ -27,8 +26,6 @@ body {
 	padding: 30px;
 	background-color: $main-color;
 	color: $text-white;
-
-
 	background-image: url(../images/Covermainpage.jpg);
 	background-size: cover;
 }
