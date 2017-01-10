@@ -11,8 +11,7 @@
         .counter__element {
             position: relative;
             font-family: $finger-paint;
-            // font-family: $open-sans;
-            // font-weight: 700;
+            font-family: $libre;
             cursor: default;
             padding: 15px;
 
@@ -28,7 +27,7 @@
 
                 span {
                     position: relative;
-                    font-size: 4.5rem;
+                    font-size: 4.2rem;
                     transition: all 0.3s ease-in-out;
                     color: $main-color;
                     z-index: 3;
