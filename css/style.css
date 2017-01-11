@@ -419,6 +419,10 @@ body {
   border-radius: 0;
 }
 
+.subscribe__second {
+  display: none;
+}
+
 /*====================================================
 =            Modals (Navigation Sections)            =
 ====================================================*/
@@ -1087,6 +1091,12 @@ body {
   margin-bottom: 30px;
 }
 
+.content-title--font {
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin: 0 auto;
+}
+
 .contact__title--right {
   margin-right: 0;
 }
@@ -1547,7 +1557,7 @@ body {
 @media only screen and (max-width: 768px) {
   /* Main content */
   .scrollable {
-    height: auto;
+    height: 100%;
   }
   .main-content.scrollable {
     overflow: auto;
@@ -1607,6 +1617,25 @@ body {
   }
   .modal-body {
     max-height: 85vh;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .sub__title {
+    display: none;
+  }
+  .sub__content {
+    opacity: 0;
+    display: inline;
+  }
+  .subscribe {
+    display: none;
+  }
+  .subscribe__second {
+    display: inline;
+  }
+  .services__content .content-title {
+    text-align: center;
   }
 }
 
