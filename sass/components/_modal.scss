@@ -47,12 +47,15 @@
 				.modal-title {
 					opacity: 0;
 					text-align: center;
+					font-family: "Libre Franklin", sans-serif;
+	    			font-weight: 800;
 					animation-name: content-animation;
 					animation-duration: 1s;
 					animation-delay: 0.8s;
 					animation-fill-mode: forwards;
 					animation-timing-function: cubic-bezier(0.7,0,0.3,1);
 				}
+				
 
 			.modal-body {
 				opacity: 0;

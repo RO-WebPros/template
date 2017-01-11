@@ -369,7 +369,7 @@ body {
   position: static;
   display: block;
   margin: 0px auto 0;
-  border: 0px solid blue;
+  border-bottom: 2px solid red;
   color: red;
   padding-bottom: 0;
 }
@@ -465,6 +465,8 @@ body {
 .modal-title {
   opacity: 0;
   text-align: center;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 800;
   -webkit-animation-name: content-animation;
           animation-name: content-animation;
   -webkit-animation-duration: 1s;
