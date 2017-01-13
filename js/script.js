@@ -171,7 +171,12 @@ jQuery(document).ready(function($) {
              }); 
        }   
     } 
-    */ 
+    */
+
+
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    }); 
           
 });
 
@@ -180,19 +185,7 @@ jQuery(document).ready(function($) {
 /*                  Main page tooltips
 /* =================================================== */
 
-
-/* Navigation */
-$('[data-target="#about"]').tooltip({title: "About Us", placement: "top", delay: {show: 500, hide: 100} });
-$('[data-target="#services"]').tooltip({title: "Services", placement: "top", delay: {show: 500, hide: 100} });
-$('[data-target="#contact"]').tooltip({title: "Contact Us", placement: "top", delay: {show: 500, hide: 100} });
-
-/* Countdown */
-$('.days').tooltip({title: "days", placement: "bottom", delay: {show: 500, hide: 100} });
-$('.hours').tooltip({title: "hours", placement: "bottom", delay: {show: 500, hide: 100} });
-$('.minutes').tooltip({title: "minutes", placement: "bottom", delay: {show: 500, hide: 100} });
-$('.seconds').tooltip({title: "seconds", placement: "bottom", delay: {show: 500, hide: 100} });
-
-
+add_tooltips();
 
 /* =================================================== */
 /*                  Make page scrollable
@@ -225,16 +218,22 @@ function checkSize() {
     } else {
         $('html, body, .wrapper, .main-content').removeClass('scrollable');
 
-        /* Navigation */
-        $('[data-target="#about"]').tooltip({title: "About Us", placement: "top", delay: {show: 500, hide: 100} });
-        $('[data-target="#services"]').tooltip({title: "Services", placement: "top", delay: {show: 500, hide: 100} });
-        $('[data-target="#contact"]').tooltip({title: "Contact Us", placement: "top", delay: {show: 500, hide: 100} });
-
-        /* Countdown */
-        $('.days').tooltip({title: "days", placement: "bottom", delay: {show: 500, hide: 100} });
-        $('.hours').tooltip({title: "hours", placement: "bottom", delay: {show: 500, hide: 100} });
-        $('.minutes').tooltip({title: "minutes", placement: "bottom", delay: {show: 500, hide: 100} });
-        $('.seconds').tooltip({title: "seconds", placement: "bottom", delay: {show: 500, hide: 100} });
+        add_tooltips();
     }
 
+}
+
+function add_tooltips() {
+
+    /* Navigation */
+    $('[data-target="#about"]').tooltip({title: "About Us", placement: "top", delay: {show: 500, hide: 100} });
+    $('[data-target="#services"]').tooltip({title: "Services", placement: "top", delay: {show: 500, hide: 100} });
+    $('[data-target="#contact"]').tooltip({title: "Contact Us", placement: "top", delay: {show: 500, hide: 100} });
+
+    /* Countdown */
+    $('.days').tooltip({title: "days", placement: "bottom", delay: {show: 500, hide: 100} });
+    $('.hours').tooltip({title: "hours", placement: "bottom", delay: {show: 500, hide: 100} });
+    $('.minutes').tooltip({title: "minutes", placement: "bottom", delay: {show: 500, hide: 100} });
+    $('.seconds').tooltip({title: "seconds", placement: "bottom", delay: {show: 500, hide: 100} });
+    
 }

@@ -16,6 +16,7 @@ html {
 
 body {
 	height: 100%;
+    position: relative;
 }
 
 .wrapper {
@@ -28,4 +29,37 @@ body {
 	color: $text-white;
 	background-image: url(../images/Covermainpage.jpg);
 	background-size: cover;
+}
+
+.content-separator {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; 
+
+    .mask { 
+        overflow: hidden;
+        height: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+
+        &:after { 
+            content: ''; 
+            display: block;
+            margin: -25px auto 0;
+            width: 100%; 
+            height: 25px;  
+            border-radius: 125px / 12px;  
+            box-shadow: 0 0 10px rgba(darken($main-color, 30%), 0.4);
+        }
+    }
+}
+
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }

@@ -7,7 +7,9 @@ body {
 
 .content-title {
   font-family: "Libre Franklin", sans-serif;
+  font-size: 3rem;
   font-weight: 800;
+  margin-bottom: 30px;
 }
 
 .content-title span {
@@ -32,7 +34,7 @@ body {
   font-size: 1.5em;
   line-height: 1.8;
   max-width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 }
 
 /*=======================================================
@@ -56,6 +58,7 @@ html {
 
 body {
   height: 100%;
+  position: relative;
 }
 
 .wrapper {
@@ -68,6 +71,38 @@ body {
   color: #F7FAFF;
   background-image: url(../images/Covermainpage.jpg);
   background-size: cover;
+}
+
+.content-separator {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.content-separator .mask {
+  overflow: hidden;
+  height: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content-separator .mask:after {
+  content: '';
+  display: block;
+  margin: -25px auto 0;
+  width: 100%;
+  height: 25px;
+  border-radius: 125px / 12px;
+  box-shadow: 0 0 10px rgba(1, 64, 93, 0.4);
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 /*==================================
@@ -197,8 +232,8 @@ body {
   margin-top: 35px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  -webkit-transform: translateX(25px) translateY(120px);
-          transform: translateX(25px) translateY(120px);
+  -webkit-transform: translateX(20px) translateY(120px);
+          transform: translateX(20px) translateY(120px);
 }
 
 .counter__element-number + .tooltip > .tooltip-inner {
@@ -221,12 +256,11 @@ body {
 .btn,
 .form-control,
 .form-control:hover,
-.form-control:focus
-.form-control:active {
+.form-control:focus .form-control:active {
   box-shadow: none !important;
 }
 
-.subscribe__email {
+.subscribe__email, .form-name, .form-email, .form-message {
   height: 45px;
   border-width: 0 0 3px 0;
   border-style: solid;
@@ -238,20 +272,21 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.subscribe__email:focus {
+.subscribe__email:focus, .form-name:focus, .form-email:focus, .form-message:focus {
   background: rgba(0, 0, 0, 0.3);
+  border-color: #0286c2;
 }
 
-.subscribe__email::-moz-placeholder {
+.subscribe__email::-moz-placeholder, .form-name::-moz-placeholder, .form-email::-moz-placeholder, .form-message::-moz-placeholder {
   opacity: 1;
   color: rgba(255, 255, 255, 0.85);
 }
 
-.subscribe__email:-ms-input-placeholder {
+.subscribe__email:-ms-input-placeholder, .form-name:-ms-input-placeholder, .form-email:-ms-input-placeholder, .form-message:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.85);
 }
 
-.subscribe__email::-webkit-input-placeholder {
+.subscribe__email::-webkit-input-placeholder, .form-name::-webkit-input-placeholder, .form-email::-webkit-input-placeholder, .form-message::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.85);
 }
 
@@ -346,7 +381,7 @@ body {
 
 .alert-message {
   margin-top: 20px;
-  border: 0px solid red;
+  border: 0px solid #FF3434;
 }
 
 .alert-message .error {
@@ -362,15 +397,14 @@ body {
   position: absolute;
   display: block;
   margin: 10px auto 0;
-  color: red;
+  color: #FF3434;
 }
 
 .error-message--contact {
   position: static;
   display: block;
   margin: 0px auto 0;
-  border-bottom: 2px solid red;
-  color: red;
+  color: #FF3434;
   padding-bottom: 0;
 }
 
@@ -383,18 +417,13 @@ body {
   display: block;
   margin: 15px auto 0;
   border: 0px solid blue;
-  color: red;
-}
-
-.contact__form-info {
-  margin: 15px 0;
+  color: #FF3434;
 }
 
 /*=============================
 =            Forms            =
 =============================*/
 .subscribe {
-  width: 90%;
   margin: 0 auto;
 }
 
@@ -414,13 +443,9 @@ body {
           flex: 1;
 }
 
-.subscribe__form .subscribe__email {
+.subscribe__form .subscribe__email, .subscribe__form .form-name, .subscribe__form .form-email, .subscribe__form .form-message {
   width: 100%;
   border-radius: 0;
-}
-
-.subscribe__second {
-  display: none;
 }
 
 /*====================================================
@@ -717,6 +742,7 @@ body {
 
 .main-content {
   position: relative;
+  overflow: hidden;
   width: 90%;
   height: 100%;
   margin: 0 auto;
@@ -743,6 +769,10 @@ body {
   font-size: 1.4rem;
 }
 
+.subscribe {
+  z-index: 100;
+}
+
 .sub__box {
   width: 400px;
   margin: 20px auto 0;
@@ -767,23 +797,18 @@ body {
 
 .sub__content {
   opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  pointer-events: none;
 }
 
 .sub__content--expanded {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.sub__content--expanded ~ .sub__title {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: all;
 }
 
 /*==============================
@@ -809,12 +834,6 @@ body {
   margin-bottom: 30px;
 }
 
-.about__history h2 {
-  margin-top: 0;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
 .about__history img {
   width: 100%;
 }
@@ -822,12 +841,6 @@ body {
 .about__team {
   max-width: 900px;
   margin: 30px auto;
-  text-align: center;
-}
-
-.about__team h2 {
-  margin-top: 0;
-  margin-bottom: 30px;
 }
 
 .team__member {
@@ -1086,28 +1099,9 @@ body {
   margin: 30px auto;
 }
 
-.contact__title {
-  font-size: 3rem;
-  margin-bottom: 30px;
-}
-
-.content-title--font {
-  font-size: 1.2em;
-  line-height: 1.4;
-  margin: 0 auto;
-}
-
-.contact__title--right {
-  margin-right: 0;
-}
-
-.contact__title--form {
-  font-size: 2.5rem;
-}
-
 .contact__information {
   list-style: none;
-  padding-left: 10px;
+  padding-left: 0;
 }
 
 .contact__information li {
@@ -1117,16 +1111,31 @@ body {
 
 .contact__information li i {
   margin-right: 15px;
+  font-size: 2.2rem;
+  color: #03A9F4;
+}
+
+.contact__information li a {
+  color: #03A9F4;
+}
+
+.contact__information li a:hover {
+  color: #02638f;
+  text-decoration: none;
 }
 
 .contact__social {
-  text-align: left;
+  text-align: right;
+}
+
+.contact__social .content-title {
+  padding-right: 10px;
 }
 
 .contact__social-icons {
   list-style-type: none;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .social-item {
@@ -1430,13 +1439,13 @@ body {
 }
 
 .contact__form {
-  margin-bottom: 30px;
   max-width: 900px;
   margin: 30px auto;
 }
 
 .contact-form {
   width: 70%;
+  margin: 0 auto;
 }
 
 .contact-form .form-group {
@@ -1447,46 +1456,39 @@ body {
   resize: vertical;
 }
 
-.form-control {
-  height: 45px;
-  border-width: 0 0 3px 0;
-  border-style: solid;
-  border-color: #03A9F4;
-  font-size: 13px;
-  letter-spacing: 3px;
+.form-name, .form-email, .form-message {
   background: transparent;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  padding-left: 5px;
 }
 
-.content-separator {
-  display: block;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+.form-name:focus, .form-email:focus, .form-message:focus {
+  background: transparent;
 }
 
-.content-separator .mask {
-  overflow: hidden;
-  height: 20px;
-  max-width: 900px;
-  margin: 0 auto;
+.form-name::-moz-placeholder, .form-email::-moz-placeholder, .form-message::-moz-placeholder {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.content-separator .mask:after {
-  content: '';
-  display: block;
-  margin: -25px auto 0;
-  width: 100%;
-  height: 25px;
-  border-radius: 125px / 12px;
-  box-shadow: 0 0 10px rgba(1, 64, 93, 0.4);
+.form-name:-ms-input-placeholder, .form-email:-ms-input-placeholder, .form-message:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.form-name::-webkit-input-placeholder, .form-email::-webkit-input-placeholder, .form-message::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /*====================================================
 =           	Media Query  			             =
 ====================================================*/
+.scrollable {
+  height: auto;
+}
+
+.main-content.scrollable {
+  overflow-y: auto;
+}
+
 @media only screen and (max-width: 992px) {
   .wrapper {
     padding: 10px;
@@ -1544,24 +1546,37 @@ body {
   .sub__cta {
     font-size: 1.8rem;
   }
-  .subscribe__email {
+  .subscribe__email, .form-name, .form-email, .form-message {
     font-size: 1rem;
     letter-spacing: 1px;
   }
   .form__button {
     font-size: 1rem;
   }
+  .services__content {
+    text-align: center;
+  }
+  .services__content .content-title {
+    margin-bottom: 30px;
+  }
+  .contact__info {
+    text-align: center;
+  }
+  .contact__information {
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+  .contact__social {
+    text-align: center;
+  }
+  .contact__social-icons {
+    padding-left: 0;
+  }
 }
 
 /* Page becomes scrollable and navigation gets on the bottom of the container */
 @media only screen and (max-width: 768px) {
   /* Main content */
-  .scrollable {
-    height: 100%;
-  }
-  .main-content.scrollable {
-    overflow: auto;
-  }
   .wrapper {
     padding: 0;
   }
@@ -1603,6 +1618,12 @@ body {
   .main-nav__item .main-nav__link:before, .main-nav__item .main-nav__link:after {
     display: none;
   }
+  .counter__element {
+    margin-bottom: 30px;
+  }
+  .counter__element-number {
+    margin-bottom: 25px;
+  }
   .subscribe {
     margin-bottom: 50px;
   }
@@ -1620,50 +1641,5 @@ body {
   }
   .contact-form {
     width: 100%;
-  }
-  .sub__title {
-    display: none;
-  }
-  .sub__content {
-    opacity: 0;
-    display: inline;
-  }
-  .subscribe {
-    display: none;
-  }
-  .subscribe__second {
-    display: inline;
-  }
-  .services__content .content-title {
-    text-align: center;
-  }
-}
-
-/* Home page */
-@media only screen and (max-width: 615px) {
-  .sub__box {
-    width: 200px;
-    margin: 20px auto 0;
-  }
-}
-
-@media only screen and (min-width: 387px) and (max-width: 480px) {
-  .social-item {
-    margin-right: 60px;
-    margin-bottom: 10px;
-  }
-}
-
-@media only screen and (max-width: 430px) {
-  .social-item {
-    margin-bottom: 10px;
-  }
-}
-
-/* Countdown */
-@media (max-width: 768px) and (min-width: 480px) {
-  .counter .col-sm-3 {
-    width: 50%;
-    float: left;
   }
 }

@@ -27,8 +27,12 @@
 	<!-- Main Wrapper -->
   	<div class="wrapper">
 
+  		
+
 		<!-- Main Content Section -->
 		<header class="main-content">
+
+			<div id="particles-js"></div>
 
 			<!-- Main Navigation -->
 
@@ -74,28 +78,32 @@
 						
 						<div class="row">
 
-	                		<div class="col-xs-12 col-sm-3 counter__element">
+	                		<!-- <div class="col-xs-12 col-sm-6 col-md-3 counter__element"> -->
+	                		<div class=" col-xs-6 col-sm-3 counter__element">
 	                			<div class="counter__element-number days">
 	                				<span id="cday"></span>
 	                			</div>
 	                			<div class="counter__element-text visible-xs">days</div>
 	                		</div>
                 	
-	                		<div class="col-xs-12 col-sm-3 counter__element">
+	                		<!-- <div class="col-xs-12 col-sm-6 col-md-3 counter__element"> -->
+	                			<div class=" col-xs-6 col-sm-3 counter__element">
 	                			<div class="counter__element-number hours">
 	                				<span id="chours"></span>
 	                			</div>
 	                			<div class="counter__element-text visible-xs">hours</div>
 		                	</div>
 	                		
-	                		<div class="col-xs-12 col-sm-3 counter__element">
+	                		<!-- <div class="col-xs-12 col-sm-6 col-md-3 counter__element"> -->
+	                			<div class=" col-xs-6 col-sm-3 counter__element">
 	                			<div class="counter__element-number minutes">
 	                				<span id="cminutes"></span>
 	                			</div>
 	                			<div class="counter__element-text visible-xs">minutes</div>
 	                		</div>
 
-	                		<div class="col-xs-12 col-sm-3 counter__element">
+	                		<!-- <div class="col-xs-12 col-sm-6 col-md-3 counter__element"> -->
+	                			<div class=" col-xs-6 col-sm-3 counter__element">
 	                			<div class="counter__element-number seconds">
 	                				<span id="cseconds"></span>
 	                			</div>
@@ -116,10 +124,6 @@
 				<p class="header-info__text">Please don't forget to subscribe to be notified!<p>
 
 			</div> <!-- .main-text -->
-			
-			<div class="subscribe__second ">
-				<h2 class="content-title content-title--font"><span>Subscribe</span> on contact button</h2>
-			</div>
 
 			<div class="subscribe" id="subscribe">
 
@@ -185,7 +189,7 @@
 								</div>
 
 								<div class="about__team">
-									<h2 class="content-title"><span>Who</span> We Are</h2>
+									<h2 class="content-title text-center"><span>Who</span> We Are</h2>
 
 									<div class="row">
 										
@@ -272,7 +276,7 @@
 								</div>
 								
 								<div class="about__history">
-									<h2 class="content-title"><span>Short</span> History</h2>
+									<h2 class="content-title text-center"><span>Short</span> History</h2>
 
 									<div class="row">
 
@@ -455,7 +459,7 @@
 
 										<div class="col-md-6">
 
-											<h3 class="contact__title content-title"><span>Keep</span> in touch with us</h3>
+											<h2 class="content-title"><span>Keep</span> in touch with us</h2>
 
 											<ul class="contact__information">
 												<li>
@@ -480,7 +484,7 @@
 
 											<div class="contact__social">
 
-												<h3 class="contact__title content-title contact__title--right"><span>Places</span> to find us</h3>
+												<h2 class="content-title"><span>Places</span> to find us</h2>
 
 												<ul class="contact__social-icons">
 													<li class="social-item">
@@ -512,31 +516,37 @@
 									<div class="mask"></div>
 								</div>
 
-								<div class="contact__form">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2">	
 
-									<h3 class="contact__title content-title contact__title--form"><span>Send</span> us a message below, and we'll get back to you soon.</h3>
-									
-									<form class="contact-form" action="#" id="contact-form">
+										<div class="contact__form">
 
-										<div class="form-group">
-											<input type="text" class="form-control form-name" id="name" name="username" placeholder="Username" required>
-										</div>
-										
-										<div class="form-group">
-											<input type="email" class="form-control form-email" id="email" name="email" placeholder="Email" required>
-										</div>
+											<h2 class="content-title text-center"><span>Leave</span> us a message</h2>
+											
+											<form class="contact-form" action="#" id="contact-form">
 
-										<div class="form-group">
-											<textarea class="form-control form-message" rows="5" id="message" name="message" placeholder="Message" required></textarea>
-										</div>
+												<div class="form-group">
+													<input type="text" class="form-control form-name" id="name" name="username" placeholder="Username" required>
+												</div>
+												
+												<div class="form-group">
+													<input type="email" class="form-control form-email" id="email" name="email" placeholder="Email" required>
+												</div>
 
-										<button type="submit" class="btn form__button form__button--contact" data-text="Send"><span>Send</span></button>
+												<div class="form-group">
+													<textarea class="form-control form-message" rows="5" id="message" name="message" placeholder="Message" required></textarea>
+												</div>
 
-										<div class="alert-message"></div>
+												<button type="submit" class="btn form__button form__button--contact" data-text="Send"><span>Send</span></button>
 
-									</form>
+												<div class="alert-message"></div>
 
-								</div> <!-- contact__form -->
+											</form>
+
+										</div> <!-- contact__form -->
+
+									</div>
+								</div> .<!-- row -->
 
 							</div> <!-- modal-body -->
 
@@ -564,6 +574,8 @@
 	<script src="js/jquery.countdown.min.js"></script>
 	<script src="js/jquery.validate.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+	<script src="js/particles.min.js"></script>
+
 	<script src="js/script.js"></script>
 
 

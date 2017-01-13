@@ -8,10 +8,10 @@ body {
 }
 
 .content-title {
-	
 	font-family: $libre;
+	font-size: 3rem;
 	font-weight: 800;
-	
+	margin-bottom: 30px;
 
 	span {
 		position: relative;
@@ -28,16 +28,12 @@ body {
 			background-color: $main-color;
 			transition: all 0.3s ease-in-out;
 		}
-
-		
 	}
-
-
 }
 
 .header-info__text {
 	font-size: 1.5em;
 	line-height: 1.8;
 	max-width: 80%;
-	margin: 0 auto;
+	margin: 0 auto 10px;
 }

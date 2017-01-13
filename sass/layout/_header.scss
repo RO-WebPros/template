@@ -9,6 +9,7 @@
 
 .main-content {
 	position: relative;
+	overflow: hidden;
 	width: 90%;
 	height: 100%;
 	margin: 0 auto;
@@ -34,7 +35,7 @@
 
 
 	.subscribe {
-		// margin-top: 30px;
+		z-index: 100;
 	}
 
 
@@ -64,18 +65,15 @@
 
 	.sub__content {
 		opacity: 0;
-		transform: scale(0);
-		transform-origin: 50% 0%;
+		transform: translateY(-100%);
 		transition: all 0.5s ease-in-out;
+		pointer-events: none;
 	}
 
 	.sub__content--expanded {
 		opacity: 1;
-		transform: scale(1);
-
-		~ .sub__title {
-			transform: translateY(-50px);			
-		}
+		transform: translateY(0);
+		pointer-events: all;
 	}
 
 	
