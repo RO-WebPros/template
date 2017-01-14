@@ -63,6 +63,7 @@ body {
 
 .wrapper {
   position: relative;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -98,7 +99,7 @@ body {
   box-shadow: 0 0 10px rgba(1, 64, 93, 0.4);
 }
 
-#particles-js {
+#particles-js, #particles-snow-js {
   position: absolute;
   width: 100%;
   height: 100%;
