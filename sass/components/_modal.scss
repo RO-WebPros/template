@@ -26,21 +26,24 @@
 		}
 
 			.modal-header {
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-				background-image: url(../images/Covermainpage.jpg);
-				background-position: 10% 10%;
+				border-bottom: none;
+				box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.2);
+				background-color: $main-color;
 				background-size: cover;
-				
 			}
 
 				.close {
 					position: relative;
 					z-index: 9999;
 					font-size: 3em;
+					color: $text-white;
+					opacity: 0.8;
 					transition: all 0.2s ease-in-out;
 
-					&:focus {
+					&:focus, &:hover {
 						outline: none;
+						opacity: 1;
+						color: $text-white;
 					}
 				}
 
@@ -49,6 +52,7 @@
 					text-align: center;
 					font-family: "Libre Franklin", sans-serif;
 	    			font-weight: 800;
+	    			color: $text-white;
 					animation-name: content-animation;
 					animation-duration: 1s;
 					animation-delay: 0.8s;

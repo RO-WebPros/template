@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Softly-Page Template</title>
+	<meta name="description" content="A base template used as a start point for other templates">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/loader_effect.css" />
+
+	<!-- Fonts -->
+
+	<link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700,800,900" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	
+	
+</head>
+
+<body>
+
+	<!-- Main Wrapper -->
+  	<div class="wrapper wrapper--kenburns">
+
+  		<canvas id="kenburns"></canvas>
+
+		<!-- Main Content Section -->
+		<header class="main-content">
+
+			<!-- Main Navigation -->
+
+			<nav class="main-nav">
+
+				<ul class="main-nav__links">
+
+					<li class="main-nav__item">
+						<a class="main-nav__link" data-toggle="modal" data-target="#about">
+							<i class="glyphicon glyphicon-user"></i>
+						</a>
+						
+					</li>
+
+					<li class="main-nav__item">
+						<a class="main-nav__link" data-toggle="modal" data-target="#services">
+							<i class="glyphicon glyphicon-wrench"></i>
+						</a>
+					</li>
+
+					<li class="main-nav__item">
+						<a class="main-nav__link" data-toggle="modal" data-target="#contact">
+							<i class="glyphicon glyphicon-envelope"></i>
+						</a>
+					</li>
+
+				</ul>
+
+			</nav> <!-- main-nav -->
+
+
+
+			
+
+
+			<div class="row">
+
+				<div class="col-md-8 col-md-offset-2">
+
+					<!-- Counter -->
+
+					<div class="counter">
+						
+						<div class="row">
+
+	                		<!-- <div class="col-xs-12 col-sm-6 col-md-3 counter__element"> -->
+	                		<div class=" col-xs-6 col-sm-3 counter__element">
+	                			<div class="counter__element-number days">
+	                				<span id="cday"></span>
+	                			</div>
+	                			<div class="counter__element-text visible-xs">days</div>
+	                		</div>
+                	
+	                		<!-- <div class="col-xs-12 col-sm-6 col-md-3 counter__element"> -->
+	                			<div class=" col-xs-6 col-sm-3 counter__element">
+	                			<div class="counter__element-number hours">
+	                				<span id="chours"></span>
+	                			</div>
+	                			<div class="counter__element-text visible-xs">hours</div>
+		                	</div>
+	                		
+	                		<!-- <div class="col-xs-12 col-sm-6 col-md-3 counter__element"> -->
+	                			<div class=" col-xs-6 col-sm-3 counter__element">
+	                			<div class="counter__element-number minutes">
+	                				<span id="cminutes"></span>
+	                			</div>
+	                			<div class="counter__element-text visible-xs">minutes</div>
+	                		</div>
+
+	                		<!-- <div class="col-xs-12 col-sm-6 col-md-3 counter__element"> -->
+	                			<div class=" col-xs-6 col-sm-3 counter__element">
+	                			<div class="counter__element-number seconds">
+	                				<span id="cseconds"></span>
+	                			</div>
+	                			<div class="counter__element-text visible-xs">seconds</div>
+	                		</div>
+
+	                	</div> <!-- row -->
+
+					</div> <!-- .counter -->
+
+				</div> <!-- col-md-6 offset-3  -->
+			
+			</div> <!-- row  -->
+
+			<div class="header-info">
+
+				<p class="header-info__text">We are currently working on a new website and won't take long.</p>
+				<p class="header-info__text">Please don't forget to subscribe to be notified!<p>
+
+			</div> <!-- .main-text -->
+
+			<div class="subscribe" id="subscribe">
+
+				<div class="sub__box">
+
+					<div class="sub__title">
+						<h3 class="sub__cta">Subscribe to our newsletter</h3>
+					</div>
+
+					<div class="sub__content">
+						<form class="form-inline subscribe__form" id="subscribe-form">
+							
+							<div class="form-group">
+								<label for="email" class="sr-only">Email address</label>
+								<input type="email" class="form-control subscribe__email" id="subscribe__email" name="subscribe__email" placeholder="Enter your email" >
+							</div>
+							<button type="submit" class="btn form__button form__button--subscribe" data-text="Sign me in"><span>Sign me in</span></button>
+							<div class="alert-message"></div>
+
+						</form>
+					</div>
+
+				</div> <!-- sub-box -->
+			
+			</div> <!-- Subscribe -->
+
+		</header> <!-- main-content -->
+
+
+
+		<!-- This div hold menu structure and information -->
+
+		<div class="information">
+
+			<div class="information__content">
+			
+				<!-- About Information Section -->
+				<section class="about information__section modal modal-effect" id="about" tabindex="-1" role="dialog" aria-labelledby="modal-about">
+
+					<div class="modal-dialog modal-lg" role="document">
+
+						<div class="modal-content" >
+
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+								<h2 class="modal-title" id="modal-about">About us</h2>
+
+							</div>
+
+							<div class="modal-body">
+
+								<p class="about__description">
+									Over the last 2 years , we are experienced in frontend and backend development technologies including advanced HTML, CSS, Bootstrap, Wordpress, PHP, MySQL, jQuery. Demonstrated understanding web technologies and design principles, we have great future plans and projects to be done.
+								</p>
+
+								<p class="about__description">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus provident placeat, nostrum voluptates deleniti repellat sunt facere reprehenderit commodi dolor maiores earum fugiat facilis est itaque.
+								</p>
+
+								<div class="content-separator">
+									<div class="mask"></div>
+								</div>
+
+								<div class="about__team">
+									<h2 class="content-title text-center"><span>Who</span> We Are</h2>
+
+									<div class="row">
+										
+										<div class="col-md-4">
+											<div class="team__member">
+
+												<div class="team__picture team__picture--1"></div>
+
+												<div class="team__info">
+													<div class="team__name"><span>Robert</span> Hamilton</div>
+													<div class="team__role">Web Designer</div>
+												</div>
+
+												<div class="team__social">
+													<div class="team__social-item">
+														<a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+													</div>
+													<div class="team__social-item">
+														<a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+													</div>
+													<div class="team__social-item">
+														<a href="#" class="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-md-4">
+											<div class="team__member">
+
+												<div class="team__picture team__picture--2"></div>
+
+												<div class="team__info">
+													<div class="team__name"><span>Rose</span> Moore</div>
+													<div class="team__role">Web Developer</div>
+												</div>
+
+												<div class="team__social">
+													<div class="team__social-item">
+														<a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+													</div>
+													<div class="team__social-item">
+														<a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+													</div>
+													<div class="team__social-item">
+														<a href="#" class="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-md-4">
+											<div class="team__member">
+
+												<div class="team__picture team__picture--3"></div>
+
+												<div class="team__info">
+													<div class="team__name"><span>Carol</span> Harris</div>
+													<div class="team__role">UX Developer</div>
+												</div>
+
+												<div class="team__social">
+													<div class="team__social-item">
+														<a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+													</div>
+													<div class="team__social-item">
+														<a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+													</div>
+													<div class="team__social-item">
+														<a href="#" class="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="content-separator">
+									<div class="mask"></div>
+								</div>
+								
+								<div class="about__history">
+									<h2 class="content-title text-center"><span>Short</span> History</h2>
+
+									<div class="row">
+
+										<div class="col-md-3">
+											<img src="images/old_building.jpg" alt="img02"/>
+										</div>
+
+										<div class="col-md-9">
+											<p>Asperiores aliquid quo, eaque similique? Accusantium sed perferendis ab sapiente explicabo inventore est distinctio optio impedit deserunt repudiandae obcaecati vitae, eaque ullam repellendus eius blanditiis doloribus voluptate, eum placeat culpa sit aperiam natus. Sapiente porro vel repellendus, sint voluptatibus.</p>
+										</div>
+
+									</div> <!-- row -->
+
+									<div class="row">
+
+										<div class="col-md-9">
+											<p>Asperiores aliquid quo, eaque similique? Accusantium sed perferendis ab sapiente explicabo inventore est distinctio optio impedit deserunt repudiandae obcaecati vitae, eaque ullam repellendus eius blanditiis doloribus voluptate, eum placeat culpa sit aperiam natus. Sapiente porro vel repellendus, sint voluptatibus.</p>
+										</div>
+
+										<div class="col-md-3">
+											<div class="grid hover12">
+												<figure>
+													<img src="images/new_building.jpg" alt="img02"/>		
+												</figure>
+											</div>
+										</div>
+
+									</div> <!-- row -->
+
+								</div> <!-- about__history -->
+
+								
+
+							</div> <!-- modal-body -->
+
+						</div> <!-- modal-content -->
+
+				  	</div> <!-- modal-dialog -->
+
+				</section> <!-- .information__section About -->
+				
+
+
+				<!-- Services Information Section -->
+				<section class="information__section modal modal-effect" id="services" tabindex="-1" role="dialog" aria-labelledby="modal-services">
+
+					<div class="modal-dialog modal-lg" role="document">
+
+						<div class="modal-content">
+
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h2 class="modal-title" id="modal-services">Our Services</h2>
+							</div>
+								
+							<div class="modal-body">
+								<div class="row services__list"> 
+
+									<div class="col-md-12 services__list-item">
+										<div class="row">
+
+												<div class="col-md-2 services__icon">
+													<div class="services__icon-wrapper">
+														<i class="fa fa-paint-brush" aria-hidden="true"></i>
+													</div>
+												</div>
+
+												<div class="col-md-10">
+													<div class="services__content">
+														<h2 class="content-title"><span>Branding</span></h2>
+														<p>We host 50 domains, more of the site are with good traffic and built from a good company.</p>
+													</div>
+												</div>
+
+										</div>
+									</div>
+
+									<div class="content-separator">
+										<div class="mask"></div>
+									</div>
+
+									<div class="col-md-12 services__list-item">
+										<div class="row">
+
+											<div class="col-md-2 services__icon">
+												<div class="services__icon-wrapper">
+													<i class="fa fa-laptop fa-2" aria-hidden="true"></i>
+												</div>
+											</div>
+
+											<div class="col-md-10">
+												<div class="services__content">
+													<h2 class="content-title"><span>Web</span> Design</h2>
+													<p>We make awesome web template, with latest requirements and frameworks, we use SASS, Jquery and we have 2 years experience in Web Desing.</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+									<div class="content-separator">
+										<div class="mask"></div>
+									</div>
+
+									<div class="col-md-12 services__list-item">
+										<div class="row">
+
+											<div class="col-md-2 services__icon">
+												<div class="services__icon-wrapper">
+													<i class="fa fa-code" aria-hidden="true"></i>
+												</div>
+											</div>
+
+											<div class="col-md-10">
+													<div class="services__content">
+														<h2 class="content-title"><span>Web</span> Development</h2>
+														<p>PHP, Python and Zend framework is that what we use, is important to make strong back-end, security and make to using then fluently.</p>
+													</div>
+												</div>
+											</div>
+
+									</div>
+
+									<div class="content-separator">
+										<div class="mask"></div>
+									</div>
+									
+
+									<div class="col-md-12 services__list-item">
+										<div class="row">
+
+												<div class="col-md-2 services__icon">
+													<div class="services__icon-wrapper">
+														<i class="fa fa-line-chart fa-2" aria-hidden="true"></i>
+													</div>
+												</div>
+
+												<div class="col-md-10">		
+													<div class="services__content">
+														<h2 class="content-title"><span>Marketing</span></h2>
+														<p>We make your site to be one of the best in domain that you are involved!</p>
+													</div>
+												</div>
+
+										</div>
+
+									</div>
+
+								</div> <!-- services_list -->
+
+							</div> <!-- modal-body -->
+
+						</div> <!-- modal-content -->
+
+					</div>	<!-- modal-dialog -->
+
+				</section> <!-- .information__section Services -->
+				
+
+
+				<!-- Contact Information Section -->
+				<section class="contact information__section modal modal-effect" id="contact" tabindex="-1" role="dialog" aria-labelledby="modal-contact">
+
+					<div class="modal-dialog modal-lg" role="document">
+
+						<div class="modal-content">
+
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+								<h2 class="modal-title" id="modal-contact">Contact us</h2>
+
+							</div>
+
+							<div class="modal-body">
+
+								<div class="contact__info">
+								
+									<div class="row">
+
+										<div class="col-md-6">
+
+											<h2 class="content-title"><span>Keep</span> in touch with us</h2>
+
+											<ul class="contact__information">
+												<li>
+													<i class="fa fa-home" aria-hidden="true"></i>
+													849 Hill St, Oklahoma City, UT
+												</li>
+
+												<li>
+													<i class="fa fa-phone" aria-hidden="true"></i>
+													(389) 252-7012
+												</li>
+
+												<li>
+													<i class="fa fa-envelope" aria-hidden="true"></i>
+													<a href="mailto:email@example.com">email@example.com</a>
+												</li>
+											</ul>
+
+										</div>
+
+										<div class="col-md-6">
+
+											<div class="contact__social">
+
+												<h2 class="content-title"><span>Places</span> to find us</h2>
+
+												<ul class="contact__social-icons">
+													<li class="social-item">
+														<a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+													</li>
+
+													<li class="social-item">
+														<a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+													</li>
+
+													<li class="social-item">
+														<a href="#" class="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+													</li>
+
+													<li class="social-item">
+														<a href="#" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+													</li>
+												</ul>
+
+											</div> <!-- contact__social -->
+
+										</div>
+
+									</div> <!-- row -->
+
+								</div> <!-- contact__info -->
+
+								<div class="content-separator">
+									<div class="mask"></div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2">	
+
+										<div class="contact__form">
+
+											<h2 class="content-title text-center"><span>Leave</span> us a message</h2>
+											
+											<form class="contact-form" action="#" id="contact-form">
+
+												<div class="form-group">
+													<input type="text" class="form-control form-name" id="name" name="username" placeholder="Username" required>
+												</div>
+												
+												<div class="form-group">
+													<input type="email" class="form-control form-email" id="email" name="email" placeholder="Email" required>
+												</div>
+
+												<div class="form-group">
+													<textarea class="form-control form-message" rows="5" id="message" name="message" placeholder="Message" required></textarea>
+												</div>
+
+												<button type="submit" class="btn form__button form__button--contact" data-text="Send"><span>Send</span></button>
+
+												<div class="alert-message"></div>
+
+											</form>
+
+										</div> <!-- contact__form -->
+
+									</div>
+								</div> .<!-- row -->
+
+							</div> <!-- modal-body -->
+
+						</div> <!-- modal-content -->
+
+				  	</div> <!-- modal-dialog -->
+
+				</section> <!-- .information__section Contact -->
+			
+			</div> <!-- information__content -->
+			
+ 		</div> <!-- information -->
+
+	</div> <!-- wrapper -->
+
+
+
+
+	
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/pace.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+	<script src="js/kenburned.min.js"></script>
+	<script src="js/script.js"></script>
+
+
+</body>
+</html>

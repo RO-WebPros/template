@@ -31,7 +31,7 @@ body {
 }
 
 .header-info__text {
-  font-size: 1.5em;
+  font-size: 2.1rem;
   line-height: 1.8;
   max-width: 80%;
   margin: 0 auto 10px;
@@ -68,10 +68,15 @@ body {
   height: 100%;
   margin: 0 auto;
   padding: 30px;
-  background-color: #03A9F4;
   color: #F7FAFF;
+  background-color: #03A9F4;
   background-image: url(../images/Covermainpage.jpg);
   background-size: cover;
+}
+
+.wrapper--kenburns {
+  background-color: transparent;
+  background-image: none;
 }
 
 .content-separator {
@@ -104,6 +109,13 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+#kenburns {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 
 /*==================================
@@ -474,9 +486,9 @@ body {
 }
 
 .modal-header {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  background-image: url(../images/Covermainpage.jpg);
-  background-position: 10% 10%;
+  border-bottom: none;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.2);
+  background-color: #03A9F4;
   background-size: cover;
 }
 
@@ -484,12 +496,16 @@ body {
   position: relative;
   z-index: 9999;
   font-size: 3em;
+  color: #F7FAFF;
+  opacity: 0.8;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.close:focus {
+.close:focus, .close:hover {
   outline: none;
+  opacity: 1;
+  color: #F7FAFF;
 }
 
 .modal-title {
@@ -497,6 +513,7 @@ body {
   text-align: center;
   font-family: "Libre Franklin", sans-serif;
   font-weight: 800;
+  color: #F7FAFF;
   -webkit-animation-name: content-animation;
           animation-name: content-animation;
   -webkit-animation-duration: 1s;

@@ -174,13 +174,46 @@ jQuery(document).ready(function($) {
     */
 
 
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
-      console.log('callback - particles.js config loaded');
-    });
+    /* =================================================== */
+    /*                  Particles
+    /* =================================================== */
 
-    particlesJS.load('particles-snow-js', 'assets/particles-snow.json', function() {
-      console.log('callback - particles.js config loaded');
-    });
+    if( $("#particles-js").length ){
+        particlesJS.load('particles-js', 'js/particles.json', function() {
+          console.log('callback - particles.js config loaded');
+        });
+    }
+    
+    if( $("#particles-snow-js").length ){
+        particlesJS.load('particles-snow-js', 'js/particles-snow.json', function() {
+          console.log('callback - particles.js config loaded');
+        });
+    }
+
+
+    /* =================================================== */
+    /*                  Kenburns
+    /* =================================================== */
+
+    if( $("#kenburns").length ) {
+
+        var the_slides = new Array(
+            "images/new_building.jpg",
+            "images/old_building.jpg",
+            "images/Covermainpage.jpg"
+        );
+          
+        $('#kenburns').attr('width', $(window).width());
+        $('#kenburns').attr('height', $(window).height());
+          
+        $('#kenburns').kenburned({
+            images: the_slides,
+            frames_per_second: 24,
+            display_time: 8000,
+            fade_time: 2000
+        });
+
+    }
 
 
 });
@@ -242,3 +275,12 @@ function add_tooltips() {
     $('.seconds').tooltip({title: "seconds", placement: "bottom", delay: {show: 500, hide: 100} });
     
 }
+
+
+$("body").paceOptions = {
+  minTime: 2500,
+  ghostTime: 10000,
+
+  restartOnRequestAfter: false
+}
+
