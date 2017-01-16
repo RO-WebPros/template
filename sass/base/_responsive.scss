@@ -106,6 +106,25 @@
 	    }
     }
 
+	.about__team {
+		.col-md-4 {
+			.team__member {
+				margin-bottom: 30px;
+
+				&:hover {
+					border: 3px solid transparent;
+				}
+			}
+
+			&:last-child {
+				.team__member {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+
 
 	.contact__info {
 		text-align: center;

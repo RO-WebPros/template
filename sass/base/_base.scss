@@ -11,7 +11,7 @@
 
 html {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 }
 
 body {
@@ -82,33 +82,50 @@ body {
 
 
 
-// .wrapper {
-//   display: none;
-// }
+// Class that gets added to main page elements to animate them in
+.loaded {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $text-white;
+  z-index: 1999;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+  .loader-text {
+    position: relative;
+    margin-top: -30px;
+    font-size: 15rem;
+    font-family: $finger-paint;
+    color: rgba($main-color, 0.1);
 
-//   .load-text-inner {
-//     position: absolute;
-//     left: 50%;
-//     top: 25%;
-//     margin-left: -1.9em;
-//     color: rgba($main-color, 0.1);
-//     font-size: 15rem;
-//     font-family: $finger-paint;
+    &:before {
+      content: attr(data-content);
+      position: absolute;
+      overflow: hidden;
+      width: 0%;
+      height: 150%;
+      color: $main-color;
+      animation-name: loading;
+      animation-duration: 2.3s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(.45,.78,.6,.39);
+    }
+  }
 
-//     &:before {
-//       content: attr(data-content);
-//       position: absolute;
-//       overflow: hidden;
-//       width: 100%;
-//       height: 150%;
-//       color: $main-color;
-//       animation: loading 3s cubic-bezier(.45,.78,.6,.39);
-//     }
-//   }
-
-//   @keyframes loading {
-//   from { width: 0; }
-// }
+@keyframes loading {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
 

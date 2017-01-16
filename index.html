@@ -24,7 +24,9 @@
 
 <body>
 
-		<!-- <h1 class="load-text-inner" data-content="Softly">Softly</h1> -->
+	<div class="loader">
+		<h1 class="loader-text" data-content="Softly">Softly</h1>
+	</div>
 
 	<!-- Main Wrapper -->
   	<div class="wrapper">
@@ -216,6 +218,10 @@
 											</div>
 										</div>
 
+										<div class="content-separator hidden-md hidden-lg">
+											<div class="mask"></div>
+										</div>
+
 										<div class="col-md-4">
 											<div class="team__member">
 
@@ -239,6 +245,10 @@
 												</div>
 
 											</div>
+										</div>
+
+										<div class="content-separator hidden-md hidden-lg">
+											<div class="mask"></div>
 										</div>
 
 										<div class="col-md-4">
@@ -570,7 +580,7 @@
 	
 
 	<script src="js/jquery-3.1.1.min.js"></script>
-	<script data-pace-options='{ "minTime": 100, "ghostTime": 2500 }' src="js/pace.js"></script>
+	<script data-pace-options='{ "minTime": 2500, "ghostTime": 100 }' src="js/pace.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="js/jquery.countdown.min.js"></script>

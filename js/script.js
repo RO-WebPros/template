@@ -9,7 +9,6 @@
  =================================================== */
 
 
-
 jQuery(document).ready(function($) {
 	
 /* =================================================== */
@@ -25,7 +24,23 @@ jQuery(document).ready(function($) {
 /*                  6.Loader
 /* =================================================== */
 
+    $(".loader").delay(2500).fadeOut("slow");
+    setTimeout( function() {
+        $(".counter").addClass("loaded");
+    }, 3000);
 
+    setTimeout( function() {
+        $(".header-info").addClass("loaded");
+    }, 3400);
+
+    setTimeout( function() {
+        $(".subscribe").addClass("loaded");
+    }, 3800);
+
+    setTimeout( function() {
+        $(".main-nav").addClass("loaded");
+    }, 4200);
+    
 
 
 /* =================================================== */
@@ -274,13 +289,5 @@ function add_tooltips() {
     $('.minutes').tooltip({title: "minutes", placement: "bottom", delay: {show: 500, hide: 100} });
     $('.seconds').tooltip({title: "seconds", placement: "bottom", delay: {show: 500, hide: 100} });
     
-}
-
-
-$("body").paceOptions = {
-  minTime: 2500,
-  ghostTime: 10000,
-
-  restartOnRequestAfter: false
 }
 
