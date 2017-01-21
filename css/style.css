@@ -194,16 +194,19 @@ body {
 /*==================================
 =            Function           =
 ==================================*/
-#video {
-  position: relative;
-  background: transparent;
-  z-index: 1;
-}
-
-.ytplayer-container {
-  position: absolute;
-  top: 0;
-  z-index: -1;
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(team1.jpg) no-repeat;
+  background-size: cover;
 }
 
 /*===============================
