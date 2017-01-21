@@ -11,8 +11,9 @@
 		border-width: 0 0 3px 0;
 		border-style: solid;
 		border-color: $main-color;
-		font-size: 13px;
+		font-size: 1.3rem;
 		letter-spacing: 2px;
+		color: rgba($text-white, 0.8);
 		background: rgba(0,0,0, 0.2);
 		transition: all 0.5s ease-in-out;
 
@@ -42,7 +43,7 @@
 	    border-style: solid;
 	    border-color: $main-color;
 	    border-radius: 0;
-	    font-size: 11px;
+	    font-size: 1.1rem;
 	    font-weight: 700;
 	    letter-spacing: 2px;
 		text-transform: uppercase;

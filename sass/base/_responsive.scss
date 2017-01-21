@@ -1,6 +1,6 @@
 /*====================================================
-=           	Media Query  			             =
-====================================================*/
+=           	Media Queries  			             =
+=====================================================*/
 
 // Class for making html, body, .wrapper and .main-content scrollable
 .scrollable {
@@ -18,6 +18,9 @@
 		padding: 10px;
 	}
 
+
+	/* Main page */
+
 	.main-content {
 		margin: 0 auto;
 		width: 95%;
@@ -31,6 +34,10 @@
 
 	.modal-dialog {
 		margin: 10px auto;
+	}
+
+	.services__content p {
+		padding: 0 60px;
 	}
 
 
@@ -99,13 +106,13 @@
 			font-size: 1rem;
 		}
 
-	.services__content {
-	    text-align: center;
+	.form-name, .form-email, .form-message {
+		font-size: 1.3rem;
+	}
 
-	    .content-title {
-	    	margin-bottom: 30px;
-	    }
-    }
+
+
+    /* About Section */
 
 	.about__team {
 		.col-md-4 {
@@ -124,17 +131,35 @@
 			}
 		}
 	}
+	
 
 
+	/* Services Section */
+
+	.services__content {
+	    text-align: center;
+
+	    .content-title {
+	    	margin-bottom: 30px;
+	    }
+    }
+
+
+
+	/* Contact Section */
 
 	.contact__info {
 		text-align: center;
 	}
 
     .contact__information {
-    	margin-bottom: 50px;
     	padding-left: 10px;
-    	
+    	text-align: left;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: flex-start;
+    	max-width: 330px;
+    	margin: 0 auto 30px;
     }
 
     .contact__social {
@@ -148,11 +173,16 @@
 }
 
 
+
 /* Page becomes scrollable and navigation gets on the bottom of the container */
 
 @media only screen and (max-width: 768px) {
 
-	/* Main content */
+	/* Main page */
+
+	.loader-text {
+		font-size: 12rem;
+	}
 	
 	.wrapper {
 		padding: 0;
@@ -163,7 +193,6 @@
 		width: 100%;
 	}
 
-	/* Navigation */
 
 	.main-nav {
 		width: 100%;
@@ -200,9 +229,13 @@
 		}
 	}
 
-	// Countdown
+
 	.counter__element {
-		margin-bottom: 30px;
+
+		&:nth-child(1), &:nth-child(2) {
+			margin-bottom: 30px;
+		}
+
 	}
 	.counter__element-number {
 		margin-bottom: 25px;
@@ -218,6 +251,10 @@
 		text-align: left;
 	}
 
+
+
+	/* Modal becomes bigger */
+
 	.modal-dialog {
 		width: 100%;
 		margin: 0 auto;
@@ -230,5 +267,154 @@
 	.contact-form {
     	width: 100%;
 	}
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+	/* Main page */
+
+	.loader-text {
+		font-size: 6rem;
+	}
+
+	.sub__box {
+		width: 250px;
+	}
+
+		.sub__cta {
+			font-size: 1.2rem;
+		}
+
+		.subscribe__email {
+			font-size: 0.8rem;
+			height: 35px;
+		}
+
+		.form__button {
+			font-size: 0.8rem;
+			height: 35px;
+
+			&:before {
+				height: 35px;
+				padding: 0.2em 0.4em;
+				line-height: 3.2;
+			}
+
+			span {
+				padding: 0.2em 0.4em;
+			}
+		}
+
+		.form__button:hover:before {
+			transform: translate3d(0, 0, 0);
+		}
+		.form__button:hover > span {
+			transform: translate3d(0, -100%, 0);
+		}
+
+
+	/* Modal */
+
+	.modal-header {
+		padding: 5px;
+
+		.close {
+			margin-top: 2px;
+			margin-right: 5px;
+			font-size: 2.5em;
+		}
+	}
+
+		.modal-title {
+			font-size: 2rem;
+			line-height: 2;
+		}
+
+	.modal-body p {
+		font-size: 1.4rem;
+	}
+
+	.content-title {
+		font-size: 2.3rem;
+	}
+
+
+
+	/* About Section */
+
+	.team__name {
+		font-size: 1.8rem;
+	}
+
+
+
+	/* Services Section */
+
+	.services__icon-wrapper {
+		width: 40px;
+		height: 40px;
+
+		i {
+			font-size: 2rem;
+		}
+	}
+
+	.services__content p {
+		padding: 0;
+	}
+
+
+
+	/* Contact Section */
+
+	.contact__information {
+		max-width: 250px;
+	}
+
+	.contact__information li {
+		font-size: 1.4rem;
+		margin-bottom: 5px;
+
+		i {
+			font-size: 1.8rem;
+		}
+	}
+
+
+	.social-item {
+	    width: 40px;
+	    height: 40px;
+	    margin-right: 20px;
+
+	    &:last-child {
+	        // margin-right: 10px;
+	    }
+
+	    .facebook {
+	        @include button-effect(40px, 40px, $facebook, $text-white);
+	    }
+
+	    .twitter {
+	        @include button-effect(40px, 40px, $twitter, $text-white);
+	    }
+
+	    .googleplus {
+	        @include button-effect(40px, 40px, $googleplus, $text-white);
+	    }
+
+	    .linkedin {
+	        @include button-effect(40px, 40px, $linkedin, $text-white);
+	    }
+	}
+
+
+	.subscribe__email, .form-name, .form-email, .form-message {
+		font-size: 1rem;
+	}
+
+
 
 }

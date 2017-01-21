@@ -151,19 +151,20 @@ jQuery(document).ready(function($) {
 
            //Video background
 
-           $('#video').YTPlayer({
-            videoId: 'yCwRLE5c9OM',
-            fitToBackground: true,
-            mute: true,
-            repeat: true,
-            pauseOnScroll: false,
-            width: $(window).width(),
-            wmode: 'opaque',
-            playerVars: {
-            start: 30
-            }
+           // $('#video').YTPlayer({
+           //  videoId: 'yCwRLE5c9OM',
+           //  fitToBackground: true,
+           //  mute: true,
+           //  repeat: true,
+           //  pauseOnScroll: false,
+           //  controls: 1,
+           //  width: $(window).width(),
+           //  wmode: 'opaque',
+           //  playerVars: {
+           //  start: 30
+           //  }
 
-           });
+           // });
 
     
 
