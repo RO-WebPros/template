@@ -143,28 +143,6 @@ jQuery(document).ready(function($) {
         return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
     }
 
-
-
-/* =================================================== */
-/*                  5.Youtube Background
-/* =================================================== */
-
-           //Video background
-
-           $('#video').YTPlayer({
-            videoId: 'yCwRLE5c9OM',
-            fitToBackground: true,
-            mute: true,
-            repeat: true,
-            pauseOnScroll: false,
-            width: $(window).width(),
-            wmode: 'opaque',
-            playerVars: {
-            start: 30
-            }
-
-           });
-
     
 
     /* =================================================== */
