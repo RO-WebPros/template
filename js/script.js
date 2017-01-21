@@ -152,12 +152,15 @@ jQuery(document).ready(function($) {
            //Video background
 
            $('#video').YTPlayer({
-            fitToBackground: true,
             videoId: 'yCwRLE5c9OM',
+            fitToBackground: true,
             mute: true,
+            repeat: true,
             pauseOnScroll: false,
+            width: $(window).width(),
+            wmode: 'opaque',
             playerVars: {
-            start: 30,
+            start: 30
             }
 
            });
