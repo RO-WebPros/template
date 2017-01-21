@@ -208,6 +208,36 @@ video#bgvid {
   background-size: cover;
 }
 
+.sliding-background {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sliding-background-wwf.jpg") repeat-x;
+  height: 100%;
+  width: 100%;
+  -webkit-animation: slide 60s linear infinite;
+          animation: slide 60s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-1692px, 0, 0);
+            transform: translate3d(-1692px, 0, 0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-1692px, 0, 0);
+            transform: translate3d(-1692px, 0, 0);
+  }
+}
+
 /*===============================
 =            Buttons            =
 ===============================*/

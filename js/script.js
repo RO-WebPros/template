@@ -143,6 +143,18 @@ jQuery(document).ready(function($) {
         return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
     }
 
+  /* =================================================== */
+    /*                      SlideShow
+    /* =================================================== */
+    if( $('div.wrapper').hasClass('slideshow-background') == true ) { // SLIDESHOW BACKGROUND
+
+                $("div.wrapper").backstretch([
+                    "images/slide1.jpg",
+                    "images/slide2.jpg",
+                    "images/slide3.jpg"
+                ], {duration: 3000, fade: 1200});
+
+    }
     
 
     /* =================================================== */
