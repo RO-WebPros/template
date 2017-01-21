@@ -149,45 +149,23 @@ jQuery(document).ready(function($) {
 /*                  5.Youtube Background
 /* =================================================== */
 
-     
-    /*var isMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        },
-        BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i);
-        },
-        any: function() {
-            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-        }
-    };
-    
-  
-    if(isMobile.any()) {  
-       var bg2 = $('#background2');
-       if($.fn.backstretch && bg2.length){
-            bg2.backstretch("images/about_thumb1.jpg");
-       }  
-    } else {
-       var videobg = $('#video-background');
-       if(videobg.length){
-            videobg.YTPlayer({
-                 fitToBackground: true,
-                 videoId: 'zJ7hUvU-d2Q'
-             }); 
-       }   
-    } 
-    */
+           //Video background
 
+           $('#video').YTPlayer({
+            videoId: 'yCwRLE5c9OM',
+            fitToBackground: true,
+            mute: true,
+            repeat: true,
+            pauseOnScroll: false,
+            width: $(window).width(),
+            wmode: 'opaque',
+            playerVars: {
+            start: 30
+            }
+
+           });
+
+    
 
     /* =================================================== */
     /*                  Particles

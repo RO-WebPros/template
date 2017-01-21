@@ -1,15 +1,14 @@
 /*==================================
 =            Function           =
 ==================================*/
-
-.video-background {
-    position: relative;
-    z-index: -1;
-    background: transparent;
+#video{
+ position: relative;
+ background: transparent;
+ z-index: 1;
 }
 
-.ytplayer-container {
-    position: fixed;
-    z-index: 0;
-    top: 0;
+.ytplayer-container{
+ position: absolute;
+ top: 0;
+ z-index: -1;
 }
