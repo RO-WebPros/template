@@ -632,8 +632,6 @@ body {
 }
 
 .modal-effect.in {
-  -webkit-transform-origin: 50% 0;
-          transform-origin: 50% 0;
   -webkit-animation-name: modal-animation;
           animation-name: modal-animation;
   -webkit-animation-duration: 0.8s;
@@ -1592,6 +1590,7 @@ body {
 
 .main-content.scrollable {
   overflow-y: auto;
+  min-height: 100vh;
 }
 
 @media only screen and (max-width: 992px) {

@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
 /*                  2.Cowntdown timmer 
 /* =================================================== */
 
-  $('.counter').countdown('2017/01/20', function(event) {
+  $('.counter').countdown('2017/01/27', function(event) {
         var offset = event.offset;
         $('#cday').text(offset.totalDays);
         $('#chours').text(''.concat(offset.hours < 10 ? '0' : '', offset.hours));
