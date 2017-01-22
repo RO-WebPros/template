@@ -146,13 +146,21 @@ jQuery(document).ready(function($) {
   /* =================================================== */
     /*                      SlideShow
     /* =================================================== */
-    if( $('div.wrapper').hasClass('slideshow-background') == true ) { // SLIDESHOW BACKGROUND
+   
+    if( $("#slideshow").length ){ // SLIDESHOW BACKGROUND
 
-                $("div.wrapper").backstretch([
-                    "images/slide1.jpg",
-                    "images/slide2.jpg",
-                    "images/slide3.jpg"
-                ], {duration: 3000, fade: 1200});
+                var $slides = $('[data-slides]');
+                var images = $slides.data('slides');
+                var count = images.length;
+                var slideshow = function() {
+                    $slides
+                        .css('background-image', 'url("' + images[Math.floor(Math.random() * count)] + '")')
+                        .show(0, function() {
+                            setTimeout(slideshow, 5000);
+                        });
+    };
+
+    slideshow();
 
     }
     
