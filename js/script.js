@@ -1,10 +1,15 @@
 /* ===================================================  
 
 1. Modal function
-2. Cowntdown timmer 
-3. Subscribe Form
-4. Contact Form
-5. Youtube Background
+2. Loader 
+3. Cowntdown timmer
+4. Subscribe Form
+5. Contact Form
+6. SlideShow
+7. Particles
+8. Kenburns
+9. Main page tooltips
+10. Make page scrollable
 
  =================================================== */
 
@@ -21,7 +26,7 @@ jQuery(document).ready(function($) {
 
 
 /* =================================================== */
-/*                  6.Loader
+/*                  2.Loader
 /* =================================================== */
 
     $(".loader").delay(3000).fadeOut("slow");
@@ -44,7 +49,7 @@ jQuery(document).ready(function($) {
 
 
 /* =================================================== */
-/*                  2.Cowntdown timmer 
+/*                  3.Cowntdown timmer 
 /* =================================================== */
 
   $('.counter').countdown('2017/01/27', function(event) {
@@ -58,7 +63,7 @@ jQuery(document).ready(function($) {
 
 
 /* =================================================== */
-/*                 3.Subscribe Form
+/*                 4.Subscribe Form
 /* =================================================== */
 
     var subscribe = $("#subscribe-form")
@@ -102,7 +107,7 @@ jQuery(document).ready(function($) {
 
 
 /* =================================================== */
-/*                  4.Contact Form
+/*                  5.Contact Form
 /* =================================================== */
 
     var contact = $("#contact-form")
@@ -140,11 +145,11 @@ jQuery(document).ready(function($) {
     });
 
     $.validator.methods.email = function( value, element ) {
-        return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
+       return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
     }
 
   /* =================================================== */
-    /*                      SlideShow
+    /*                     6.SlideShow
     /* =================================================== */
    
     if( $("#slideshow").length ){ // SLIDESHOW BACKGROUND
@@ -166,7 +171,7 @@ jQuery(document).ready(function($) {
     
 
     /* =================================================== */
-    /*                  Particles
+    /*                  7.Particles
     /* =================================================== */
 
     if( $("#particles-js").length ){
@@ -183,7 +188,7 @@ jQuery(document).ready(function($) {
 
 
     /* =================================================== */
-    /*                  Kenburns
+    /*                 8.Kenburns
     /* =================================================== */
 
     if( $("#kenburns").length ) {
@@ -211,13 +216,13 @@ jQuery(document).ready(function($) {
 
 
 /* =================================================== */
-/*                  Main page tooltips
+/*                  9.Main page tooltips
 /* =================================================== */
 
 add_tooltips();
 
 /* =================================================== */
-/*                  Make page scrollable
+/*                  10.Make page scrollable
 /* =================================================== */
 
 
@@ -266,4 +271,6 @@ function add_tooltips() {
     $('.seconds').tooltip({title: "seconds", placement: "bottom", delay: {show: 500, hide: 100} });
     
 }
+
+
 
