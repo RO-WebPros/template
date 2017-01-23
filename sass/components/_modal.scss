@@ -2,12 +2,7 @@
 =            Modals (Navigation Sections)            =
 ====================================================*/
 
-
-.information__content {
-	position: relative;
-}
-
-// Overwrite Bootstrap style to hide default scroll bar
+/* Overwrite Bootstrap style to hide default scroll bar */
 .modal-open .modal {
 	overflow-y: hidden;
 }
@@ -53,11 +48,7 @@
 					font-family: "Libre Franklin", sans-serif;
 	    			font-weight: 800;
 	    			color: $text-white;
-					animation-name: content-animation;
-					animation-duration: 1s;
-					animation-delay: 0.8s;
-					animation-fill-mode: forwards;
-					animation-timing-function: cubic-bezier(0.7,0,0.3,1);
+					animation: content-animation 1s 0.8s forwards cubic-bezier(0.7,0,0.3,1);
 				}
 				
 
@@ -67,11 +58,7 @@
 				padding-top: 0;
 				overflow: hidden;
 				background-color: transparent;
-				animation-name: content-animation;
-				animation-duration: 1s;
-				animation-delay: 1.2s;
-				animation-fill-mode: forwards;
-				animation-timing-function: cubic-bezier(0.7,0,0.3,1);
+				animation: content-animation 1s 1.2s forwards cubic-bezier(0.7,0,0.3,1);
 
 				p {
 					font-size: 1.7rem;
@@ -86,11 +73,7 @@
 	transform-origin: 50% 0;
 
 	&.in {
-		animation-name: modal-animation;
-		animation-duration: 0.8s;
-		animation-delay: 0s;
-		animation-fill-mode: forwards;
-		animation-timing-function: cubic-bezier(0.7,0,0.3,1);
+		animation: modal-animation 0.8s forwards cubic-bezier(0.7,0,0.3,1);
 	}
 }
 
@@ -99,15 +82,11 @@
 @keyframes modal-animation {
 	0% { 
 		opacity: 0;
-		// transform: translate3d(-400px, 0, 0) scale3d(1.4, 0, 1);
-		/* transform: scale(0); */
 		transform:  translateY(-100%);
 	}
 	
 	100% {
-		opacity: 1; 
-		// transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-		// transform: scale(1);
+		opacity: 1;
 		transform:  translateY(0);
 	}
 }

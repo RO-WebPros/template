@@ -85,10 +85,7 @@
                     }
                 }
             }
-
         
-
-            /* Tooltip */
             .counter__element-number + .tooltip {
                 width: 130px;
 
@@ -111,7 +108,6 @@
                 box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.1);
             }
             
-            /* Tooltip on top */
             .counter__element-number + .tooltip.bottom > .tooltip-arrow {
                 border-bottom: 0px solid $main-color;
             }

@@ -24,22 +24,22 @@ jQuery(document).ready(function($) {
 /*                  6.Loader
 /* =================================================== */
 
-    $(".loader").delay(2500).fadeOut("slow");
+    $(".loader").delay(3000).fadeOut("slow");
     setTimeout( function() {
         $(".counter").addClass("loaded");
-    }, 3000);
-
-    setTimeout( function() {
-        $(".header-info").addClass("loaded");
     }, 3400);
 
     setTimeout( function() {
-        $(".subscribe").addClass("loaded");
+        $(".header-info").addClass("loaded");
     }, 3800);
 
     setTimeout( function() {
-        $(".main-nav").addClass("loaded");
+        $(".subscribe").addClass("loaded");
     }, 4200);
+
+    setTimeout( function() {
+        $(".main-nav").addClass("loaded");
+    }, 4600);
     
 
 

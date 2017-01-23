@@ -1,3 +1,7 @@
+/*=============================
+=            Forms            =
+=============================*/
+
 .btn,
 .form-control,
 .form-control:hover,
@@ -6,11 +10,26 @@
     box-shadow: none!important;
 }
 
+.subscribe__form {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+
+	.form-group {
+		flex: 1;
+	}
+
+	.subscribe__email {
+		width: 100%;
+	}
+}
+
 	.subscribe__email {
 		height: 45px;
 		border-width: 0 0 3px 0;
 		border-style: solid;
 		border-color: $main-color;
+		border-radius: 0;
 		font-size: 1.3rem;
 		letter-spacing: 2px;
 		color: rgba($text-white, 0.8);
@@ -105,34 +124,65 @@
 		transition: transform 0.45s;
 		transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 	}
+
 	.form__button:hover:before {
 		transform: translate3d(0, 0, 0);
 	}
+
 	.form__button:hover > span {
 		transform: translate3d(0, -90%, 0);
 	}
 
 
 
+.contact__form {
+	max-width: 900px;
+	margin: 30px auto;
+}
+
+.contact-form {
+	width: 70%;
+	margin: 0 auto;
+
+	.form-group {
+		position: relative;
+	}
+
+	.form-message {
+		resize: vertical;
+	}
+
+}
+
+	.form-name, .form-email, .form-message {
+		@extend .subscribe__email;
+		color: rgba($text-black, 0.8);
+		background: transparent;
+		padding-left: 5px;
+
+		&:focus {
+			background: transparent;
+		}
+
+		&::-moz-placeholder {
+			opacity: 1;
+			color: rgba(0,0,0,.6);
+		}
+
+		&:-ms-input-placeholder {
+			color: rgba(0,0,0,.6);
+		}
+
+		&::-webkit-input-placeholder {
+			color: rgba(0,0,0,.6);
+		}
+	}
+
+
 
 .form-error {
     border-color: #FF3434 !important;
-
 }
-
-.alert-message {
-    margin-top: 20px;
-    border: 0px solid #FF3434;
-}
-
-	.alert-message .error {
-	    color: #FF3434;
-	    border: 4px solid blue;
-	    position: absolute;
-	    left: 450px;
-	    top: 640px;
-	    margin-top: 30px;
-	}
 
 .error-message {
 	position: absolute;
@@ -142,48 +192,5 @@
 }
 
 .error-message--contact {
-    position: static;
-    display: block;
-    margin: 0px auto 0;
     color: #FF3434;
-    padding-bottom: 0;
 }
-
-.contact__label {
-	margin-top: 10px;
-
-}
-
-.alert-message {
-	position: static;
-	display: block;
-	margin: 15px auto 0;
-	border: 0px solid blue;
-	color: #FF3434;
-}
-
-
-/*=============================
-=            Forms            =
-=============================*/
-
-.subscribe {
-	// width: 90%;
-	margin: 0 auto;
-}
-
-.subscribe__form {
-	width: 100%;
-	display: flex;
-	align-items: flex-start;
-
-	.form-group {
-		flex: 1;
-	}
-
-	.subscribe__email {
-		width: 100%;
-		border-radius: 0;
-	}
-}
-

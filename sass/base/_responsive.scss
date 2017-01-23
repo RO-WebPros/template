@@ -2,7 +2,10 @@
 =           	Media Queries  			             =
 =====================================================*/
 
-// Class for making html, body, .wrapper and .main-content scrollable
+/* 
+* Class for making html, body, .wrapper and .main-content scrollable
+* It gets added at width < 768px  or height < 500px and the page becomes scrollable
+*/
 .scrollable {
 	height: auto;
 }
@@ -12,35 +15,24 @@
 	min-height: 100vh;
 }
 
+
+/* 
+* Some text becomes smaller 
+* Column sections like team members, services icon and title, contact information get under each other 
+*/
 @media only screen and (max-width: 992px) {
 
 	.wrapper {
 		padding: 10px;
 	}
 
-
 	/* Main page */
-
 	.main-content {
 		margin: 0 auto;
 		width: 95%;
 	}
 
-	.header-info__text {
-		font-size: 1.2em;
-		line-height: 1.4;
-	}
-
-
-	.modal-dialog {
-		margin: 10px auto;
-	}
-
-	.services__content p {
-		padding: 0 60px;
-	}
-
-
+	/* Navigation */
 	.main-nav__item {
 		width: 35px;
 		height: 35px;
@@ -66,7 +58,7 @@
 		letter-spacing: 1px;
 	}
 
-
+	/* Header */
 	.counter__element-number {
 		width: 60px;
 		height: 60px;
@@ -88,6 +80,10 @@
 		font-size: 1.4rem;
 	}
 
+	.header-info__text {
+		font-size: 1.2em;
+		line-height: 1.4;
+	}
 
 	.sub__box {
 		width: 300px;
@@ -110,10 +106,14 @@
 		font-size: 1.3rem;
 	}
 
+	/* Modal */
+
+	.modal-dialog {
+		margin: 10px auto;
+	}
 
 
     /* About Section */
-
 	.about__team {
 		.col-md-4 {
 			.team__member {
@@ -131,23 +131,21 @@
 			}
 		}
 	}
-	
-
 
 	/* Services Section */
-
 	.services__content {
 	    text-align: center;
-
+	
 	    .content-title {
 	    	margin-bottom: 30px;
 	    }
+
+		.services__content p {
+			padding: 0 60px;
+		}
     }
 
-
-
 	/* Contact Section */
-
 	.contact__info {
 		text-align: center;
 	}
@@ -174,12 +172,14 @@
 
 
 
-/* Page becomes scrollable and navigation gets on the bottom of the container */
-
+/* 
+* Page becomes scrollable 
+* Navigation gets on the bottom of the container
+* Main content and modal get full width
+*/
 @media only screen and (max-width: 768px) {
 
 	/* Main page */
-
 	.loader-text {
 		font-size: 12rem;
 	}
@@ -193,7 +193,7 @@
 		width: 100%;
 	}
 
-
+	/* Navigation */
 	.main-nav {
 		width: 100%;
 		left: 0;
@@ -229,7 +229,7 @@
 		}
 	}
 
-
+	/* Coutdown */
 	.counter__element {
 
 		&:nth-child(1), &:nth-child(2) {
@@ -241,6 +241,7 @@
 		margin-bottom: 25px;
 	}
 
+	/* Subscribe Box */
 	.subscribe {
 		margin-bottom: 50px;
 	}
@@ -251,10 +252,7 @@
 		text-align: left;
 	}
 
-
-
-	/* Modal becomes bigger */
-
+	/* Modal */
 	.modal-dialog {
 		width: 100%;
 		margin: 0 auto;
@@ -264,6 +262,7 @@
 		max-height: 85vh;
 	}
 
+	/* Contact */ 
 	.contact-form {
     	width: 100%;
 	}
@@ -271,11 +270,10 @@
 }
 
 
-
+/* Text gets smaller, to fit on small devices */
 @media only screen and (max-width: 600px) {
 
 	/* Main page */
-
 	.loader-text {
 		font-size: 6rem;
 	}
@@ -317,7 +315,6 @@
 
 
 	/* Modal */
-
 	.modal-header {
 		padding: 5px;
 
@@ -341,18 +338,12 @@
 		font-size: 2.3rem;
 	}
 
-
-
-	/* About Section */
-
+	/* About */
 	.team__name {
 		font-size: 1.8rem;
 	}
 
-
-
-	/* Services Section */
-
+	/* Services */
 	.services__icon-wrapper {
 		width: 40px;
 		height: 40px;
@@ -366,10 +357,7 @@
 		padding: 0;
 	}
 
-
-
-	/* Contact Section */
-
+	/* Contact */
 	.contact__information {
 		max-width: 250px;
 	}
@@ -389,10 +377,6 @@
 	    height: 40px;
 	    margin-right: 20px;
 
-	    &:last-child {
-	        // margin-right: 10px;
-	    }
-
 	    .facebook {
 	        @include button-effect(40px, 40px, $facebook, $text-white);
 	    }
@@ -410,11 +394,8 @@
 	    }
 	}
 
-
 	.subscribe__email, .form-name, .form-email, .form-message {
 		font-size: 1rem;
 	}
-
-
 
 }
