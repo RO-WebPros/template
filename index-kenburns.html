@@ -34,6 +34,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700,800,900" rel="stylesheet">
 
+	<!-- Kenburns Effect -->
+	<link rel="stylesheet" type="text/css" href="css/vegas.min.css">
+
 	<!-- Custom Styles -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -45,7 +48,7 @@
 	</div>
 
 	<!-- Main Wrapper -->
-  	<div class="wrapper wrapper--kenburns">
+  	<div class="wrapper wrapper--no-background wrapper--kenburns">
 
   		<canvas id="kenburns"></canvas>
 
@@ -637,10 +640,26 @@
 	<!-- Form Validation -->
 	<script src="js/jquery.validate.js"></script>
 	
-	<!-- Kenburns effect -->
-	<script src="js/kenburned.min.js"></script>
+	<!-- Kenburns Effect -->
+	<script src="js/vegas.min.js"></script>
 
 	<!-- Custom Scripts -->
 	<script src="js/script.js"></script>
+
+	<script>
+		if( $(".wrapper--kenburns").length ){
+		    $kenburns = $('.wrapper--kenburns');
+		    $kenburns.vegas({
+		        slides: [
+		            { src: 'images/slide1.jpg' },
+		            { src: 'images/slide2.jpg' },
+		            { src: 'images/slide3.jpg' }
+		        ],
+		        animation: 'random',
+		        animationDuration: 6000,
+		        timer : false
+		    });
+		}
+	</script>
 </body>
 </html>

@@ -34,24 +34,21 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700,800,900" rel="stylesheet">
 
+	<!-- Slideshow -->
+	<link rel="stylesheet" type="text/css" href="css/vegas.min.css">
+
 	<!-- Custom Styles -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body class="slideshow-background">
+<body>
 
 	<div class="loader">
 		<h1 class="loader-text" data-content="Softly">Softly</h1>
 	</div>
 
 	<!-- Main Wrapper -->
-  	<div class="wrapper"  style="background-image: none; background-color: transparent;">
-
-		<div id="slideshow" class="test" data-slides='[
-	        "images/slide1.jpg",
-	        "images/slide2.jpg",
-	        "images/slide3.jpg"]'>        	
-    	</div>
+  	<div class="wrapper wrapper--no-background wrapper--slideshow">
 
 		<!-- Main Content Section -->
 		<header class="main-content">
@@ -641,7 +638,27 @@
 	<!-- Form Validation -->
 	<script src="js/jquery.validate.js"></script>
 
+	<!-- Slideshow -->
+	<script src="js/vegas.min.js"></script>
+
 	<!-- Custom Scripts -->
 	<script src="js/script.js"></script>
+
+	<script>
+		if( $(".wrapper--slideshow").length ){
+		    $slideshow = $('.wrapper--slideshow');
+		    $slideshow.vegas({
+		        slides: [
+		            { src: 'images/slide1.jpg' },
+		            { src: 'images/slide2.jpg' },
+		            { src: 'images/slide3.jpg' }
+		        ],
+		        transition: 'blur',
+		        transitionDuration: 2000,
+		        timer : false,
+		        delay: 6000
+		    });
+		}
+	</script>
 </body>
 </html>
