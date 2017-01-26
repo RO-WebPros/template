@@ -152,24 +152,21 @@ jQuery(document).ready(function($) {
   /* =================================================== */
     /*                     6.SlideShow
     /* =================================================== */
-   
-    if( $("#slideshow").length ){ // SLIDESHOW BACKGROUND
 
-                var $slides = $('[data-slides]');
-                var images = $slides.data('slides');
-                var count = images.length;
-                var slideshow = function() {
-                    $slides
-                        .css('background-image', 'url("' + images[Math.floor(Math.random() * count)] + '")')
-                        .show(0, function() {
-                            setTimeout(slideshow, 5000);
-                        });
-    };
-
-    slideshow();
-
-    }
-    
+    // if( $(".wrapper--slideshow").length ){
+    //     $slideshow = $('.wrapper--slideshow');
+    //     $slideshow.vegas({
+    //         slides: [
+    //             { src: 'images/slide1.jpg' },
+    //             { src: 'images/slide2.jpg' },
+    //             { src: 'images/slide3.jpg' }
+    //         ],
+    //         transition: 'blur',
+    //         transitionDuration: 2000,
+    //         timer : false,
+    //         delay: 6000
+    //     });
+    // }
 
     /* =================================================== */
     /*                  7.Particles
@@ -192,29 +189,19 @@ jQuery(document).ready(function($) {
     /*                 8.Kenburns
     /* =================================================== */
 
-    if( $("#kenburns").length ) {
-
-        var the_slides = new Array(
-            "images/slide1.jpg",
-            "images/slide2.jpg",
-            "images/slide3.jpg"
-        );
-          
-        $('#kenburns').attr('width', $(window).width());
-        $('#kenburns').attr('height', $(window).height());
-          
-        $('#kenburns').kenburned({
-            images: the_slides,
-            frames_per_second: 24,
-            display_time: 8000,
-            fade_time: 2000
-        });
-
-    }
-
-
-});
-
+    // if( $(".wrapper--kenburns").length ){
+    //     $kenburns = $('.wrapper--kenburns');
+    //     $kenburns.vegas({
+    //         slides: [
+    //             { src: 'images/slide1.jpg' },
+    //             { src: 'images/slide2.jpg' },
+    //             { src: 'images/slide3.jpg' }
+    //         ],
+    //         animation: 'random',
+    //         animationDuration: 6000,
+    //         timer : false
+    //     });
+    // }
 
     /* =================================================== */
     /*                 9.Smoke Effect
@@ -228,6 +215,8 @@ jQuery(document).ready(function($) {
         "left": "0",
         "bottom": "0"
     });
+
+});
 
 
 /* =================================================== */

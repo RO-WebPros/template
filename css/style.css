@@ -73,7 +73,7 @@ body {
   background-size: cover;
 }
 
-.wrapper--kenburns {
+.wrapper--no-background {
   background-color: transparent;
   background-image: none;
 }
@@ -107,66 +107,9 @@ body {
   box-shadow: 0 0 10px rgba(1, 64, 93, 0.4);
 }
 
-/* Effects Styles */
-#particles-js, #particles-snow-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-#kenburns {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -2;
-}
-
-/*==================================
-=            Function           =
+/* ==================================
+=            Function               =
 ==================================*/
-video#bgvid {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: url(team1.jpg) no-repeat;
-  background-size: cover;
-}
-
-[data-slides] {
-  /*    background-image: url(../../images/slide1.jpg);  */
-  /* Default image. */
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  -webkit-transition: background-image 2s linear;
-  transition: background-image 2s linear;
-}
-
-.test {
-  background-size: cover;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: 100%;
-  height: 100%;
-  z-index: -2000;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-}
-
-/* @media all and (min-width: 48em) {
-    .test { height: 320px; }
-} */
 /*===============================
 =            Buttons            =
 ===============================*/
@@ -798,6 +741,66 @@ video#bgvid {
   }
 }
 
+/* ==================================
+=            Effects              =
+==================================*/
+/* Video Effect */
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(team1.jpg) no-repeat;
+  background-size: cover;
+}
+
+/* Slideshow effect */
+[data-slides] {
+  /*    background-image: url(../../images/slide1.jpg);  */
+  /* Default image. */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  -webkit-transition: background-image 2s linear;
+  transition: background-image 2s linear;
+}
+
+.test {
+  background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -2000;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+/* Particles effect */
+#particles-js, #particles-snow-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Kenburns effect */
+#kenburns {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
 /*==================================
 =            Navigation            =
 ==================================*/
@@ -927,9 +930,6 @@ video#bgvid {
   border-top: 5px solid #03A9F4;
 }
 
-/*==============================
-=            Footer            =
-==============================*/
 /*=================================================
 =            Home Page specific styles            =
 =================================================*/
