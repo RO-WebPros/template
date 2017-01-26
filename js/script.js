@@ -8,6 +8,7 @@
 6. SlideShow
 7. Particles
 8. Kenburns
+9. Smoke Effect
 9. Main page tooltips
 10. Make page scrollable
 
@@ -194,9 +195,9 @@ jQuery(document).ready(function($) {
     if( $("#kenburns").length ) {
 
         var the_slides = new Array(
-            "images/new_building.jpg",
-            "images/old_building.jpg",
-            "images/Covermainpage.jpg"
+            "images/slide1.jpg",
+            "images/slide2.jpg",
+            "images/slide3.jpg"
         );
           
         $('#kenburns').attr('width', $(window).width());
@@ -213,6 +214,20 @@ jQuery(document).ready(function($) {
 
 
 });
+
+
+    /* =================================================== */
+    /*                 9.Smoke Effect
+    /* =================================================== */
+
+
+    $(".smoke__effect").css({
+        "position": "absolute",
+        "width": "100%",
+        "height": "100%",
+        "left": "0",
+        "bottom": "0"
+    });
 
 
 /* =================================================== */

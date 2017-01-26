@@ -3,6 +3,7 @@
     window.requestAnimationFrame = requestAnimationFrame;
 })();
 
+
 var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 
@@ -91,6 +92,8 @@ smokeImage.src = "http://somethinghitme.com/projects/particle%20test/images/smok
 smokeImage.onload = function () {
     render();
 }
+
+
 
 
 window.onresize = resizeMe;
