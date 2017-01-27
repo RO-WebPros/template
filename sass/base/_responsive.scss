@@ -172,6 +172,7 @@
 
 
 
+
 /* 
 * Page becomes scrollable 
 * Navigation gets on the bottom of the container
@@ -270,6 +271,7 @@
 }
 
 
+
 /* Text gets smaller, to fit on small devices */
 @media only screen and (max-width: 600px) {
 
@@ -313,7 +315,13 @@
 			transform: translate3d(0, -100%, 0);
 		}
 
+	.comming__soon {
 
+  		font-size: 3em;
+ 		margin-bottom: 30px;
+
+	}
+	
 	/* Modal */
 	.modal-header {
 		padding: 5px;
@@ -399,3 +407,5 @@
 	}
 
 }
+
+

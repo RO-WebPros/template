@@ -1,3 +1,7 @@
+/*======================================
+=            Main Tags                 =
+======================================*/
+
 html {
 
   width: 100%;
@@ -13,13 +17,9 @@ body {
 
 }
 
-footer {
-	text-align: center;
-/* 	line-height: 0; */
-    margin-top: 50px;
-    padding: 50px 0;
-    background: #9ADCFB;
-}
+/*======================================
+=              Header                  =
+======================================*/
 
 .header {
     position: relative;
@@ -58,10 +58,72 @@ footer {
     background: 0 0;
 }
 
+.btn-mainpage.focus, .btn-mainpage:focus, .btn-mainpage:hover {
+
+    color: white !important;
+    text-decoration: none;
+
+}
+
+/*======================================
+=              Content                 =
+======================================*/
+
+
+.text__center {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.text__center:hover {
+  
+  color: #03A9F4;
+
+}
+
+.horizontal__line {
+
+  border: 2px solid gray;
+  width: 100%;
+}
+
+
+/* Image Effect */
+
+.thumbnail {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+         
+}
+ 
+.thumbnail:hover {
+    text-decoration: none;
+    -webkit-filter:grayscale(70%);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease,-webkit-transform .5s ease;
+}
+
+
+/*======================================
+=              Footer                  =
+======================================*/
+
 .footer {
 	border: 2px solid #9ADCFB;
 }
 
-.text__center {
-    text-align: center;
+footer {
+  text-align: center;
+/*  line-height: 0; */
+    margin-top: 50px;
+    padding: 50px 0;
+    background: #9ADCFB;
 }

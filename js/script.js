@@ -189,34 +189,48 @@ jQuery(document).ready(function($) {
     /*                 8.Kenburns
     /* =================================================== */
 
-    // if( $(".wrapper--kenburns").length ){
-    //     $kenburns = $('.wrapper--kenburns');
-    //     $kenburns.vegas({
-    //         slides: [
-    //             { src: 'images/slide1.jpg' },
-    //             { src: 'images/slide2.jpg' },
-    //             { src: 'images/slide3.jpg' }
-    //         ],
-    //         animation: 'random',
-    //         animationDuration: 6000,
-    //         timer : false
-    //     });
-    // }
+/*    if( $(".wrapper--kenburns").length ){
+        $kenburns = $('.wrapper--kenburns');
+        $kenburns.vegas({
+            slides: [
+                { src: 'images/slide1.jpg' },
+                { src: 'images/slide2.jpg' },
+                { src: 'images/slide3.jpg' }
+            ],
+            animation: 'random',
+            animationDuration: 6000,
+            timer : false
+        });
+    }*/
 
     /* =================================================== */
-    /*                 9.Smoke Effect
+    /*                 9.Ripples Effect
     /* =================================================== */
 
+      $('.main-content').ripples({
+            resolution: 512,
+            dropRadius: 20, //px
+            perturbance: 0.04,
+        }),
+    
 
-    $(".smoke__effect").css({
-        "position": "absolute",
-        "width": "100%",
-        "height": "100%",
-        "left": "0",
-        "bottom": "0"
-    });
+    // Automatic drops
 
-});
+    setInterval(function() {
+        var $el = $('.main-content');
+        var x = Math.random() * $el.outerWidth();
+        var y = Math.random() * $el.outerHeight();
+        var dropRadius = 20;
+        var strength = 0.04 + Math.random() * 0.04;
+
+        $el.ripples('drop', x, y, dropRadius, strength);
+    }, 400);
+
+
+
+
+
+}); // End of jquery
 
 
 /* =================================================== */
