@@ -280,6 +280,10 @@
 		font-size: 6rem;
 	}
 
+	.header-title {
+  		font-size: 3em;
+	}
+
 	.sub__box {
 		width: 250px;
 	}
@@ -314,13 +318,6 @@
 		.form__button:hover > span {
 			transform: translate3d(0, -100%, 0);
 		}
-
-	.comming__soon {
-
-  		font-size: 3em;
- 		margin-bottom: 30px;
-
-	}
 	
 	/* Modal */
 	.modal-header {

@@ -207,26 +207,26 @@ jQuery(document).ready(function($) {
     /* =================================================== */
     /*                 9.Ripples Effect
     /* =================================================== */
- if( $("#ripples__effect").length ){  
+ if( $("#ripples-js").length ){  
    
-    $('#ripples__effect').ripples({
+    $('#ripples-js').ripples({
                 resolution: 512,
-                dropRadius: 20, //px
-                perturbance: 0.04,
-    }),
+                dropRadius: 40, //px
+                perturbance: 0.02,
+    })
 
 
         // Automatic drops
 
     setInterval(function() {
-        var $el = $('#ripples__effect');
+        var $el = $('#ripples-js');
         var x = Math.random() * $el.outerWidth();
         var y = Math.random() * $el.outerHeight();
-        var dropRadius = 20;
+        var dropRadius = 40;
         var strength = 0.04 + Math.random() * 0.04;
 
         $el.ripples('drop', x, y, dropRadius, strength);
-    }, 400)
+    }, 1000)
 }
 
 

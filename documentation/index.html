@@ -11,26 +11,18 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-	<!-- Custom Scrollbar -->
-	<!-- <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"> -->
-
-	<!-- Font Awesome -->
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700,800,900" rel="stylesheet">
 
-	<!-- Custom Styles -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="assets/css/highlight-theme.css">
+
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navigation" data-offset="200">
 
-	<div class="navigation">
+	<nav class="navigation">
 
 		<div class="nav__header">
 			<a href="#welcome">
@@ -38,7 +30,7 @@
 			</a>
 		</div>
 
-		<ul class="nav__menu">
+		<ul class="nav nav__menu">
 			<li><a href="#welcome">Welcome</a></li>
 			<li><a href="#installation">Installing Template</a></li>
 			<li><a href="#html">HTML Structure</a></li>
@@ -47,7 +39,7 @@
 			<li><a href="#customise">Customisation</a></li>
 			<li><a href="#credits">Credits</a></li>
 		</ul>
-	</div>
+	</nav>
 
 	<div class="content">
 		
@@ -57,8 +49,8 @@
 			
 
 			<h2>Welcome to Softly Template Documentation</h2>
-			<p>First of all, a huge thanks for purchasing this theme, your support is truly appreciated!</p>
-			<p>This document covers the installation and use of this theme and often reveals answers to common problems and issues. Read this document thoroughly if you are experiencing any difficulties. If you have any questions that are beyond the scope of this document, feel free to pose them in the dedicated support section.</p>
+			<p>First of all, a huge thanks for purchasing this template, your support is truly appreciated!</p>
+			<p>This document covers the installation and use of this template and often reveals answers to common problems and issues. Read this document thoroughly if you are experiencing any difficulties. If you have any questions that are beyond the scope of this document, feel free to pose them in the dedicated support section.</p>
 
 			<h2>Template Features</h2>
 
@@ -349,17 +341,117 @@
 			</code></pre>
 
 
-			<h3>Images</h3>
+			<h3>Effects</h3>
+			<p class="nested">After you choose the HTML file with the effect you want to use, there are three different ways to include your assets based on what effect you chose.</p>
+
+			<p class="nested">Let's start with the <strong>Single Image, Snow, Particles and Ripple</strong> effects.</p>
+			<p class="nested">Open <em>style.css</em> and go to the Basic styles section. Here, in the wrapper selector, change this line:</p>
+
+			<pre class="nested"><code>
+	/*=======================================================
+	=            Basic styles (used in all pages)            =
+	=======================================================*/
+
+	...
+
+	.wrapper {
+		...
+		background-image: url(<span class="highlight">PATH/TO/FILE/image.jpg</span>);
+	}
+			</code></pre>
+
+			<p class="nested">For the <strong>Video Background</strong>, all you have to do is change the path to your video file inside <em>index-video.html</em>:</p>
+			<pre class="nested"><code>
+	&lt;video playsinline autoplay muted loop id="bgvid"&gt;
+	    &lt;source src="<span class="highlight">PATH/TO/video.mp4</span>" type="video/mp4"&gt;
+	&lt;/video&gt;
+			</code></pre>
+
+			<p class="nested">For the <strong>Slideshow</strong> and <strong>Kenburns</strong> effects, you will find the settings inside the <em>script.js</em> file. Go to the coresponding section and add your list of images used for the effect.</p>
+
+			<p class="nested"><strong>Slideshow:</strong></p>
+			<pre class="nested"><code>
+	$slideshow = $('.wrapper--slideshow');
+	$slideshow.vegas({
+	    slides: [
+	        { src: '<span class="highlight">PATH/TO/FILE/image.jpg</span>' },
+	        { src: '<span class="highlight">PATH/TO/FILE/image.jpg</span>' },
+	        { src: '<span class="highlight">PATH/TO/FILE/image.jpg</span>' }
+	});
+			</code></pre>
+
+			<p class="nested"><strong>Kenburns:</strong></p>
+
+			<pre class="nested"><code>
+	$kenburns = $('.wrapper--kenburns');
+	$kenburns.vegas({
+	    slides: [
+	        { src: '<span class="highlight">PATH/TO/FILE/image.jpg</span>' },
+	        { src: '<span class="highlight">PATH/TO/FILE/image.jpg</span>' },
+	        { src: '<span class="highlight">PATH/TO/FILE/image.jpg</span>' }
+	    ]
+	});
+			</code></pre>
+
+			<p class="nested">For the more advanced users, in the <em>script.js</em> file you can find the settings to change other things like particle sizes or image showing times for each effect.</p>
+
+			<br><br>
+			<p>Congratulations! Now your website is ready to launch.</p>
+
 
 		</section>
 
-		
+
+		<section id="credits">
+			<h2>Credits</h2>
+			<p>We used a number of plugins, fonts and images to create this template. All of them are free for commercial use.</p>
+
+			<h3>Fonts <small>from Google Fonts</small></h3>
+			<ul class="list nested">
+				<li><a href="https://fonts.google.com/specimen/Finger+Paint">Finger Paint</a> (this is used for logo loading animation only)</li>
+				<li><a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a></li>
+				<li><a href="https://fonts.google.com/specimen/Libre+Franklin">Libre Franklin</a></li>
+			</ul>
+
+
+			<h3>jQuery Plugins</h3>
+			<ul class="list nested">
+				<li><a href="http://getbootstrap.com/">Bootstrap</a> - Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web</li>
+				<li><a href="https://jquery.com/">jQuery</a> - jQuery is a fast, small, and feature-rich JavaScript library</li>
+				<li><a href="http://manos.malihu.gr/jquery-custom-content-scroller/">jQuery custom content scroller</a></li>
+				<li><a href="http://hilios.github.io/jQuery.countdown/">The Final Countdown</a></li>
+				<li><a href="https://jqueryvalidation.org/">jQuery Validation Plugin</a></li>
+				<li><a href="http://github.hubspot.com/pace/docs/welcome/">Pace</a> - Automatic page load progress bar</li>
+				<li><a href="http://vegas.jaysalvat.com/">Vegas</a> - Vegas is a jQuery/Zepto plugin to add beautiful backgrounds and Slideshows to DOM elements</li>
+				<li><a href="http://vincentgarreau.com/particles.js/">Particles.js</a> - A lightweight JavaScript library for creating particles</li>
+				<li><a href="https://sirxemic.github.io/jquery.ripples/">jQuery Ripples</a> - A simple WebGL-based ripple effect</li>
+			</ul>
+
+			<h3>Icons</h3>
+			<ul class="list nested">
+				<li><a href="http://fontawesome.io/">Font Awesome</a> - The iconic font and CSS toolkit</li>
+			</ul>
+
+			<h3>Images</h3>
+			<p class="nested">All images are from <a href="https://unsplash.com/">Unsplash</a>.</p>
+			<p class="nested">Note that images are for preview only and are not included in the main download files.</p>
+		</section>
+
+		<p>Once again, a big thank you for purchasing this theme. You are an awesome person!</p>
+
+		<p>If there is anything we missed out or you have any other questions relating to this template, we are glad to help you.</p>
 
 	</div>
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+	<script src="assets/js/jquery-3.1.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/highlight.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
 	<script>
 		$(document).ready(function(){
 	    	// Smooth ScrollTo
@@ -376,10 +468,5 @@
 		    });
 		});
 	</script>
-
-	<link rel="stylesheet" href="assets/css/highlight-theme.css">
-	<script src="assets/js/highlight.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	
 </body>
 </html>

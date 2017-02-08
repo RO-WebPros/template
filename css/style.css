@@ -107,11 +107,6 @@ body {
   box-shadow: 0 0 10px rgba(1, 64, 93, 0.4);
 }
 
-.comming__soon {
-  font-size: 5em;
-  margin-bottom: 30px;
-}
-
 /* ==================================
 =            Function               =
 ==================================*/
@@ -968,6 +963,11 @@ video#bgvid {
           transform: translateY(-30px);
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
+}
+
+.header-title {
+  font-size: 5em;
+  margin-bottom: 30px;
 }
 
 .subscribe {
@@ -1862,6 +1862,9 @@ video#bgvid {
   .loader-text {
     font-size: 6rem;
   }
+  .header-title {
+    font-size: 3em;
+  }
   .sub__box {
     width: 250px;
   }
@@ -1891,10 +1894,6 @@ video#bgvid {
   .form__button:hover > span {
     -webkit-transform: translate3d(0, -100%, 0);
             transform: translate3d(0, -100%, 0);
-  }
-  .comming__soon {
-    font-size: 3em;
-    margin-bottom: 30px;
   }
   /* Modal */
   .modal-header {
