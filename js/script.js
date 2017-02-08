@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
 /*                  3.Cowntdown timmer 
 /* =================================================== */
 
-  $('.counter').countdown('2017/01/27', function(event) {
+  $('.counter').countdown('2017/02/01', function(event) {
         var offset = event.offset;
         $('#cday').text(offset.totalDays);
         $('#chours').text(''.concat(offset.hours < 10 ? '0' : '', offset.hours));
@@ -206,31 +206,32 @@ jQuery(document).ready(function($) {
     /* =================================================== */
     /*                 9.Ripples Effect
     /* =================================================== */
+ if( $("#ripples__effect").length ){  
+   
+    $('#ripples__effect').ripples({
+                resolution: 512,
+                dropRadius: 20, //px
+                perturbance: 0.04,
+    }),
 
-      $('.main-content').ripples({
-            resolution: 512,
-            dropRadius: 20, //px
-            perturbance: 0.04,
-        }),
-    
 
-    // Automatic drops
+        // Automatic drops
 
     setInterval(function() {
-        var $el = $('.main-content');
+        var $el = $('#ripples__effect');
         var x = Math.random() * $el.outerWidth();
         var y = Math.random() * $el.outerHeight();
         var dropRadius = 20;
         var strength = 0.04 + Math.random() * 0.04;
 
         $el.ripples('drop', x, y, dropRadius, strength);
-    }, 400);
+    }, 400)
+}
 
 
 
 
-
-}); // End of jquery
+ 
 
 
 /* =================================================== */
@@ -291,4 +292,4 @@ function add_tooltips() {
 }
 
 
-
+}); // End

@@ -78,12 +78,13 @@ body {
 .text__center:hover {
   
   color: #03A9F4;
+  cursor: pointer;
 
 }
 
 .horizontal__line {
 
-  border: 2px solid gray;
+  border: 2px solid #9ADCFB;
   width: 100%;
 }
 
@@ -98,10 +99,19 @@ body {
           transition: all 1s ease;
          
 }
+
+.thumbnail img:hover {
+    color: #03A9F4;
+         
+}
+
+.caption h4:hover {
+   color: #03A9F4;
+}
  
 .thumbnail:hover {
     text-decoration: none;
-    -webkit-filter:grayscale(70%);
+/*     -webkit-filter:grayscale(70%); */
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
