@@ -5,10 +5,12 @@
 3. Modal function 
 4. Subscribe Form
 5. Contact Form
-6. Particles
-7. Ripple Effect
-8. Main page tooltips
-9. Make page scrollable
+6. Kenburns
+7. Slideshow
+8. Particles
+9. Ripple Effect
+10. Main page tooltips
+11. Make page scrollable
 
  =================================================== */
 
@@ -166,10 +168,53 @@ jQuery(document).ready(function($) {
            return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
         }
 
+    /* =================================================== */
+    /*                  6.Kenbuns
+    /* =================================================== */
+
+
+
+        if( $(".wrapper--kenburns").length ){
+                $kenburns = $('.wrapper--kenburns');
+                $kenburns.vegas({
+                    slides: [
+                        { src: 'images/slide1.jpg' },
+                        { src: 'images/slide2.jpg' },
+                        { src: 'images/slide3.jpg' }
+                    ],
+                    animation: 'random',
+                    animationDuration: 6000,
+                    timer : false
+                });
+            }
+
 
 
     /* =================================================== */
-    /*                  6.Particles
+    /*                  7.Slideshow
+    /* =================================================== */
+
+
+
+        if( $(".wrapper--slideshow").length ){
+                    $slideshow = $('.wrapper--slideshow');
+                    $slideshow.vegas({
+                        slides: [
+                            { src: 'images/slide1.jpg' },
+                            { src: 'images/slide2.jpg' },
+                            { src: 'images/slide3.jpg' }
+                        ],
+                        transition: 'blur',
+                        transitionDuration: 2000,
+                        timer : false,
+                        delay: 6000
+                    });
+                }
+
+
+
+    /* =================================================== */
+    /*                  8.Particles
     /* =================================================== */
 
         if( $("#particles-js").length ){
@@ -187,7 +232,7 @@ jQuery(document).ready(function($) {
 
 
     /* =================================================== */
-    /*                 7.Ripples Effect
+    /*                 9.Ripples Effect
     /* =================================================== */
      
 
@@ -221,7 +266,7 @@ jQuery(document).ready(function($) {
 
 
     /* =================================================== */
-    /*                  8.Main page tooltips
+    /*                  10.Main page tooltips
     /* =================================================== */
 
 
@@ -231,7 +276,7 @@ jQuery(document).ready(function($) {
 
 
     /* =================================================== */
-    /*                  9.Make page scrollable
+    /*                  11.Make page scrollable
     /* =================================================== */
 
 
