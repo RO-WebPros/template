@@ -50,10 +50,10 @@ jQuery(document).ready(function($) {
 
 
 /* =================================================== */
-/*                  3.Cowntdown timmer 
+/*                  3.Cowntdown timer 
 /* =================================================== */
 
-  $('.counter').countdown('2017/01/27', function(event) {
+  $('.counter').countdown('2017/02/27', function(event) {
         var offset = event.offset;
         $('#cday').text(offset.totalDays);
         $('#chours').text(''.concat(offset.hours < 10 ? '0' : '', offset.hours));
