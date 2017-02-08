@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Softly Template Documentation</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<!-- Custom Scrollbar -->
+	<!-- <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"> -->
+
+	<!-- Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700,800,900" rel="stylesheet">
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+	<div class="navigation">
+
+		<div class="nav__header">
+			<a href="#welcome">
+				<img class="logo" src="assets/images/logo.svg" alt="Softly Logo">
+			</a>
+		</div>
+
+		<ul class="nav__menu">
+			<li><a href="#welcome">Welcome</a></li>
+			<li><a href="#installation">Installing Template</a></li>
+			<li><a href="#html">HTML Structure</a></li>
+			<li><a href="#css">CSS Structure</a></li>
+			<li><a href="#javascript">Javascript Structure</a></li>
+			<li><a href="#customise">Customisation</a></li>
+			<li><a href="#credits">Credits</a></li>
+		</ul>
+	</div>
+
+	<div class="content">
+		
+		<section id="welcome">
+
+			<h1>Softly<small>Responsive Coming Soon Template</small></h1>
+			
+
+			<h2>Welcome to Softly Template Documentation</h2>
+			<p>First of all, a huge thanks for purchasing this theme, your support is truly appreciated!</p>
+			<p>This document covers the installation and use of this theme and often reveals answers to common problems and issues. Read this document thoroughly if you are experiencing any difficulties. If you have any questions that are beyond the scope of this document, feel free to pose them in the dedicated support section.</p>
+
+			<h2>Template Features</h2>
+
+			<ul class="list">
+			    <li>Bootstrap 3 Framework</li>
+	          	<li>HTML5 &amp; CSS3</li>
+	          	<li>CSS3 Animations</li>
+	     		<li>Fully Responsive</li>
+				<li>Well commented files</li>
+				<li>Crossbrowser Compatible with IE9+, Firefox, Safari, Opera, Chrome</li>
+			</ul>
+
+			<p>Go ahead to know more.</p>
+
+		</section>
+
+
+		<section id="installation">
+
+			<h2>Installing the Template</h2>
+
+			<p>After unzip the download pack, you'll find a Template Folder with all the files.</p>
+
+			<p>You can view this Template in any browser, you can display or edit the Template without an internet connection. </p>
+
+			<p>Now open your FTP Client (like Filezilla) or directly through cpanel and upload the content of the Template on your server root. </p>
+
+			<p>Once the files are done uploading go to www.yourdomainname.com/index.html</p>
+
+		</section>
+
+
+		<section id="html">
+
+			<h2>HTML Structure</h2>
+
+			<p>This Template is based on the Bootstrap Framework. It uses the default Bootstrap grid system of 12 columns and all its other features. For more information on how to use it visit <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>.</p>
+
+
+			<h3>Basic Grid HTML</h3>
+
+			<p class="nested">For a simple two column layout, create a .row and add the appropriate number of .col-md* columns.</p>
+
+			<p class="nested">Given this example, we have .col-md-4 and .col-md-8, making for 12 total columns and a complete row.</p>
+
+			<pre class="nested"><code>
+	&lt;div class="row"&gt;  
+	    &lt;div class="col-md-4"&gt;...&lt;/div&gt;  
+	    &lt;div class="col-md-8"&gt;...&lt;/div&gt;  
+	&lt;/div&gt; 
+			</code></pre>
+
+			<h3>Nesting Columns</h3>
+
+			<p class="nested">To nest your content with the default grid, add a new .container and set of .col-md* columns within an existing .col-md* column. Nested rows should include a set of columns that add up to the number of columns of its parent. </p>
+
+			<pre class="nested"><code>
+	&lt;div class="container"&gt;  
+	    &lt;div class="col-md-9"&gt;  
+	        Level 1 column  
+	        &lt;div class="row"&gt;  
+	            &lt;div class="col-md-8"&gt;Level 2&lt;/div&gt;  
+	            &lt;div class="col-md-4"&gt;Level 2&lt;/div&gt;  
+	        &lt;/div&gt;  
+	    &lt;/div&gt;  
+	  
+	    &lt;div class="col-md-3"&gt;  
+	        Level 2 column  
+	    &lt;/div&gt;  
+	&lt;/div&gt;  
+			</code></pre>
+
+			<h3>General HTML Structure</h3>
+
+			<p class="nested">The HTML structure is well organized. It has a wrapper that contains everything. Inside it you will find 2 main sections: a header containing the main content which can be seen on the actual page, and an "information" div containing the 3 pages with additional info.</p>
+
+			<p class="nested">Inside <em>index.html</em>:</p>
+
+			<pre class="nested"><code>
+  	&lt;div class="wrapper"&gt;
+
+  		&lt;header class="main-content"&gt;
+		...
+  		&lt;/header&gt;
+
+
+
+		&lt;div class="information"&gt;
+		...
+ 		&lt;/div&gt;
+
+	&lt;/div&gt;
+			</code></pre>
+
+		</section>
+
+
+		<section id="css">
+			<h2>CSS Structure</h2>
+			<p>These are the css files that are loaded in the Head Section.</p>
+			<p>Inside <em>index.html</em>:</p>
+
+
+			<pre><code>
+	&lt;!-- Bootstrap --&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"&gt;
+
+	&lt;!-- Custom Scrollbar --&gt;
+	&lt;link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"&gt;
+
+	&lt;!-- Font Awesome --&gt;
+	&lt;link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"&gt;
+
+	&lt;!-- Google Fonts --&gt;
+	&lt;link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet"&gt;
+	&lt;link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"&gt;
+	&lt;link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700,800,900" rel="stylesheet"&gt;
+
+	&lt;!-- Custom Styles --&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;
+			</code></pre>
+		</section>
+
+
+		<section id="javascript">
+			<h2>Javascript Structure</h2>
+			<p>These are the JS files that are loaded at the end of the Body Section.</p>
+
+			<pre><code>
+	&lt;!-- Scripts --&gt;
+
+	&lt;!-- jQuery --&gt;
+	&lt;script src="js/jquery-3.1.1.min.js"&gt;&lt;/script&gt;
+
+	&lt;!-- Bootstrap --&gt;
+	&lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+
+	&lt;!-- Pace.js for preloader --&gt;
+	&lt;script data-pace-options='{ "minTime": 2500, "ghostTime": 100 }' src="js/pace.js"&gt;&lt;/script&gt;
+
+	&lt;!-- Countdown --&gt;
+	&lt;script src="js/jquery.countdown.min.js"&gt;&lt;/script&gt;
+
+	&lt;!-- Custom Scrollbar --&gt;
+	&lt;script src="js/jquery.mCustomScrollbar.concat.min.js"&gt;&lt;/script&gt;
+
+	&lt;!-- Form Validation --&gt;
+	&lt;script src="js/jquery.validate.js"&gt;&lt;/script&gt;
+
+	&lt;!-- Custom Scripts --&gt;
+	&lt;script src="js/script.js"&gt;&lt;/script&gt;
+			</code></pre>
+
+			<p>Depending on the chosen variant, there might be an additional file linked to in this section.</p>
+		</section>
+
+
+		<section id="customise">
+			<h2>Customisation</h2>
+
+			<p>Lets start customising the template to your needs. Open <em>index.html</em> and follow the steps.</p>
+
+			<p>Since most of these steps are same for all pages, will only explain it once here.</p>
+
+			<h3>Logo</h3>
+			<p class="nested">To change the logo text showing while the page loads:</p>
+
+			<pre class="nested"><code>
+	&lt;div class="loader"&gt;
+		&lt;h1 class="loader-text" data-content="<span class="highlight">CHANGE HERE</span>"&gt;<span class="highlight">CHANGE HERE</span>&lt;/h1&gt;
+	&lt;/div&gt;
+			</code></pre>
+
+
+			<h3>Navigation</h3>
+			<p class="nested">The three navigation buttons have the following markup:</p>
+
+			<pre class="nested"><code>
+	&lt;ul class="main-nav__links"&gt;
+
+		&lt;li class="main-nav__item"&gt;
+			&lt;a class="main-nav__link" data-toggle="modal" data-target="#about"&gt;
+				&lt;i class="glyphicon glyphicon-user"&gt;&lt;/i&gt;
+			&lt;/a&gt;
+			
+		&lt;/li&gt;
+
+		&lt;li class="main-nav__item"&gt;
+			&lt;a class="main-nav__link" data-toggle="modal" data-target="#services"&gt;
+				&lt;i class="glyphicon glyphicon-wrench"&gt;&lt;/i&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+
+		&lt;li class="main-nav__item"&gt;
+			&lt;a class="main-nav__link" data-toggle="modal" data-target="#contact"&gt;
+				&lt;i class="glyphicon glyphicon-envelope"&gt;&lt;/i&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+
+	&lt;/ul&gt;
+			</code></pre>
+
+			<p class="nested">Each of them is linked to the coresponding info section (which is a modal)</p>
+
+
+			<h3>Countdown</h3>
+			<p class="nested">To change the timer on the main page, open the <em>script.js</em> file inside js folder, and go to the Countdown Timer section:</p>
+
+			<pre class="nested"><code>
+	$('.counter').countdown('<span class="highlight">2017/02/27</span>', function(event) {
+			</code></pre>
+
+
+			<h3>Icons</h3>
+			<p class="nested">We use Font Awesome and the Bootstrap Glyphicons for icons. In order to change an icon, all you have to do is change the name of the icon, link this:</p>
+
+			<pre class="nested"><code>
+	&lt;i class="<span class="highlight">fa fa-paint-brush</span>" aria-hidden="true"&gt;&lt;/i&gt;
+			</code></pre>
+
+			<p class="nested">For all the icons you can use, go <a href="http://fontawesome.io/icons/" target="_blank">here for Font Awesome</a> icons and <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">here for Bootstrap</a> icons.</p>
+
+
+			<h3>About Section</h3>
+			<p class="nested">To change the images in the team section, open the <em>style.css</em> file inside css folder, and go to the About Page specific styles section.</p>
+			<p class="nested">Here, change each path for the pictures you want:</p>
+
+			<pre class="nested"><code>
+	.team__picture--1 {
+	  background-image: url("<span class="highlight">PATH/TO/FILE/image.jpg</span>");
+	}
+
+	.team__picture--2 {
+	  background-image: url("<span class="highlight">PATH/TO/FILE/image.jpg</span>");
+	}
+
+	.team__picture--3 {
+	  background-image: url("<span class="highlight">PATH/TO/FILE/image.jpg</span>");
+	}
+			</code></pre>
+
+			<p class="nested">For the social media links, open <em>index.html</em> and change them here:</p>
+
+			<pre class="nested"><code>
+	&lt;div class="team__social"&gt;
+		&lt;div class="team__social-item"&gt;
+			&lt;a href="<span class="highlight">YOUR LINK HERE</span>" class="facebook"&gt;&lt;i class="fa fa-facebook" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class="team__social-item"&gt;
+			&lt;a href="<span class="highlight">YOUR LINK HERE</span>" class="twitter"&gt;&lt;i class="fa fa-twitter" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class="team__social-item"&gt;
+			&lt;a href="<span class="highlight">YOUR LINK HERE</span>" class="googleplus"&gt;&lt;i class="fa fa-google-plus" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+			</code></pre>
+
+
+			<h3>Services Section</h3>
+			<p class="nested">To change the title of a service, inside <em>index.html</em> go to Services Information Section:</p>
+			<pre class="nested"><code>
+	&lt;h2 class="content-title"&gt;&lt;span&gt;<span class="highlight">Web</span>&lt;/span&gt; <span class="highlight">Development</span>&lt;/h2&gt;
+			</code></pre>
+			<p class="nested">The word inside the span tag will have the colored underline effect.</p>
+
+
+			<h3>Contact Section</h3>
+			<p class="nested">To change the social media links, inside <em>index.html</em> go to Contact Social Media section:</p>
+
+			<pre class="nested"><code>
+	&lt;ul class="contact__social-icons"&gt;
+		&lt;li class="social-item"&gt;
+			&lt;a href="<span class="highlight">YOUR LINK HERE</span>" class="facebook"&gt;&lt;i class="fa fa-facebook" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/li&gt;
+
+		&lt;li class="social-item"&gt;
+			&lt;a href="<span class="highlight">YOUR LINK HERE</span>" class="twitter"&gt;&lt;i class="fa fa-twitter" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/li&gt;
+
+		&lt;li class="social-item"&gt;
+			&lt;a href="<span class="highlight">YOUR LINK HERE</span>" class="googleplus"&gt;&lt;i class="fa fa-google-plus" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/li&gt;
+
+		&lt;li class="social-item"&gt;
+			&lt;a href="<span class="highlight">YOUR LINK HERE</span>" class="linkedin"&gt;&lt;i class="fa fa-linkedin" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+			</code></pre>
+
+
+			<h3>Images</h3>
+
+		</section>
+
+		
+
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+	    	// Smooth ScrollTo
+		    $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+		        e.preventDefault();
+		        var target = this.hash,
+		        $target = $(target);
+
+		        $('html, body').stop().animate( {
+		            'scrollTop': $target.offset().top-65
+		        }, 500, 'swing', function () {
+		            window.location.hash = target;
+		        });
+		    });
+		});
+	</script>
+
+	<link rel="stylesheet" href="assets/css/highlight-theme.css">
+	<script src="assets/js/highlight.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+</body>
+</html>
