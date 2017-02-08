@@ -966,8 +966,10 @@ video#bgvid {
 }
 
 .header-title {
-  font-size: 5em;
   margin-bottom: 30px;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 5em;
+  letter-spacing: 2px;
 }
 
 .subscribe {
