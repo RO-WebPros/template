@@ -101,8 +101,8 @@
 						<form class="form-inline subscribe__form" id="subscribe-form" action="" method="post">
 							
 							<div class="form-group">
-								<label for="subscribe__email" class="sr-only">Email address</label>
 								<input type="email" class="form-control subscribe__email" id="subscribe__email" name="subscribe__email" placeholder="Enter your email">
+								<label for="subscribe__email" class="subscribe-message"></label>
 							</div>
 
 							<button type="submit" class="btn form__button form__button--subscribe" data-text="Sign me in">
@@ -265,7 +265,7 @@
 								<div class="row">
 
 									<div class="col-md-3">
-										<img src="images/old_building.jpg" alt="img02"/>
+										<img src="images/about1.jpg" alt="About 1">
 									</div>
 
 									<div class="col-md-9">
@@ -283,7 +283,7 @@
 									<div class="col-md-3">
 										<div class="grid hover12">
 											<figure>
-												<img src="images/new_building.jpg" alt="img02"/>		
+												<img src="images/about2.jpg" alt="About 2">		
 											</figure>
 										</div>
 									</div>
@@ -544,6 +544,8 @@
 
 											<button type="submit" class="btn form__button form__button--contact" data-text="Send"><span>Send</span></button>
 
+											<div class="contact-message">Your message has been sent!</div>
+
 										</form>
 
 									</div>
@@ -588,6 +590,12 @@
 
 	<!-- Form Validation -->
 	<script src="js/jquery.validate.js"></script>
+
+	<!-- Mailchimp Integration -->
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+
+	<!-- Ajax Contact Form -->
+	<script src="js/jquery.form.min.js"></script>
 
 	<!-- Custom Scripts -->
 	<script src="js/script.js"></script>
