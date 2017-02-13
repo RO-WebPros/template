@@ -1,6 +1,33 @@
-/*==================================
-=            Typography            =
-==================================*/
+/*=========================================
+=            Table of Contents            =
+=========================================*/
+/* 
+
+1 - General styles
+	1.1 - Typography
+	1.2 - Layout
+
+2 - Components
+	2.1 - Countdown
+	2.2 - Effects
+	2.3 - Forms
+	2.4 - Page Loader
+	2.5 - Modals (Navigation Sections)
+	2.6 - Navigation
+
+3 - Section Specific Styles
+	3.1 - Home Page (main page)
+	3.2 - About Section
+	3.3 - Services Section
+	3.4 - Contact Section
+
+4 - Media Queries (responsive styles)
+
+*/
+/*==========================================
+=            1 - General styles            =
+==========================================*/
+/*----------  1.1 - Typography  ----------*/
 .content-title {
   font-family: "Libre Franklin", sans-serif;
   font-size: 3rem;
@@ -34,9 +61,7 @@
   margin: 0 auto 10px;
 }
 
-/*=======================================================
-=            Basic styles (used in all pages)            =
-=======================================================*/
+/*----------  1.2 - Layout  ----------*/
 ::-moz-selection {
   background: rgba(3, 169, 244, 0.4);
 }
@@ -138,15 +163,10 @@ body {
   box-shadow: 0 0 10px rgba(1, 64, 93, 0.4);
 }
 
-/* ==================================
-=            Function               =
-==================================*/
-/*===============================
-=            Buttons            =
-===============================*/
-/*=================================
-=            Countdown            =
-=================================*/
+/*======================================
+=            2 - Components            =
+======================================*/
+/*----------  2.1 - Countdown  ----------*/
 .counter {
   width: 100%;
   margin-top: 30px;
@@ -277,9 +297,40 @@ body {
   border-bottom: 0px solid #03A9F4;
 }
 
-/*=============================
-=            Forms            =
-=============================*/
+/*----------  2.2 - Effects  ----------*/
+/* Video Effect */
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(team1.jpg) no-repeat;
+  background-size: cover;
+}
+
+/* Particles effect */
+#particles-js, #particles-snow-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Kenburns effect */
+#kenburns {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+/*----------  2.3 - Forms  ----------*/
 .btn,
 .form-control,
 .form-control:hover,
@@ -519,9 +570,7 @@ body {
   color: #FF3434;
 }
 
-/*======================================
-=            Page Preloader            =
-======================================*/
+/*----------  2.4 - Page Loader  ----------*/
 /* Class that gets added to main page elements to animate them in */
 .loaded {
   opacity: 1 !important;
@@ -679,9 +728,7 @@ body {
   }
 }
 
-/*====================================================
-=            Modals (Navigation Sections)            =
-====================================================*/
+/*----------  2.5 - Modals (Navigation Sections)  ----------*/
 /* Overwrite Bootstrap style to hide default scroll bar */
 .modal-open .modal {
   overflow-y: hidden;
@@ -811,69 +858,7 @@ body {
   }
 }
 
-/* ==================================
-=            Effects              =
-==================================*/
-/* Video Effect */
-video#bgvid {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: url(team1.jpg) no-repeat;
-  background-size: cover;
-}
-
-/* Slideshow effect */
-[data-slides] {
-  /*    background-image: url(../../images/slide1.jpg);  */
-  /* Default image. */
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  -webkit-transition: background-image 2s linear;
-  transition: background-image 2s linear;
-}
-
-.test {
-  background-size: cover;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: 100%;
-  height: 100%;
-  z-index: -2000;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-}
-
-/* Particles effect */
-#particles-js, #particles-snow-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* Kenburns effect */
-#kenburns {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -2;
-}
-
-/*==================================
-=            Navigation            =
-==================================*/
+/*----------  2.6 - Navigation  ----------*/
 .main-nav {
   position: absolute;
   left: 30px;
@@ -1000,9 +985,10 @@ video#bgvid {
   border-top: 5px solid #03A9F4;
 }
 
-/*=================================================
-=            Home Page specific styles            =
-=================================================*/
+/*===================================================
+=            3 - Section Specific Styles            =
+===================================================*/
+/*----------  3.1 - Home Page specific styles  ----------*/
 .main-content {
   position: relative;
   overflow: hidden;
@@ -1090,9 +1076,7 @@ video#bgvid {
   pointer-events: all;
 }
 
-/*==================================================
-=            About Page specific styles            =
-==================================================*/
+/*----------  3.2 - About Section specific styles  ----------*/
 .about__description {
   max-width: 900px;
   margin: 30px auto;
@@ -1263,9 +1247,7 @@ video#bgvid {
   background-color: #dd4b39;
 }
 
-/*=====================================================
-=            Services Page specific styles            =
-=====================================================*/
+/*----------  3.3 - Services Section specific styles  ----------*/
 .services__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1360,9 +1342,7 @@ video#bgvid {
   margin-bottom: 15px;
 }
 
-/*====================================================
-=            Contact Page specific styles            =
-====================================================*/
+/*----------  3.4 - Contact Section specific styles  ----------*/
 .contact__info {
   max-width: 900px;
   margin: 30px auto;
@@ -1708,9 +1688,10 @@ video#bgvid {
   background-color: #007bb5;
 }
 
-/*====================================================
-=           	Media Queries  			             =
-=====================================================*/
+/*=============================================================
+=            4 - Media Queries (responsive styles)            =
+=============================================================*/
+/*----------  4 - Media Queries  ----------*/
 /* 
 * Class for making html, body, .wrapper and .main-content scrollable
 * It gets added at width < 768px  or height < 500px and the page becomes scrollable
