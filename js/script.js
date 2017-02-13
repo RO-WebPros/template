@@ -6,13 +6,11 @@
 4. Modal function 
 5. Subscribe Form
 6. Contact Form
-7. Kenburns effect
-8. Slideshow effect
-9. Particles effect
-10. Snow effect
-11. Ripples Effect
-12. Main page tooltips
-13. Make page scrollable
+7. Particles effect
+8. Snow effect
+9. Ripples Effect
+10. Main page tooltips
+11. Make page scrollable
 
  =================================================== */
 
@@ -172,52 +170,7 @@ jQuery(document).ready(function($) {
 
 
     /* =================================================== */
-    /*                  7.Kenbuns effect
-    /* =================================================== */
-
-    if( $(".wrapper--kenburns").length ){
-        $kenburns = $('.wrapper--kenburns');
-        $kenburns.vegas({
-            slides: [
-                { src: 'images/kenburns1.jpg' },
-                { src: 'images/kenburns2.jpg' },
-                { src: 'images/kenburns3.jpg' },
-                { src: 'images/kenburns4.jpg' },
-                { src: 'images/kenburns5.jpg' }
-            ],
-            animation: 'random',
-            animationDuration: 6000,
-            timer : false
-        });
-    }
-
-
-
-    /* =================================================== */
-    /*                  8.Slideshow effect
-    /* =================================================== */
-
-    if( $(".wrapper--slideshow").length ){
-        $slideshow = $('.wrapper--slideshow');
-        $slideshow.vegas({
-            slides: [
-                { src: 'images/slideshow1.jpg' },
-                { src: 'images/slideshow2.jpg' },
-                { src: 'images/slideshow3.jpg' },
-                { src: 'images/slideshow4.jpg' },
-                { src: 'images/slideshow5.jpg' }
-            ],
-            transition: 'blur',
-            transitionDuration: 2000,
-            timer : false,
-            delay: 6000
-        });
-    }
-
-
-
-    /* =================================================== */
-    /*                  9.Particles effect
+    /*                  7.Particles effect
     /* =================================================== */
 
     if( $("#particles-js").length ){
@@ -229,7 +182,7 @@ jQuery(document).ready(function($) {
 
 
     /* =================================================== */
-    /*                  10.Snow effect
+    /*                  8.Snow effect
     /* =================================================== */
     
     if( $("#particles-snow-js").length ){
@@ -241,7 +194,7 @@ jQuery(document).ready(function($) {
 
 
     /* =================================================== */
-    /*                 11.Ripples Effect
+    /*                 9.Ripples Effect
     /* =================================================== */
 
     if( $("#ripples-js").length ){  
@@ -266,7 +219,7 @@ jQuery(document).ready(function($) {
 
 
     /* =================================================== */
-    /*                  12.Main page tooltips
+    /*                  10.Main page tooltips
     /* =================================================== */
 
     add_tooltips();
@@ -287,7 +240,7 @@ jQuery(document).ready(function($) {
     }
 
     /* =================================================== */
-    /*                  13.Make page scrollable
+    /*                  11.Make page scrollable
     /* =================================================== */
 
     checkSize();

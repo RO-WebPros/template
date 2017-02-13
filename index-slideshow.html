@@ -652,5 +652,22 @@
 	<!-- Custom Scripts -->
 	<script src="js/script.js"></script>
 
+	<script>
+		$slideshow = $('.wrapper--slideshow');
+		$slideshow.vegas({
+		    slides: [
+		        { src: 'images/slideshow1.jpg' },
+		        { src: 'images/slideshow2.jpg' },
+		        { src: 'images/slideshow3.jpg' },
+		        { src: 'images/slideshow4.jpg' },
+		        { src: 'images/slideshow5.jpg' }
+		    ],
+		    transition: 'blur',
+		    transitionDuration: 2000,
+		    timer : false,
+		    delay: 6000
+		});
+	</script>
+
 </body>
 </html>
