@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Website Title -->
-	<title>Softly - Presentation Page</title>
+	<title>Softly - Preview</title>
 
 	<!-- Website Description -->
 	<meta name="description" content="Responsive Coming Soon Page">
@@ -15,30 +15,36 @@
 	<meta name="keywords" content="Softly, html theme,, Coming Soon Page template, html page, one page, one column, responsive landing page">
 	<meta name="author" content="WebPros">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700,800,900" rel="stylesheet">
+
 	<!-- Favicon -->
 	<link rel="icon" href="favicon.png" type="image/png">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
 	<!-- Mainpage Css -->
 	<link rel="stylesheet" type="text/css" href="css/mainpage.css">
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-<!-- 	Custom Scrollbar
-<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"> -->
 
 </head>
 
 <body>
+
+        <div class="loader">
+            <h1 class="loader-text" data-content="Softly">Softly</h1>
+        </div>
 
 		<header class="header">
 
 			<div class="header__container"></div> 
                 <div class="header__content">              
                     <div class="container">
-                    <h1>Softly 1.0 </h1>                
+                        <h1>Softly</h1>                
                         <h2>Coming Soon Template</h2>
                         <a class="btn btn-main btn-mainpage" id="view-demo" href="#">View demo</a>
                         <a class="btn btn-main btn-mainpage" href="#" target="_blank">Want to buy</a>
@@ -50,27 +56,6 @@
 		</header>
 
     <div class=" wrapper">
-
-
-      
-
-        <header id="home" class="header ">
-
-            <div class="page-header-00">
-              <div class="container all-light">
-
-                </div>
-              </div>
-            </div>
-
-        </header>
-
-
-		<div id="content" class="container">
-
-            <div class="row">
-        
-                <div class="col-md-12">
         
                     <h2 class="text__center">With Countdown</h2>
 
@@ -148,10 +133,8 @@
                                 </div>  
                             </a>
                         </div>
-                    </div><!-- end div .row -->                    
-                </div>
+                    </div><!-- end div .row -->
 
-                <div class="col-md-12">
                     <h2 class="text__center">Without Countdown</h2>
                     <div class="row">
                         <div class="col-md-6">
@@ -221,7 +204,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <a href="#" class="thumbnail  thumbnail__mainpage">
+                            <a href="#" class="thumbnail thumbnail__mainpage">
                                 <img src="images/withcounter/comming_soon.png" alt="Image Background with Polygon">
                                 <div class="caption text-center">
                                     <h4>Comming soon later</h4>
@@ -229,9 +212,6 @@
                             </a>
                         </div>
                     </div><!-- end div .row -->
-                </div>
-            </div>
-        </div>  
 
 		<footer>
 			 <div class="container">    
@@ -246,6 +226,15 @@
 
 	<!-- jQuery -->
 	<script src="js/jquery-3.1.1.min.js"></script>
+
+    <!-- Pace.js for preloader -->
+    <script data-pace-options='{ "minTime": 2500, "ghostTime": 100 }' src="js/pace.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $(".loader").delay(3000).fadeOut("slow");
+        });
+    </script>
 
 
 </body>
