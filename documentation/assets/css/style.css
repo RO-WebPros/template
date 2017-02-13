@@ -15,7 +15,7 @@ body {
 }
 
 .nav__header {
-	padding: 40px 0;
+	padding: 30px 0;
 }
 
 	.logo {
@@ -32,15 +32,15 @@ body {
 .nav__menu li a {
 	display: block;
 	padding: 10px 0 10px 30px;
-	border-bottom: 2px solid #eee;
+	border-bottom: 1px solid #eee;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 25px;
+	font-size: 22px;
 	color: #eee;
 	transition: all 0.2s ease-in-out;
 }
 
 .nav__menu li:first-child a {
-	border-top: 2px solid #eee;
+	border-top: 1px solid #eee;
 }
 
 .nav__menu li a:hover,
