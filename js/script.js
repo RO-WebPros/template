@@ -82,43 +82,28 @@ jQuery(document).ready(function($) {
     /* =================================================== */
 
     var subscribe = $("#subscribe-form");
-
-    subscribe.validate({
-
-        rules: {
-            subscribe__email: {
-                required: true,
-                email: true
-            }
-        },
-
-        messages: {
-            subscribe__email:{
-                required: "Please enter an email address",
-                email: 'Please enter a valid email address'
-            }
-        },
-
-        highlight: function(element) {
-           
-            $(element).addClass('form-error');
-            $(".form__button--subscribe").addClass('form-error');
         
-        },
-        unhighlight: function(element) {
+    subscribe.submit( function() {
 
-            $(element).removeClass('form-error');
-            $(".form__button--subscribe").removeClass('form-error');
-        
-        },
-        errorPlacement: function(error, element) {
+        setTimeout( function() {
+            
+            if ( $('.subscribe__email').hasClass('error') ) {
+                $('.form__button--subscribe').addClass('form-error');
+            } else if ( ! $('.subscribe__email').hasClass('error') ) {
+                    $('.form__button--subscribe').removeClass('form-error');
+                    $('.subscribe__email').val('');                
+            }
 
-            offset = element.offset();
-            error.insertAfter(element)
-            error.addClass('error-message');  // add a class to the wrapper
-       
-        },
+            
+
+        }, 450);
+
     });
+
+    subscribe.ajaxChimp({
+        url: 'http://dragosvlad.us15.list-manage.com/subscribe/post?u=9649718b8b6522f836867d15b&amp;id=7fd92ed1e5'
+    });
+
 
 
 
@@ -170,6 +155,19 @@ jQuery(document).ready(function($) {
     $.validator.methods.email = function( value, element ) {
        return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
     }
+
+
+    contact.ajaxForm(function() { 
+        $('.contact-message').addClass('success');
+
+        $('.form-name').val('');
+        $('.form-email').val('');
+        $('.form-message').val('');
+
+        setTimeout( function() {
+            $('.contact-message').removeClass('success');
+        }, 5000);
+    });
 
 
 
@@ -323,7 +321,6 @@ jQuery(document).ready(function($) {
         }
 
     }
-
 
 
 });

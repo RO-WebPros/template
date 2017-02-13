@@ -339,6 +339,10 @@ body {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.subscribe__email.error, .error.form-name, .error.form-email, .error.form-message {
+  border-color: #FF3434;
+}
+
 .form__button {
   position: relative;
   height: 45px;
@@ -362,6 +366,7 @@ body {
 .form__button--contact:hover, .form__button--contact:focus {
   background: transparent;
   color: #03A9F4;
+  outline: none;
 }
 
 .form__button--contact:hover:before, .form__button--contact:focus:before {
@@ -399,8 +404,9 @@ body {
           align-items: center;
 }
 
-.form__button--subscribe:hover {
+.form__button--subscribe:hover, .form__button--subscribe:focus {
   color: #F7FAFF;
+  outline: none;
 }
 
 .form__button:before,
@@ -424,6 +430,23 @@ body {
           transform: translate3d(0, -90%, 0);
 }
 
+.subscribe-message {
+  position: relative;
+  left: 0;
+  top: 5px;
+  color: #fff;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.subscribe-message.error {
+  color: #FF3434;
+}
+
+.subscribe-message.valid {
+  color: #04ED6C;
+}
+
 .contact__form {
   max-width: 900px;
   margin: 30px auto;
@@ -440,6 +463,22 @@ body {
 
 .contact-form .form-message {
   resize: vertical;
+}
+
+.contact-message {
+  position: relative;
+  top: 10px;
+  opacity: 0;
+  color: #00A64A;
+  font-size: 18px;
+  font-weight: 700;
+  pointer-events: none;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.contact-message.success {
+  opacity: 1;
 }
 
 .form-name, .form-email, .form-message {
@@ -1907,6 +1946,10 @@ video#bgvid {
   .subscribe__email, .form-name, .form-email, .form-message {
     font-size: 0.8rem;
     height: 35px;
+  }
+  .subscribe-message,
+  .contact-message {
+    font-size: 12px;
   }
   .form__button {
     font-size: 0.8rem;
