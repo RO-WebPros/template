@@ -24,17 +24,10 @@
 4 - Media Queries (responsive styles)
 
 */
-
-
-
-
 /*==========================================
 =            1 - General styles            =
 ==========================================*/
-
-
 /*----------  1.1 - Typography  ----------*/
-
 .content-title {
   font-family: "Libre Franklin", sans-serif;
   font-size: 3rem;
@@ -68,9 +61,7 @@
   margin: 0 auto 10px;
 }
 
-
 /*----------  1.2 - Layout  ----------*/
-
 ::-moz-selection {
   background: rgba(3, 169, 244, 0.4);
 }
@@ -172,16 +163,10 @@ body {
   box-shadow: 0 0 10px rgba(1, 64, 93, 0.4);
 }
 
-
-
-
 /*======================================
 =            2 - Components            =
 ======================================*/
-
-
 /*----------  2.1 - Countdown  ----------*/
-
 .counter {
   width: 100%;
   margin-top: 30px;
@@ -312,9 +297,7 @@ body {
   border-bottom: 0px solid #03A9F4;
 }
 
-
 /*----------  2.2 - Effects  ----------*/
-
 /* Video Effect */
 video#bgvid {
   position: fixed;
@@ -347,9 +330,7 @@ video#bgvid {
   z-index: -2;
 }
 
-
 /*----------  2.3 - Forms  ----------*/
-
 .btn,
 .form-control,
 .form-control:hover,
@@ -589,9 +570,7 @@ video#bgvid {
   color: #FF3434;
 }
 
-
 /*----------  2.4 - Page Loader  ----------*/
-
 /* Class that gets added to main page elements to animate them in */
 .loaded {
   opacity: 1 !important;
@@ -749,9 +728,7 @@ video#bgvid {
   }
 }
 
-
 /*----------  2.5 - Modals (Navigation Sections)  ----------*/
-
 /* Overwrite Bootstrap style to hide default scroll bar */
 .modal-open .modal {
   overflow-y: hidden;
@@ -881,9 +858,7 @@ video#bgvid {
   }
 }
 
-
 /*----------  2.6 - Navigation  ----------*/
-
 .main-nav {
   position: absolute;
   left: 30px;
@@ -1010,16 +985,10 @@ video#bgvid {
   border-top: 5px solid #03A9F4;
 }
 
-
-
-
 /*===================================================
 =            3 - Section Specific Styles            =
 ===================================================*/
-
-
 /*----------  3.1 - Home Page specific styles  ----------*/
-
 .main-content {
   position: relative;
   overflow: hidden;
@@ -1107,9 +1076,7 @@ video#bgvid {
   pointer-events: all;
 }
 
-
 /*----------  3.2 - About Section specific styles  ----------*/
-
 .about__description {
   max-width: 900px;
   margin: 30px auto;
@@ -1280,9 +1247,7 @@ video#bgvid {
   background-color: #dd4b39;
 }
 
-
 /*----------  3.3 - Services Section specific styles  ----------*/
-
 .services__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1377,9 +1342,7 @@ video#bgvid {
   margin-bottom: 15px;
 }
 
-
 /*----------  3.4 - Contact Section specific styles  ----------*/
-
 .contact__info {
   max-width: 900px;
   margin: 30px auto;
@@ -1725,14 +1688,10 @@ video#bgvid {
   background-color: #007bb5;
 }
 
-
-
-
 /*=============================================================
 =            4 - Media Queries (responsive styles)            =
 =============================================================*/
-
-
+/*----------  4 - Media Queries  ----------*/
 /* 
 * Class for making html, body, .wrapper and .main-content scrollable
 * It gets added at width < 768px  or height < 500px and the page becomes scrollable
