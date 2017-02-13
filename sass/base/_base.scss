@@ -30,13 +30,44 @@ body {
   z-index: 1200;
 	color: $text-white;
   background-color: $main-color;
-  background-image: url(../images/Covermainpage.jpg);
   background-size: cover;
 }
 
 .wrapper--no-background {
   background-color: transparent;
   background-image: none;
+}
+
+.wrapper--particles {
+  background-image: url(../images/particles1.jpg);
+}
+
+.wrapper--particles-2 {
+  background-image: url(../images/particles2.jpg);
+}
+
+.wrapper--ripples {
+  background-image: url(../images/ripples1.jpg);
+}
+
+.wrapper--ripples-2 {
+  background-image: url(../images/ripples2.jpg);
+}
+
+.wrapper--snow {
+  background-image: url(../images/snow1.jpg);
+}
+
+.wrapper--snow-2 {
+  background-image: url(../images/snow2.jpg);
+}
+
+.wrapper--image {
+  background-image: url(../images/single-image1.jpg);
+}
+
+.wrapper--image-2 {
+  background-image: url(../images/single-image2.jpg);
 }
 
 .information {

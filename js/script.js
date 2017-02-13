@@ -181,9 +181,11 @@ jQuery(document).ready(function($) {
         $kenburns = $('.wrapper--kenburns');
         $kenburns.vegas({
             slides: [
-                { src: 'images/slide1.jpg' },
-                { src: 'images/slide2.jpg' },
-                { src: 'images/slide3.jpg' }
+                { src: 'images/kenburns1.jpg' },
+                { src: 'images/kenburns2.jpg' },
+                { src: 'images/kenburns3.jpg' },
+                { src: 'images/kenburns4.jpg' },
+                { src: 'images/kenburns5.jpg' }
             ],
             animation: 'random',
             animationDuration: 6000,
@@ -201,9 +203,11 @@ jQuery(document).ready(function($) {
         $slideshow = $('.wrapper--slideshow');
         $slideshow.vegas({
             slides: [
-                { src: 'images/slide1.jpg' },
-                { src: 'images/slide2.jpg' },
-                { src: 'images/slide3.jpg' }
+                { src: 'images/slideshow1.jpg' },
+                { src: 'images/slideshow2.jpg' },
+                { src: 'images/slideshow3.jpg' },
+                { src: 'images/slideshow4.jpg' },
+                { src: 'images/slideshow5.jpg' }
             ],
             transition: 'blur',
             transitionDuration: 2000,
