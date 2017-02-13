@@ -92,8 +92,6 @@ jQuery(document).ready(function($) {
                     $('.subscribe__email').val('');                
             }
 
-            
-
         }, 450);
 
     });
@@ -101,7 +99,6 @@ jQuery(document).ready(function($) {
     subscribe.ajaxChimp({
         url: 'http://dragosvlad.us15.list-manage.com/subscribe/post?u=9649718b8b6522f836867d15b&amp;id=7fd92ed1e5'
     });
-
 
 
 

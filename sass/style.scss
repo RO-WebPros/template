@@ -1,27 +1,73 @@
+/*=========================================
+=            Table of Contents            =
+=========================================*/
+
+/* 
+
+1 - General styles
+	1.1 - Typography
+	1.2 - Layout
+
+2 - Components
+	2.1 - Countdown
+	2.2 - Effects
+	2.3 - Forms
+	2.4 - Page Loader
+	2.5 - Modals (Navigation Sections)
+	2.6 - Navigation
+
+3 - Section Specific Styles
+	3.1 - Home Page (main page)
+	3.2 - About Section
+	3.3 - Services Section
+	3.4 - Contact Section
+
+4 - Media Queries (responsive styles)
+
+*/
+
+
+
+/*==========================================
+=            1 - General styles            =
+==========================================*/
+
 @import
 	'base/variables',
 	'base/typography',
 	'base/base';
 
-@import
-	'helpers/functions',
-	'helpers/helpers',
-	'helpers/mixins';
+
+@import 'helpers/mixins';
+
+
+/*======================================
+=            2 - Components            =
+======================================*/
 
 @import
-	'components/buttons',
 	'components/countdown',
+	'components/effects',
 	'components/forms',
 	'components/loader',
 	'components/modal',
-	'components/effect',
 	'components/navigation';
+
+
+/*===================================================
+=            3 - Section Specific Styles            =
+===================================================*/
 
 @import
 	'pages/home',
 	'pages/about',
 	'pages/services',
 	'pages/contact';
+
+
+/*=============================================================
+=            4 - Media Queries (responsive styles)            =
+=============================================================*/
 
 @import
 	'base/responsive';
